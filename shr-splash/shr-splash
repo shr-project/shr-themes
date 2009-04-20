@@ -1,0 +1,10 @@
+#!/bin/sh
+if [ "`grep -i splash /proc/cmdline`" ]; then
+  case "$1" in
+      start)
+         cat /shr-splash.fb > /dev/fb0
+      ;;
+  esac
+fi
+
+exit 0
