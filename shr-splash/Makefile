@@ -5,4 +5,11 @@ install:
 	ln -sf /etc/init.d/shr-splash $(DESTDIR)/etc/rc0.d/K21shr-splash #halting
 	ln -sf /etc/init.d/shr-splash $(DESTDIR)/etc/rc6.d/K21shr-splash #rebooting
 
+uninstall:
+	rm $(DESTDIR)/etc/init.d/shr-splash
+        rm -rf $(prefix)/share/shr-splash/
+	rm $(DESTDIR)/etc/rcS.d/S01shr-splash #booting
+	rm $(DESTDIR)/etc/rc0.d/K21shr-splash #halting
+	rm $(DESTDIR)/etc/rc6.d/K21shr-splash #rebooting
+
 .PHONY: install
