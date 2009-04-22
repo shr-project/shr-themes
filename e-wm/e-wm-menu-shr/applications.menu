@@ -86,6 +86,7 @@
     <Include>
       <And>
 	<Or>
+          <Category>Application</Category>
           <Category>Applications</Category>
 	  <Category>Utility</Category>
           <Category>PIM</Category>
