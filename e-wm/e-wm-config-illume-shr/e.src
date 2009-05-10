@@ -259,7 +259,7 @@ group "E_Config" struct {
       value "modifiers" int: 0;
       value "key" string: "Execute";
       value "action" string: "delayed_action";
-      value "params" string: "[0.0 exec /etc/enlightenment/suspend.sh] [2.0 halt_now]";
+      value "params" string: "[0.0 syscon] [2.0 halt_now]";
       value "any_mod" uchar: 1;
     }
   }
