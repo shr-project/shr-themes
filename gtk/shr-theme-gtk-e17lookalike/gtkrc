@@ -70,6 +70,18 @@ style "moko-window-default" {
 }
 class "GtkWidget" style "moko-window-default"
 
+#style "white-text" {
+
+#   fg[NORMAL]      = "#ffffff" # black
+#   fg[PRELIGHT]    = "#ffffff" # black
+#   fg[ACTIVE]      = "#ffffff" # black
+#    fg[SELECTED]    = "#ffffff" # white
+#   fg[INSENSITIVE] = "#999999" # grey
+
+#    GtkFrame::shadow_type = GTK_SHADOW_NONE
+#}
+#class "GtkWidget" style "white-text"
+
 style "default-coloring" {
 
 #    bg[NORMAL]        = "#e5e5e5" #
@@ -98,7 +110,8 @@ style "default-coloring" {
 
     GtkFrame::shadow_type = GTK_SHADOW_NONE
 }
-widget_class "GtkWidget" style "default-coloring"
+widget_class "*.<GtkLabel>" style "default-coloring"
+
 
 include "transparent"
 

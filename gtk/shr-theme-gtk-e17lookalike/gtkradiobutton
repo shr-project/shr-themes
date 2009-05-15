@@ -73,6 +73,7 @@ class "GtkRadioButton" style "gtkradiobutton"
 
 style "gtkradiobutton-label" {
     fg[NORMAL]   = "#000000"
+    fg[PRELIGHT] = "#000000"
     fg[ACTIVE]   = "#000000"
 }
 widget_class "*.GtkRadioButton.*" style "gtkradiobutton-label"

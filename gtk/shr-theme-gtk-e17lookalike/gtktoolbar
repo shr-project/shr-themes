@@ -12,7 +12,7 @@ style "toolbar"
     }
   }
 }
-widget_class "*Toolbar" style "toolbar"
+class "GtkToolbar" style "toolbar"
 
 style "gtktoolbar-label" {
     fg[NORMAL]  = "#ffffff"
@@ -22,4 +22,4 @@ style "gtktoolbar-label" {
     text[ACTIVE] = "#ffffff"
     text[INSENSITIVE] = "#ffffff"
 }
-widget_class "*Toolbar.*" style "gtktoolbar-label"
+class "*.<GtkToolbar>.*" style "gtktoolbar-label"
