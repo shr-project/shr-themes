@@ -60,4 +60,5 @@ style "gtkcheckbutton" {
     GtkCheckButton::indicator-size = 35
     GtkCheckButton::indicator-spacing = 5
 }
-class "GtkWidget" style "gtkcheckbutton"
+class "GtkCheckButton" style "gtkcheckbutton"
+
