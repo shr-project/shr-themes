@@ -4,7 +4,7 @@ gtk-font-name = "Sans 5"
 gtk-icon-theme-name = "openmoko-standard"
 
 gtk-icon-sizes = "gtk-button=32,32:gtk-small-toolbar=48,48:gtk-large-toolbar=48,48"
-
+gtk-toolbar-style = GTK_TOOLBAR_ICONS
 # Note: libtaku supports multiple orientations. To enable:
 # TakuIconTile::orientation = GTK_ORIENTATION_VERTICAL
 # Might also want to set
