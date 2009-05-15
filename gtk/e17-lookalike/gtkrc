@@ -1,0 +1,130 @@
+# Set the default font and font size (if not using settings daemon)
+gtk-font-name = "Sans 5"
+# same for icon theme
+gtk-icon-theme-name = "openmoko-standard"
+
+gtk-icon-sizes = "gtk-button=32,32:gtk-small-toolbar=48,48:gtk-large-toolbar=48,48"
+
+# Note: libtaku supports multiple orientations. To enable:
+# TakuIconTile::orientation = GTK_ORIENTATION_VERTICAL
+# Might also want to set
+# TakuIconTile::show-secondary-text = False
+
+gtk_button_images = 0
+gtk_menu_images = 0
+
+style "moko-window-default" {
+
+#    bg[NORMAL]        = "#e5e5e5" #
+#    bg[PRELIGHT]      = "#ff7800" #
+#    bg[ACTIVE]        = "#ff7800" #
+#    bg[SELECTED]      = "#ff7800" #
+#    bg[INSENSITIVE]   = "#e5e5e5" #
+
+#   base[NORMAL]      = "#e5e5e5" #
+#   base[PRELIGHT]    = "#ff7800" #
+#   base[ACTIVE]      = "#ff7800" #
+#   base[SELECTED]    = "#ff7800" #
+#   base[INSENSITIVE] = "#e5e5e5" #
+
+    fg[NORMAL]      = "#000000" # black
+    fg[PRELIGHT]    = "#000000" # black
+    fg[ACTIVE]      = "#000000" # black
+    fg[SELECTED]    = "#ffffff" # white
+    fg[INSENSITIVE] = "#999999" # grey
+
+    text[NORMAL]      = "#000000" # mid grey
+    text[PRELIGHT]    = "#999999" # white
+    text[ACTIVE]      = "#ffffff" # light grey
+    text[SELECTED]    = "#ffffff" # white
+    text[INSENSITIVE] = "#cccccc" # dark grey
+
+    GtkFrame::shadow_type = GTK_SHADOW_NONE
+#
+# How to draw shadows in general
+#
+    engine "pixmap" {
+        image {
+            function        = SHADOW
+            shadow          = IN
+            file            = "shadow-in.png"
+            border          = { 6, 6, 6, 6 }
+            stretch         = TRUE
+        }
+        image {
+            function        = SHADOW
+            shadow          = OUT
+            file            = "shadow-in.png" # FIXME add proper shadow
+            border          = { 6, 6, 6, 6 }
+            stretch         = TRUE
+        }
+        image {
+            function        = SHADOW
+            shadow          = ETCHED_IN
+            file            = "shadow-in.png" # FIXME add proper shadow
+            border          = { 6, 6, 6, 6 }
+            stretch         = TRUE
+        }
+        image {
+            function        = SHADOW
+            shadow          = ETCHED_OUT
+            file            = "shadow-in.png" # FIXME add proper shadow
+            border          = { 6, 6, 6, 6 }
+            stretch         = TRUE
+        }
+        image {
+            function        = SHADOW
+            shadow          = NONE
+            file            = "shadow-in.png"
+            border          = {0, 0, 0, 0}
+            stretch         = TRUE
+        }
+#
+# How to draw lines in general
+#
+        image {
+            function        = HLINE
+            file            = "hline.png"
+            stretch         = TRUE
+        }
+        image {
+            function        = VLINE
+            file            = "hline.png" # FIXME add proper vline
+            stretch         = TRUE
+        }
+    }
+}
+
+class "GtkWidget" style "moko-window-default"
+
+style "multi-tap"
+{
+  bg[NORMAL] = "#000"
+  fg[NORMAL] = "#fff"
+}
+widget "multi-tap-window*" style "multi-tap"
+
+include "transparent"
+
+include "gtkassistant"
+include "gtkbutton"
+include "gtkcheckbutton"
+include "gtkcombobox"
+include "gtkentry"
+#include "gtkeventbox"
+#include "gtkframe"
+include "gtkmenu"
+include "gtkmenuitem"
+include "gtknotebook"
+include "gtkpaned"
+include "gtkprogressbar"
+include "gtkradiobutton"
+include "gtkscale"
+#include "gtkscrolledwindow"
+include "gtkscrollbar"
+include "gtkspinbutton"
+include "gtktextview"
+include "gtktoolbar"
+include "gtktoolbutton"
+include "gtktreeview"
+

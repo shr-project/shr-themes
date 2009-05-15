@@ -1,0 +1,40 @@
+style "gtktreeview" {
+    xthickness = 4
+    ythickness = 4
+    
+    GtkTreeView::allow_rules = 1
+    GtkTreeView::vertical_separator = 6
+    GtkTreeView::even_row_color = "#f7f7f7"
+    GtkTreeView::odd_row_color = "#e7e7e7"
+    GtkTreeView::expander-size = 40
+
+    GtkButton::focus-line-width = 0
+
+    #text[NORMAL]      = "#666666" # mid grey
+    #text[PRELIGHT]    = "#ffffff" # white
+    #text[ACTIVE]      = "#e5e5e5" # light grey
+    #text[SELECTED]    = "#ffffff" # white
+    #text[INSENSITIVE] = "#223344" # dark grey
+}
+widget "*.GtkTreeView" style "gtktreeview"
+
+style "gtktreeviewheader" {
+   engine "pixmap" {
+        image {
+            function        = BOX
+            state           = NORMAL
+            file            = "treeview/header.png"
+            border          = { 20, 20, 10, 10 }
+            stretch         = TRUE
+        }
+        }
+    xthickness = 22
+    ythickness = 10
+    GtkButton::focus-line-width = 0
+    fg[NORMAL] = "#ffffff"  
+    text[NORMAL] = "#ffffff"
+ 
+}
+widget "*.GtkTreeView.GtkButton" style "gtktreeviewheader"
+widget "*.JanaGtkEventList.GtkButton" style "gtktreeviewheader"
+
