@@ -22,7 +22,7 @@ style "gtkbutton" {
             stretch         = TRUE
         }
     }
-    xthickness = 22
+    xthickness = 10
     ythickness = 10
     GtkButton::focus-line-width = 0
     fg[NORMAL] = "#ffffff"  
