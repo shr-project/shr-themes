@@ -62,3 +62,9 @@ style "gtkcheckbutton" {
 }
 class "GtkCheckButton" style "gtkcheckbutton"
 
+style "gtkcheckbutton-label" {
+    fg[NORMAL]   = "#000000"
+    fg[ACTIVE]   = "#000000"
+}
+widget_class "*.GtkCheckButton.*" style "gtkcheckbutton-label"
+

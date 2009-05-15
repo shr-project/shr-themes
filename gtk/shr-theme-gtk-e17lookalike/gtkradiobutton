@@ -72,7 +72,7 @@ style "gtkradiobutton" {
 class "GtkRadioButton" style "gtkradiobutton"
 
 style "gtkradiobutton-label" {
-    fg[SELECTED]   = "#000000"
-    text[SELECTED] = "#000000"
+    fg[NORMAL]   = "#000000"
+    fg[ACTIVE]   = "#000000"
 }
 widget_class "*.GtkRadioButton.*" style "gtkradiobutton-label"

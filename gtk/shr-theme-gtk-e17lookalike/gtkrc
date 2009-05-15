@@ -14,32 +14,6 @@ gtk_button_images = 0
 gtk_menu_images = 0
 
 style "moko-window-default" {
-
-#    bg[NORMAL]        = "#e5e5e5" #
-#    bg[PRELIGHT]      = "#ff7800" #
-#    bg[ACTIVE]        = "#ff7800" #
-#    bg[SELECTED]      = "#ff7800" #
-#    bg[INSENSITIVE]   = "#e5e5e5" #
-
-#   base[NORMAL]      = "#e5e5e5" #
-#   base[PRELIGHT]    = "#ff7800" #
-#   base[ACTIVE]      = "#ff7800" #
-#   base[SELECTED]    = "#ff7800" #
-#   base[INSENSITIVE] = "#e5e5e5" #
-
-    fg[NORMAL]      = "#000000" # black
-    fg[PRELIGHT]    = "#000000" # black
-    fg[ACTIVE]      = "#000000" # black
-    fg[SELECTED]    = "#ffffff" # white
-    fg[INSENSITIVE] = "#999999" # grey
-
-    text[NORMAL]      = "#000000" # mid grey
-    text[PRELIGHT]    = "#999999" # white
-    text[ACTIVE]      = "#ffffff" # light grey
-    text[SELECTED]    = "#ffffff" # white
-    text[INSENSITIVE] = "#cccccc" # dark grey
-
-    GtkFrame::shadow_type = GTK_SHADOW_NONE
 #
 # How to draw shadows in general
 #
@@ -94,21 +68,42 @@ style "moko-window-default" {
         }
     }
 }
-
 class "GtkWidget" style "moko-window-default"
 
-style "multi-tap"
-{
-  bg[NORMAL] = "#000"
-  fg[NORMAL] = "#fff"
+style "default-coloring" {
+
+#    bg[NORMAL]        = "#e5e5e5" #
+#    bg[PRELIGHT]      = "#ff7800" #
+#    bg[ACTIVE]        = "#ff7800" #
+#    bg[SELECTED]      = "#ff7800" #
+#    bg[INSENSITIVE]   = "#e5e5e5" #
+
+#   base[NORMAL]      = "#e5e5e5" #
+#   base[PRELIGHT]    = "#ff7800" #
+#   base[ACTIVE]      = "#ff7800" #
+#   base[SELECTED]    = "#ff7800" #
+#   base[INSENSITIVE] = "#e5e5e5" #
+
+    fg[NORMAL]      = "#000000" # black
+    fg[PRELIGHT]    = "#000000" # black
+    fg[ACTIVE]      = "#000000" # black
+    fg[SELECTED]    = "#ffffff" # white
+    fg[INSENSITIVE] = "#999999" # grey
+
+    text[NORMAL]      = "#000000" # mid grey
+    text[PRELIGHT]    = "#999999" # white
+    text[ACTIVE]      = "#ffffff" # light grey
+    text[SELECTED]    = "#ffffff" # white
+    text[INSENSITIVE] = "#cccccc" # dark grey
+
+    GtkFrame::shadow_type = GTK_SHADOW_NONE
 }
-widget "multi-tap-window*" style "multi-tap"
+widget_class "GtkWidget" style "default-coloring"
 
 include "transparent"
 
 include "gtkassistant"
 include "gtkbutton"
-include "gtkcheckbutton"
 include "gtkcombobox"
 include "gtkentry"
 #include "gtkeventbox"
@@ -118,13 +113,13 @@ include "gtkmenuitem"
 include "gtknotebook"
 include "gtkpaned"
 include "gtkprogressbar"
-include "gtkradiobutton"
 include "gtkscale"
 #include "gtkscrolledwindow"
 include "gtkscrollbar"
-include "gtkspinbutton"
 include "gtktextview"
 include "gtktoolbar"
-include "gtktoolbutton"
 include "gtktreeview"
-
+include "gtkradiobutton"
+include "gtktoolbutton"
+include "gtkspinbutton"
+include "gtkcheckbutton"
