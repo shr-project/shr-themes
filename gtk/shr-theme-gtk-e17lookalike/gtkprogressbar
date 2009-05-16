@@ -1,6 +1,6 @@
 #FIXME add missing vertical progress bar styling
 
-style "gtkprogressbar" {
+style "progressbar" {
     ythickness = 12
     engine "pixmap" {
         image {
@@ -37,5 +37,3 @@ style "gtkprogressbar" {
 #        }
     }
 }
-class "GtkProgressBar" style "gtkprogressbar"
-widget_class "*.GtkProgressBar" style "gtkprogressbar"

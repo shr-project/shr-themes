@@ -1,4 +1,4 @@
-style "gtkmenu" {
+style "menu" {
 #   engine "pixmap" {
 #        image {
 #            function        = BOX
@@ -11,4 +11,3 @@ style "gtkmenu" {
     ythickness = 8
     GtkMenu::scroll-arrow-vlength = 64
 }
-class "GtkMenu" style "gtkmenu"

@@ -1,4 +1,4 @@
-style "gtkmenuitem" {
+style "menu_item" {
    engine "pixmap" {
         image {
             function        = BOX
@@ -20,5 +20,6 @@ style "gtkmenuitem" {
     fg[PRELIGHT] = "#000000"
     text[PRELIGHT] = "#000"
 }
-class "GtkMenuItem" style "gtkmenuitem"
-widget "GtkWindow.gtk-combobox-popup-menu.*" style "gtkmenuitem"
+
+style "separator_menu_item" {
+}

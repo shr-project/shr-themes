@@ -1,4 +1,4 @@
-style "gtktreeview" {
+style "treeview" {
     xthickness = 4
     ythickness = 4
     
@@ -16,9 +16,8 @@ style "gtktreeview" {
     #text[SELECTED]    = "#ffffff" # white
     #text[INSENSITIVE] = "#223344" # dark grey
 }
-widget "*.GtkTreeView" style "gtktreeview"
 
-style "gtktreeviewheader" {
+style "treeview_header" {
    engine "pixmap" {
         image {
             function        = BOX
@@ -33,8 +32,5 @@ style "gtktreeviewheader" {
     GtkButton::focus-line-width = 0
     fg[NORMAL] = "#ffffff"  
     text[NORMAL] = "#ffffff"
- 
 }
-widget "*.GtkTreeView.GtkButton" style "gtktreeviewheader"
-widget "*.JanaGtkEventList.GtkButton" style "gtktreeviewheader"
 

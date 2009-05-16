@@ -7,6 +7,14 @@ style "toolbutton"
     image
     {
       function    = BOX
+      state       = NORMAL
+      file        = "toolbar/toolbar.png"
+      border      = {0, 0, 0, 0}
+      stretch     = TRUE
+    }
+    image
+    {
+      function    = BOX
       state       = ACTIVE
       file        = "toolbar/toolbutton-active.png"
       border      = {0, 0, 0, 0}
@@ -22,5 +30,3 @@ style "toolbutton"
     }
   }
 }
-widget_class "*.<GtkToolItem>.*.GtkToggleButton" style "toolbutton"
-widget_class "*.<GtkToolItem>.*.GtkButton" style "toolbutton"

@@ -1,4 +1,4 @@
-style "gtkcheckbutton" {
+style "checkbutton" {
     engine "pixmap" {
         image {
             function        = CHECK
@@ -60,11 +60,9 @@ style "gtkcheckbutton" {
     GtkCheckButton::indicator-size = 35
     GtkCheckButton::indicator-spacing = 5
 }
-class "GtkCheckButton" style "gtkcheckbutton"
-
-style "gtkcheckbutton-label" {
+style "checkbutton-text" {
     fg[NORMAL]   = "#000000"
+    fg[PRELIGHT] = "#000000"
     fg[ACTIVE]   = "#000000"
 }
-widget_class "*.GtkCheckButton.*" style "gtkcheckbutton-label"
 

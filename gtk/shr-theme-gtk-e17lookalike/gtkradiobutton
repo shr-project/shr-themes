@@ -1,4 +1,4 @@
-style "gtkradiobutton" {
+style "radiobutton" {
     engine "pixmap" {
         image {
             function        = OPTION
@@ -69,11 +69,9 @@ style "gtkradiobutton" {
     GtkCheckButton::indicator-size = 35
     GtkCheckButton::indicator-spacing = 5
 }
-class "GtkRadioButton" style "gtkradiobutton"
 
-style "gtkradiobutton-label" {
+style "radiobutton-text" {
     fg[NORMAL]   = "#000000"
     fg[PRELIGHT] = "#000000"
     fg[ACTIVE]   = "#000000"
 }
-widget_class "*.GtkRadioButton.*" style "gtkradiobutton-label"

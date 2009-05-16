@@ -1,4 +1,4 @@
-style "gtkscrollbar" {
+style "scrollbar" {
 
     GtkScrollbar::slider_width = 35
     GtkScrollbar::stepper_size = 26
@@ -38,6 +38,7 @@ style "gtkscrollbar" {
     }
 }
 
-class "GtkScrollbar" style "gtkscrollbar"
-widget_class "*.GtkScrollbar" style "gtkscrollbar"
-
+style "hscrollbar" = "scrollbar" {
+}
+style "vscrollbar" = "scrollbar" {
+}

@@ -32,9 +32,8 @@ style "notebook"
   xthickness = 0
   ythickness = 0
 }
-class "GtkNotebook" style "notebook"
 
-style "notebook-label" {
+style "notebook-header" {
     fg[PRELIGHT]    = "#ffffff"
     fg[ACTIVE]      = "#ffffff"
     fg[INSENSITIVE] = "#ffffff"
@@ -42,4 +41,5 @@ style "notebook-label" {
     text[ACTIVE]      = "#ffffff"
     text[INSENSITIVE] = "#ffffff"
 }
-widget_class "*.GtkNotebook.*" style "notebook-label"
+style "notebook_bg" {
+}

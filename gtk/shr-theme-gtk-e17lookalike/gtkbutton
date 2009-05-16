@@ -1,4 +1,4 @@
-style "gtkbutton" {
+style "button" {
    engine "pixmap" {
         image {
             function        = BOX
@@ -28,11 +28,10 @@ style "gtkbutton" {
     fg[NORMAL] = "#ffffff"  
     text[NORMAL] = "#ffffff"
 }
-class "GtkButton" style "gtkbutton"
 
-style "gtkbutton-label" {
+style "button-text" {
     fg[NORMAL]   = "#ffffff"
     fg[PRELIGHT] = "#ffffff"
     fg[ACTIVE]   = "#ffffff"
 }
-widget_class "*.<GtkButton>.*" style "gtkbutton-label"
+

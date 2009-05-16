@@ -1,4 +1,4 @@
-style "gtkentry" 
+style "entry" 
 {
   xthickness = 8
   ythickness = 8
@@ -17,5 +17,3 @@ style "gtkentry"
   fg[NORMAL] = "#000000"
   text[INSENSITIVE] = "#999999" # dark grey
 }
-class "GtkEntry" style "gtkentry"
-widget_class "*.GtkEntry*" style "gtkentry"

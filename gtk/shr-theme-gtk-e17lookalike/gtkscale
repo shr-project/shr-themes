@@ -1,6 +1,6 @@
 #FIXME add missing vertical slider styling
 
-style "gtkscale" {
+style "scale" {
     engine "pixmap" {
         image {
             function                  = BOX
@@ -21,5 +21,10 @@ style "gtkscale" {
     GtkRange::slider-width = 28
     GtkScale::slider-length = 56
 }
-class "GtkHScale" style "gtkscale"
-widget_class "*.GtkHScale" style "gtkscale"
+
+style "vscale" = "scale" {
+
+}
+style "hscale" = "scale" {
+
+}
