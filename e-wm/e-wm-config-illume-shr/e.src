@@ -268,7 +268,7 @@ group "E_Config" struct {
       value "context" int: 9;
       value "modifiers" int: 0;
       value "key" string: "Keycode-177";
-      value "action" string: "[0.0 simple_lock] [1.0 exec 'shr-settings AUX shr_profile.Profile shr_display.Display shr_pm.Pm']";
+      value "action" string: "simple_lock";
       value "params" string: "";
       value "any_mod" uchar: 1;
     }
