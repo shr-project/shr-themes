@@ -269,7 +269,7 @@ group "E_Config" struct {
       value "modifiers" int: 0;
       value "key" string: "Keycode-177";
       value "action" string: "delayed_action";
-      value "params" string: "[0.0 simple_lock] [1.0 exec '/usr/bin/shr-settings AUX shr_profile.Profile shr_display.Display shr_pm.Pm']";
+      value "params" string: "[0.0 simple_lock] [1.0 exec /usr/bin/shr-settings "AUX menu" shr_profile.Profile shr_display.Display shr_pm.Pm]";
       value "any_mod" uchar: 1;
     }
   }
