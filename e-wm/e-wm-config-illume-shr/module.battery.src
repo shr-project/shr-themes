@@ -3,4 +3,5 @@ group "Battery_Config" struct {
   value "alert" int: 10;
   value "alert_p" int: 10;
   value "alert_timeout" int: 0;
+  value "force_mode" int: 1;
 }
