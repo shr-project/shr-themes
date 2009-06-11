@@ -34,8 +34,7 @@
     actions:
              - RingTone()
              - Command('xset -display localhost:0 s reset')
-             - OccupyResource(CPU)
-
+#             - OccupyResource(Display)
 -
     while: CallStatus()
     filters: Or(HasAttr(status, "outgoing"), HasAttr(status, "active"))
