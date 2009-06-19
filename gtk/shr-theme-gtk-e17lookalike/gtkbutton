@@ -1,0 +1,37 @@
+style "button" {
+   engine "pixmap" {
+        image {
+            function        = BOX
+            state           = NORMAL
+            file            = "button/button-normal.png"
+            border          = { 20, 20, 10, 10 }
+            stretch         = TRUE
+        }
+        image {
+            function        = BOX
+            state           = PRELIGHT
+            file            = "button/button-normal.png"
+            border          = { 20, 20, 10, 10 }
+            stretch         = TRUE
+        }
+        image {
+            function        = BOX
+            state           = ACTIVE
+            file            = "button/button-active.png"
+            border          = { 20, 20, 10, 10 }
+            stretch         = TRUE
+        }
+    }
+    xthickness = 4
+    ythickness = 4
+    GtkButton::focus-line-width = 0
+    fg[NORMAL] = "#ffffff"  
+    text[NORMAL] = "#ffffff"
+}
+
+style "button-text" {
+    fg[NORMAL]   = "#ffffff"
+    fg[PRELIGHT] = "#ffffff"
+    fg[ACTIVE]   = "#ffffff"
+}
+

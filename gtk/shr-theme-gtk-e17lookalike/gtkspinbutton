@@ -1,0 +1,5 @@
+style "spinbutton" 
+{
+  ythickness = 10
+  GtkSpinButton::shadow_type = GTK_SHADOW_NONE
+}
