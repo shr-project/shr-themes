@@ -1,0 +1,68 @@
+style "checkbutton" {
+    engine "pixmap" {
+        image {
+            function        = CHECK
+            state           = NORMAL
+            shadow          = OUT
+            overlay_file    = "checkbutton/checkbutton-unchecked.png"
+            overlay_stretch = TRUE
+        }
+        image {
+            function        = CHECK
+            state           = PRELIGHT
+            shadow          = OUT
+            overlay_file    = "checkbutton/checkbutton-unchecked.png"
+            overlay_stretch = TRUE
+        }
+        image {
+            function        = CHECK
+            state           = ACTIVE
+            shadow          = OUT
+            overlay_file    = "checkbutton/checkbutton-unchecked.png"
+            overlay_stretch = TRUE
+        }
+        image {
+            function        = CHECK
+            state           = INSENSITIVE
+            shadow          = OUT
+            overlay_file    = "checkbutton/checkbutton-unchecked.png"
+            overlay_stretch = TRUE
+        }
+        image {
+            function        = CHECK
+            state           = NORMAL
+            shadow          = IN
+            overlay_file    = "checkbutton/checkbutton-checked.png"
+            overlay_stretch = TRUE
+        }
+        image {
+            function        = CHECK
+            state           = PRELIGHT
+            shadow          = IN
+            overlay_file    = "checkbutton/checkbutton-checked.png"
+            overlay_stretch = TRUE
+        }
+        image {
+            function        = CHECK
+            state           = ACTIVE
+            shadow          = IN
+            overlay_file    = "checkbutton/checkbutton-checked.png"
+            overlay_stretch = TRUE
+        }
+        image {
+            function        = CHECK
+            state           = INSENSITIVE
+            shadow          = IN
+            overlay_file    = "checkbutton/checkbutton-checked.png"
+            overlay_stretch = TRUE
+        }
+    }
+    GtkCheckButton::indicator-size = 35
+    GtkCheckButton::indicator-spacing = 5
+}
+style "checkbutton-text" {
+    fg[NORMAL]   = "#000000"
+    fg[PRELIGHT] = "#000000"
+    fg[ACTIVE]   = "#000000"
+}
+

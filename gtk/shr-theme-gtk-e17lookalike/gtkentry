@@ -1,0 +1,19 @@
+style "entry" 
+{
+  xthickness = 8
+  ythickness = 8
+#  engine "pixmap" 
+#  {
+#    image 
+#    {
+#      function        = SHADOW
+#      shadow          = IN
+#      file            = "entry/entry-normal.png"
+#      border          = {7, 7, 7, 7}
+#    }
+#  }
+  text[NORMAL] = "#000000"
+  base[NORMAL] = "#ffffff"
+  fg[NORMAL] = "#000000"
+  text[INSENSITIVE] = "#999999" # dark grey
+}
