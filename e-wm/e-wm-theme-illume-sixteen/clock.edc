@@ -1,0 +1,63 @@
+   /*** MOD: CLOCK ***/
+   group {
+      name: "e/modules/clock/main";
+      script {
+         public clock_cb(val) {   
+            new buf[11];
+            new year, month, day, yearday, weekday, hour, minute;
+            new Float:second;
+            new Float:s;
+       
+            date(year, month, day, yearday, weekday, hour, minute, second);
+//          timer(60.0 - second, "clock_cb", 1);
+// update every 5 seconds just for changing actual time in config. no other
+// way to know unless you poll (and every 5 seconds is better than 60 for
+// responsiveness to config changes
+            s = 60.0 - second;
+            while (s < 0.0) s = s + 5.0;
+            timer(60.0 - second, "clock_cb", 1);
+            if ((hour < 10) && (minute < 10))
+              {snprintf(buf, 10, "0%i:0%i", hour, minute);}
+            else if ((hour < 10) && (minute >= 10))
+              {snprintf(buf, 10, "0%i:%i", hour, minute);}
+            else if ((hour >= 10) && (minute < 10))
+              {snprintf(buf, 10, "%i:0%i", hour, minute);}
+            else if ((hour >= 10) && (minute >= 10))
+              {snprintf(buf, 10, "%i:%i", hour, minute);}
+            set_text(PART:"e.text.label", buf);
+         }
+      }
+      parts {
+         part { name: "e.text.label";
+            type: TEXT;
+            mouse_events: 0;
+            description { state: "default" 0.0;
+               fixed: 1 1;
+               align: 0.5 1.0;
+               color: 46 46 46 255;
+               text {
+                  text: "00:00";
+                  font: "Liberation-Bold";
+                  size: 24;
+                  align: 0.5 1.0;
+                  min: 1 1;
+               }
+            }
+         }
+         part { name: "events";
+            type: RECT;
+            description { state: "default" 0.0;
+               color: 0 0 0 0;
+            }
+         }
+      }
+      programs {
+         program { name: "init";
+            signal: "load";
+            source: "";
+            script {
+               clock_cb(0);
+            }
+         }
+      }
+   }
