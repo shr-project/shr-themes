@@ -910,7 +910,7 @@ collections {
 	    signal: "mouse,up,1";
 	    source: "over3";
 	    action: STATE_SET "default" 0.0;
-//            transition: DECELERATE 0.5;
+            transition: DECELERATE 0.5;
 	    target: "over3";
 	 }
 	 program {
