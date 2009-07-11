@@ -1,5 +1,5 @@
 message-length: 7
-message-tone: Arkanoid_PSID.sid;tune=3
+message-tone: notify_message.wav
 message-volume: 10
 message-vibration: 1
 ring-loop: 1
