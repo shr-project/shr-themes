@@ -1,4 +1,4 @@
 message-volume: 0
-message-vibration: 1
+message-vibration: true
 ring-volume: 0
-ring-vibration: 1
+ring-vibration: true

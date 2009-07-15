@@ -35,7 +35,7 @@
              - RingTone()
              - Command('xset -display localhost:0 s reset')
              - SetLed("gta02_aux_red", "blink")
-#             - OccupyResource(Display)
+             - OccupyResource(Display)
 -
     while: CallStatus()
     filters: Or(HasAttr(status, "outgoing"), HasAttr(status, "active"))

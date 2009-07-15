@@ -3396,7 +3396,7 @@ collections {
             signal: "elm,action,slot,left,show";
 	    source: "elm";
 	    action: STATE_SET "visible" 0.0;
-	    transition: DECELERATE 0.5;
+//	    transition: DECELERATE 0.5;
 	    target: "left";
 	    target: "elm.swallow.slot.left";
 	 }
@@ -3404,7 +3404,7 @@ collections {
             signal: "elm,action,slot,left,hide";
 	    source: "elm";
 	    action: STATE_SET "default" 0.0;
-	    transition: DECELERATE 0.5;
+//	    transition: DECELERATE 0.5;
 	    target: "left";
 	    target: "elm.swallow.slot.left";
 	 }
@@ -3412,7 +3412,7 @@ collections {
             signal: "elm,action,slot,right,show";
 	    source: "elm";
 	    action: STATE_SET "visible" 0.0;
-	    transition: DECELERATE 0.5;
+//	    transition: DECELERATE 0.5;
 	    target: "right";
 	    target: "elm.swallow.slot.right";
 	 }
@@ -3420,7 +3420,7 @@ collections {
             signal: "elm,action,slot,right,hide";
 	    source: "elm";
 	    action: STATE_SET "default" 0.0;
-	    transition: DECELERATE 0.5;
+//	    transition: DECELERATE 0.5;
 	    target: "right";
 	    target: "elm.swallow.slot.right";
 	 }
@@ -3428,7 +3428,7 @@ collections {
             signal: "elm,action,slot,top,show";
 	    source: "elm";
 	    action: STATE_SET "visible" 0.0;
-	    transition: DECELERATE 0.5;
+//	    transition: DECELERATE 0.5;
 	    target: "top";
 	    target: "elm.swallow.slot.top";
 	 }
@@ -3436,7 +3436,7 @@ collections {
             signal: "elm,action,slot,top,hide";
 	    source: "elm";
 	    action: STATE_SET "default" 0.0;
-	    transition: DECELERATE 0.5;
+//	    transition: DECELERATE 0.5;
 	    target: "top";
 	    target: "elm.swallow.slot.top";
 	 }
@@ -3444,7 +3444,7 @@ collections {
             signal: "elm,action,slot,bottom,show";
 	    source: "elm";
 	    action: STATE_SET "visible" 0.0;
-	    transition: DECELERATE 0.5;
+//	    transition: DECELERATE 0.5;
 	    target: "bottom";
 	    target: "elm.swallow.slot.bottom";
 	 }
@@ -3452,7 +3452,7 @@ collections {
             signal: "elm,action,slot,bottom,hide";
 	    source: "elm";
 	    action: STATE_SET "default" 0.0;
-	    transition: DECELERATE 0.5;
+//	    transition: DECELERATE 0.5;
 	    target: "bottom";
 	    target: "elm.swallow.slot.bottom";
 	 }
@@ -3702,7 +3702,7 @@ collections {
 	 }
 	 program { name: "topshow2";
 	    action: STATE_SET "visible" 0.0;
-	    transition: DECELERATE 0.5;
+//	    transition: DECELERATE 0.5;
 	    target: "elm.swallow.slot.top";
 	 }
 	 program { name: "topshow3";
@@ -3715,7 +3715,7 @@ collections {
             signal: "elm,action,slot,top,hide";
 	    source: "elm";
 	    action: STATE_SET "default" 0.0;
-	    transition: DECELERATE 0.5;
+//	    transition: DECELERATE 0.5;
 	    target: "elm.swallow.slot.top";
             after: "tophide2";
 	 }
@@ -3732,7 +3732,7 @@ collections {
 	 }
 	 program { name: "bottomshow2";
 	    action: STATE_SET "visible" 0.0;
-	    transition: DECELERATE 0.5;
+//	    transition: DECELERATE 0.5;
 	    target: "elm.swallow.slot.bottom";
 	 }
 	 program { name: "bottomshow3";
@@ -3745,7 +3745,7 @@ collections {
             signal: "elm,action,slot,bottom,hide";
 	    source: "elm";
 	    action: STATE_SET "default" 0.0;
-	    transition: DECELERATE 0.5;
+//	    transition: DECELERATE 0.5;
 	    target: "elm.swallow.slot.bottom";
             after: "bottomhide2";
 	 }
@@ -10037,7 +10037,7 @@ collections {
 	 }
          program { name: "show_start2";
 	    action:  STATE_SET "visible" 0.0;
-            transition: DECELERATE 0.5;
+//            transition: DECELERATE 0.5;
 	    target: "base";
 	    target: "clip";
             after: "show_end";
@@ -10055,7 +10055,7 @@ collections {
 	 }
          program { name: "hide_start2";
 	    action:  STATE_SET "hidden" 0.0;
-            transition: DECELERATE 0.5;
+//            transition: DECELERATE 0.5;
 	    target: "base";
 	    target: "clip";
             after: "hide_end";
