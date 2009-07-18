@@ -43,14 +43,14 @@
 -
     while: CallStatus()
     filters:
-            - Or(HasAttr(status, "outgoing"), HasAttr(status, "active"))
+            - Or(Or(HasAttr(status, "outgoing"), HasAttr(status, "active")), And(HasAttr(status, "incoming"), CallListContains("active")))
             - Not(BTHeadsetIsConnected())
     actions:
             - SetScenario(gsmhandset)
 -
     while: CallStatus()
     filters:
-            - Or(HasAttr(status, "outgoing"), HasAttr(status, "active"))
+            - Or(Or(HasAttr(status, "outgoing"), HasAttr(status, "active")), And(HasAttr(status, "incoming"), CallListContains("active")))
             - BTHeadsetIsConnected()
     actions:
             - SetScenario(gsmbluetooth)
