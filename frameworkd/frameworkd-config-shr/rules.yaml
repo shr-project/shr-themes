@@ -36,11 +36,11 @@
              - Command('xset -display localhost:0 s reset')
              - SetLed("gta02_aux_red", "blink")
              - OccupyResource(Display)
--
-    while: CallStatus()
-    filters: Or(HasAttr(status, "outgoing"), HasAttr(status, "active"))
-    actions:
-            - OccupyResource(CPU)
+#-
+#    while: CallStatus()
+#    filters: Or(HasAttr(status, "outgoing"), HasAttr(status, "active"))
+#    actions:
+#            - OccupyResource(CPU)
 -
     while: CallStatus()
     filters:
@@ -61,11 +61,11 @@
     filters: HasAttr(status, "charging")
     actions: SetLed("gta02_power_orange", "light")
 
--
-    while: PowerStatus()
-    filters: Not(HasAttr(status, "discharging"))
-    actions: OccupyResource(CPU)
-
+#-
+#    while: PowerStatus()
+#    filters: Not(HasAttr(status, "discharging"))
+#    actions: OccupyResource(CPU)
+#
 -
     while: PowerStatus()
     filters: HasAttr(status, "critical")
