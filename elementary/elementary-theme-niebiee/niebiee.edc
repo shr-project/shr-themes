@@ -7699,7 +7699,7 @@ type: RECT;
             clip_to: "clip";
 			type: RECT;
 	    description { state: "default" 0.0;
-	       color: 0 105 159 255;
+	       color: 0 97 159 255;
 	       rel1.to: "over";
 	       rel2.to: "over";
               
@@ -7777,7 +7777,7 @@ type: RECT;
 	 }
          program { name: "show_start2";
 	    action:  STATE_SET "visible" 0.0;
-            transition: DECELERATE 0.5;
+            //transition: DECELERATE 0.1;
 	    target: "base";
 	    target: "clip";
             after: "show_end";
@@ -7795,7 +7795,7 @@ type: RECT;
 	 }
          program { name: "hide_start2";
 	    action:  STATE_SET "hidden" 0.0;
-            transition: DECELERATE 0.5;
+            //transition: ACCELERATE 0.1;
 	    target: "base";
 	    target: "clip";
             after: "hide_end";
