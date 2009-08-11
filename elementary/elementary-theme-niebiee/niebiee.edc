@@ -7377,16 +7377,15 @@ type: RECT;
 ///////////////////////////////////////////////////////////////////////////////
    group { name: "elm/check/base/default";
       images {
-         image: "bt_base2.png" COMP;
-
-
+         image: "check_on.png" COMP;
+         image: "check_off.png" COMP;
       }
       parts {      
          part { name: "bg";
 	    mouse_events: 0;
 	    scale: 1;
 	    description { state: "default" 0.0;
-		color: 0 255 0 255;
+	    //color: 0 255 0 255;
 	       rel1.offset: 1 1;
 	       rel2.relative: 0.0 1.0;
 	       rel2.offset: 1 -2;
@@ -7396,8 +7395,8 @@ type: RECT;
 	       aspect: 1.0 1.0;
 	       aspect_preference: VERTICAL;
                image {
-                  normal: "bt_base2.png";
-                  border: 7 7 7 7;
+                  normal: "check_off.png";
+                  border: 2 2 2 2;
                }
                fill.smooth : 0;
 	    }
@@ -7405,9 +7404,14 @@ type: RECT;
          part { name: "check";
 	    mouse_events: 0;
 	    scale: 1;
-		type: RECT;
+		type: IMAGE;
 	    description { state: "default" 0.0;
-		color: 0 255 0 255;
+		//color: 0 255 0 255;
+               image {
+                 normal: "check_on.png";
+                  border: 0 0 0 0;
+               }
+               fill.smooth : 0;
                rel1 {
                   to: "bg";
                   offset: 1 1;
