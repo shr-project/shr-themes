@@ -7699,7 +7699,7 @@ type: RECT;
             clip_to: "clip";
 			type: RECT;
 	    description { state: "default" 0.0;
-	       color: 0 0 0 255;
+	       color: 0 105 159 255;
 	       rel1.to: "over";
 	       rel2.to: "over";
               
@@ -7709,7 +7709,7 @@ type: RECT;
 	    mouse_events:  0;
             clip_to: "clip";
 	    description { state: "default" 0.0;
-		color: 0 255 0 255;
+		color: 0 97 159 255;
 	       image {
 		  normal: "frame_2.png";
 		  border: 5 5 32 26;
@@ -7719,8 +7719,8 @@ type: RECT;
 	    }
 	    description { state: "hidden" 0.0;
                inherit: "default" 0.0;
-               rel1.relative: -1.0 0.0;
-               rel2.relative: 0.0 1.0;
+               rel1.relative: 0.0 0.0;
+               rel2.relative: 1.0 1.0;
 	    }
 	    description { state: "visible" 0.0;
                inherit: "default" 0.0;
@@ -7733,7 +7733,7 @@ type: RECT;
 	    mouse_events:  0;
             clip_to: "clip";
 	    description { state:    "default" 0.0;
-		color: 0 255 0 255;
+		//color: 0 255 0 255;
 	       rel1 {
                   to: "base";
                   offset: 4 4;
