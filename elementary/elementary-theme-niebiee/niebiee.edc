@@ -7711,7 +7711,7 @@ type: RECT;
 	    description { state: "default" 0.0;
 		color: 0 97 159 255;
 	       image {
-		  normal: "frame_2.png";
+		  normal: "frame_1.png";
 		  border: 5 5 32 26;
 		  middle: 0;
 	       }
@@ -7743,7 +7743,7 @@ type: RECT;
                   offset: -5 -5;
                }
 	       image {
-		  normal: "frame_1.png";
+		  normal: "frame_2.png";
 		  border: 2 2 28 22;
 		  middle: 0;
 	       }
