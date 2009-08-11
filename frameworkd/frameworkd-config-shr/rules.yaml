@@ -26,16 +26,14 @@
     # Call -> Audio Scenario Handling
     #
     trigger: IncomingMessage()
-    actions:
-             - ExternalDBusAction('session', 'org.freesmartphone.odeviced', '/org/freesmartphone/Device/IdleNotifier/0', 'org.freesmartphone.Device.IdleNotifier', 'SetState', 'busy')
-             - MessageTone(play)
+    actions: MessageTone(play)
 
 -
     while: CallListContains("incoming")
     filters: Not(CallListContains("active"))
     actions:
              - RingTone()
-             - ExternalDBusAction('session', 'org.freesmartphone.odeviced', '/org/freesmartphone/Device/IdleNotifier/0', 'org.freesmartphone.Device.IdleNotifier', 'SetState', 'busy')
+             - Command('xset -display localhost:0 s reset')
              - SetLed("gta02_aux_red", "blink")
              - OccupyResource(Display)
 -
