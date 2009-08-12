@@ -1,9 +1,6 @@
-slider
 bubbles
-list-compress
-genlist
+list-compress (t)
+genlist (t)
 frames
-checkbox
-radio
 clock
 icons
