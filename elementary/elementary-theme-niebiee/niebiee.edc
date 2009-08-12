@@ -2283,7 +2283,7 @@ part { name: "shadow";
 	    description { state: "default" 0.0;
 	       rel1.relative: 0.2500000 0.0;
 	       rel2.relative: 0.3125000 1.0;
-	       color: 0 0 0 255;
+	       color: 255 255 255 255;
 	       text {
 		  font:     "Sans,Edje-Vera";
 		  text:     ":";
@@ -2316,7 +2316,7 @@ part { name: "shadow";
 	    description { state: "default" 0.0;
 	       rel1.relative: 0.5625000 0.0;
 	       rel2.relative: 0.6250000 1.0;
-	       color: 0 0 0 255;
+	       color: 255 255 255 255;
 	       text {
 		  font:     "Sans,Edje-Vera";
 		  text:     ":";
@@ -2378,7 +2378,7 @@ part { name: "shadow";
 	    description { state: "default" 0.0;
 	       rel1.relative: 0.285714286 0.0;
 	       rel2.relative: 0.357142857 1.0;
-	       color: 0 0 0 255;
+	       color: 255 255 255 255;
 	       text {
 		  font:     "Sans,Edje-Vera";
 		  text:     ":";
@@ -2411,7 +2411,7 @@ part { name: "shadow";
 	    description { state: "default" 0.0;
 	       rel1.relative: 0.642857143 0.0;
 	       rel2.relative: 0.714285714 1.0;
-	       color: 0 0 0 255;
+	       color: 255 255 255 255;
 	       text {
 		  font:     "Sans,Edje-Vera";
 		  text:     ":";
@@ -2465,7 +2465,7 @@ part { name: "shadow";
 	    description { state: "default" 0.0;
 	       rel1.relative: 0.363636364 0.0;
 	       rel2.relative: 0.454545455 1.0;
-	       color: 0 0 0 255;
+	       color: 255 255 255 255;
 	       text {
 		  font:     "Sans,Edje-Vera";
 		  text:     ":";
@@ -2525,7 +2525,7 @@ part { name: "shadow";
 	    description { state: "default" 0.0;
 	       rel1.relative: 0.444444444 0.0;
 	       rel2.relative: 0.555555556 1.0;
-	       color: 0 0 0 255;
+	       color: 255 255 255 255;
 	       text {
 		  font:     "Sans,Edje-Vera";
 		  text:     ":";
@@ -3975,7 +3975,7 @@ type: RECT;
             relative: 0.0 0.0;
             offset: -5 4;
           }
-          color: 0 0 0 255;
+          color: 255 255 255 255;
           text {
             font: "Sans:style=Bold,Edje-Vera-Bold";
             size: 10;
@@ -4000,7 +4000,7 @@ type: RECT;
             relative: 1.0 0.0;
             offset: -5 4;
           }
-          color: 0 0 0 255;
+          color: 255 255 255 255;
           text {
             font: "Sans:style=Bold,Edje-Vera-Bold";
             size: 10;
@@ -4082,7 +4082,7 @@ type: RECT;
             relative: 0.0 0.0;
             offset: -5 4;
           }
-          color: 0 0 0 255;
+          color: 255 255 255 255;
           text {
             font: "Sans:style=Bold,Edje-Vera-Bold";
             size: 10;
@@ -4108,7 +4108,7 @@ type: RECT;
             relative: 0.0 0.0;
             offset: -5 4;
           }
-          color: 0 0 0 255;
+          color: 255 255 255 255;
           text {
             font: "Sans:style=Bold,Edje-Vera-Bold";
             size: 10;
@@ -4191,7 +4191,7 @@ type: RECT;
             relative: 0.0 1.0;
             offset: -5 -5;
           }
-          color: 0 0 0 255;
+          color: 255 255 255 255;
           text {
             font: "Sans:style=Bold,Edje-Vera-Bold";
             size: 10;
@@ -4216,7 +4216,7 @@ type: RECT;
             relative: 1.0 1.0;
             offset: -5 -5;
           }
-          color: 0 0 0 255;
+          color: 255 255 255 255;
           text {
             font: "Sans:style=Bold,Edje-Vera-Bold";
             size: 10;
@@ -4298,7 +4298,7 @@ type: RECT;
             relative: 0.0 1.0;
             offset: -5 -5;
           }
-          color: 0 0 0 255;
+          color: 255 255 255 255;
           text {
             font: "Sans:style=Bold,Edje-Vera-Bold";
             size: 10;
@@ -4324,7 +4324,7 @@ type: RECT;
             relative: 0.0 1.0;
             offset: -5 -5;
           }
-          color: 0 0 0 255;
+          color: 255 255 255 255;
           text {
             font: "Sans:style=Bold,Edje-Vera-Bold";
             size: 10;
@@ -4665,7 +4665,7 @@ type: RECT;
                }
             }
             description { state: "selected" 0.0;
-				color: 0 0 0 255;
+				color: 255 255 255 255;
                inherit: "default" 0.0;
                visible: 1;
             }
@@ -4894,7 +4894,6 @@ type: RECT;
       data.item: "selectraise" "on";
       images {
          image: "bt_base2.png" COMP;
-         image: "list_base.png" COMP;
       }
       parts {
          
@@ -4916,12 +4915,10 @@ type: RECT;
             mouse_events: 0;
 //			type: RECT;
             description { state: "default" 0.0;
-			color: 0 0 0 255;
                visible: 0;
-               color: 255 255 255 0;
-		color: 0 105 159 255;
+		color: 255 255 255 0;
                image {
-                  normal: "list_base.png";
+                  normal: "bt_base2.png";
                   border: 7 7 7 7;
                }
               fill.smooth: 0;
@@ -4940,11 +4937,6 @@ type: RECT;
                inherit: "default" 0.0;
                visible: 1;
                color: 255 255 255 255;
-               image {
-                  normal: "bt_base2.png";
-                  border: 7 7 7 7;
-               }
-               fill.smooth: 0;
 
                rel1 {
                   relative: 0.0 0.0;
@@ -5042,6 +5034,7 @@ type: RECT;
             target:  "bg";
 
             target:  "elm.text";
+            transition: DECELERATE 0.2;
          }
          program {
             name:    "go_passive";
@@ -5051,7 +5044,7 @@ type: RECT;
             target:  "bg";
 
             target:  "elm.text";
-            //transition: LINEAR 0.1;
+//            transition: LINEAR 0.1;
          }
       }
    }
@@ -5061,7 +5054,6 @@ type: RECT;
       data.item: "selectraise" "on";
       images {
          image: "bt_base2.png" COMP;
-         image: "list_base.png" COMP;
       }
       parts {
          
@@ -5083,15 +5075,13 @@ type: RECT;
             mouse_events: 0;
 			//type: RECT;
             description { state: "default" 0.0;
-			color: 0 0 0 255;
                visible: 0;
                image {
-                  normal: "list_base.png";
+                  normal: "bt_base2.png";
                   border: 7 7 7 7;
                }
                fill.smooth: 0;
-               //color: 255 255 255 0;
-               color: 0 90 159 255;
+               color: 255 255 255 0;
                rel1 {
                   relative: 0.0 0.0;
                   offset: -5 -5;
@@ -5105,11 +5095,6 @@ type: RECT;
             description { state: "selected" 0.0;
                inherit: "default" 0.0;
                visible: 1;
-               image {
-                  normal: "bt_base2.png";
-                  border: 7 7 7 7;
-               }
-               fill.smooth: 0;
                color: 255 255 255 255;
                rel1 {
                   relative: 0.0 0.0;
@@ -5207,6 +5192,7 @@ type: RECT;
             target:  "bg";
 
             target:  "elm.text";
+            transition: DECELERATE 0.2;
          }
          program {
             name:    "go_passive";
@@ -5216,7 +5202,7 @@ type: RECT;
             target:  "bg";
 
             target:  "elm.text";
-            //transition: LINEAR 0.1;
+//            transition: LINEAR 0.1;
          }
       }
    }
@@ -5353,6 +5339,7 @@ type: RECT;
             target:  "bg";
 
             target:  "elm.text";
+            transition: DECELERATE 0.2;
          }
          program {
             name:    "go_passive";
@@ -5362,7 +5349,7 @@ type: RECT;
             target:  "bg";
 
             target:  "elm.text";
-            transition: LINEAR 0.1;
+//            transition: LINEAR 0.1;
          }
       }
    }
@@ -5371,7 +5358,7 @@ type: RECT;
 ///////////////////////////////////////////////////////////////////////////////
    group { name: "elm/slider/horizontal/default";
       images {
-
+         image: "frame_3.png" COMP;
 
 	 image: "sl_bt_0.png" COMP;
 
@@ -5379,13 +5366,14 @@ type: RECT;
 	 image: "sl_bt2_0_1.png" COMP;
 	 image: "sl_bt2_0_2.png" COMP;
 
-         image: "bt_base2.png" COMP;
+         image: "bt_base1.png" COMP;
       }
       parts {
          part { name: "base";
             mouse_events: 0;
+            type: RECT;
             description { state: "default" 0.0;
-		color: 0 255 0 255;
+		color: 255 255 255 150;
                max: 99999 6;
                min: 0 6;
                rel1 { to: "bg";
@@ -5394,11 +5382,11 @@ type: RECT;
                rel2 { to: "bg";
                   offset: -2 -1;
                }
-               image {
-                  normal: "bt_base2.png";
-                  border: 7 7 7 7;
-               }
-               fill.smooth: 0;
+//               image {
+//                  normal: "bt_base1.png";
+//                  border: 7 7 7 7;
+//               }
+//               fill.smooth: 0;
             }
          }
          part { name: "level";
@@ -5412,7 +5400,7 @@ type: RECT;
                   to_x: "elm.dragable.slider";
                   relative: 0.5 1.0;
                }
-               color: 0 255  0 255;
+               color: 255 255 255 255;
             }
             description { state: "inverted" 0.0;
                inherit: "default" 0.0;
@@ -5431,7 +5419,7 @@ type: RECT;
                   relative: 0.5 0.0;
                }
                rel2.to: "base";
-               color: 0 255 0 255;
+//               color: 0 255 0 255;
             }
             description { state: "inverted" 0.0;
                inherit: "default" 0.0;
@@ -5525,15 +5513,15 @@ type: RECT;
          part { name: "units";
             mouse_events: 0;
             description { state: "default" 0.0;
-		color: 0 255 0 255;
+//		color: 0 255 0 255;
 	       visible: 0;
                rel1 {
                   to_x: "elm.units";
                   offset: 0 5;
                }
                image {
-                  normal: "bt_base2.png";
-                  border: 7 7 7 7;
+                  normal: "frame_3.png";
+                  border: 4 4 4 4;
                }
                fill.smooth: 0;
             }
@@ -5614,7 +5602,7 @@ type: RECT;
          part { name: "button0";
             mouse_events: 0;
             description { state: "default" 0.0;
-		color: 0 255 0 255;
+		//color: 0 255 0 255;
                fixed: 1 1;
                max: 17 999;
                min: 17 24;
@@ -5632,7 +5620,7 @@ type: RECT;
          part { name: "button3";
             mouse_events: 0;
             description { state: "default" 0.0;
-		color: 0 255 0 255;
+		//color: 0 255 0 255;
                fixed: 1 1;
 	       visible: 0;
                min: 8 32;
@@ -5662,7 +5650,7 @@ type: RECT;
          part { name: "button4";
             mouse_events: 0;
             description { state: "default" 0.0;
-		color: 0 255 0 255;
+		//color: 0 255 0 255;
 	       visible: 0;
                max: 15 999;
                min: 15 32;
@@ -5686,7 +5674,7 @@ type: RECT;
          part { name: "button5";
             mouse_events: 0;
             description { state: "default" 0.0;
-		color: 0 255 0 255;
+		//color: 0 255 0 255;
                fixed: 1 1;
 	       visible: 0;
                min: 8 32;
@@ -5864,19 +5852,21 @@ type: RECT;
 
    group { name: "elm/slider/vertical/default";
       images {
+         image: "frame_2.png" COMP;
 	
 	 image: "sl_bt_0.png" COMP;
 	 image: "sl_bt2_0_0.png" COMP;
 	 image: "sl_bt2_0_1.png" COMP;
 	 image: "sl_bt2_0_2.png" COMP;
          
-         image: "bt_base2.png" COMP;
+         image: "bt_base1.png" COMP;
       }
       parts {
          part { name: "base";
             mouse_events: 0;
+            type: RECT;
             description { state: "default" 0.0;
-		color: 0 255 0 255;
+		color: 255 255 255 150;
                max: 6 99999;
                min: 6 0;
                rel1 { to: "bg";
@@ -5885,11 +5875,11 @@ type: RECT;
                rel2 { to: "bg";
                   offset: -2 -1;
                }
-               image {
-                  normal: "bt_base2.png";
-                  border: 7 7 7 7;
-               }
-               fill.smooth: 0;
+//               image {
+//                  normal: "bt_base1.png";
+//                  border: 7 7 7 7;
+//               }
+//               fill.smooth: 0;
             }
          }
          part { name: "level";
@@ -5903,7 +5893,7 @@ type: RECT;
                   to_y: "elm.dragable.slider";
                   relative: 1.0 0.5;
                }
-               color: 0 255 0 255;
+               color: 255 255 255 255;
             }
             description { state: "inverted" 0.0;
                inherit: "default" 0.0;
@@ -5922,7 +5912,6 @@ type: RECT;
                   relative: 0.0 0.5;
                }
                rel2.to: "base";
-               color:  0 255 0 255;
             }
             description { state: "inverted" 0.0;
                inherit: "default" 0.0;
@@ -6016,7 +6005,7 @@ type: RECT;
          part { name: "units";
             mouse_events: 0;
             description { state: "default" 0.0;
-		color: 0 255 0 255;
+		//color: 0 255 0 255;
 	       visible: 0;
                rel1 {
                   to: "elm.units";
@@ -6027,8 +6016,8 @@ type: RECT;
                   offset: 7 8;
                }
                image {
-                  normal: "bt_base2.png";
-                  border: 7 7 7 7;
+                  normal: "frame_2.png";
+                  border: 4 4 4 4;
                }
                fill.smooth: 0;
             }
@@ -6049,7 +6038,7 @@ type: RECT;
 	       rel1.offset: 8 0;
 	       rel2.relative: 1.0 1.0;
 	       rel2.offset: -9 0;
-	       color: 0 0 0 255;
+	       color: 255 255 255 255;
 	       text {
 		  font: "Sans,Edje-Vera";
 		  size: 10;
@@ -6109,7 +6098,7 @@ type: RECT;
          part { name: "button0";
             mouse_events: 0;
             description { state: "default" 0.0;
-		color: 0 255 0 255;
+		//color: 0 255 0 255;
                fixed: 1 1;
                max: 17 999;
                min: 17 24;
@@ -6149,7 +6138,7 @@ type: RECT;
          part { name: "button3";
             mouse_events: 0;
             description { state: "default" 0.0;
-		color: 0 255 0 255;
+		//color: 0 255 0 255;
 	       visible: 0;
                min: 8 32;
                align: 1.0 0.5;
@@ -6178,7 +6167,7 @@ type: RECT;
          part { name: "button4";
             mouse_events: 0;
             description { state: "default" 0.0;
-		color: 0 255 0 255;
+		//color: 0 255 0 255;
 	       visible: 0;
                max: 15 999;
                min: 15 32;
@@ -6203,7 +6192,7 @@ type: RECT;
          part { name: "button5";
             mouse_events: 0;
             description { state: "default" 0.0;
-		color: 0 255 0 255;
+		//color: 0 255 0 255;
 	       visible: 0;
                min: 8 32;
                align: 0.0 0.5;
@@ -6405,23 +6394,29 @@ type: RECT;
          part {
             name: "base";
             mouse_events: 0;
+            type: RECT;
             description {
                state: "default" 0.0;
-		color: 0 255 0 255;
-               image {
-                  normal: "bt_base2.png";
-                  border: 7 7 7 7;
-               }
-               fill.smooth: 0;
+		color: 0 105 159 255;
+//               image {
+//                  normal: "bt_base2.png";
+//                  border: 7 7 7 7;
+//               }
+//               fill.smooth: 0;
             }
          }
          part { name: "bg";
             clip_to: "disclip";
             mouse_events: 0;
-			type: RECT;
             description { state: "default" 0.0;
                visible: 0;
-               color: 0 0 0 0;
+                color: 255 255 255 0;
+               image {
+                  normal: "bt_base2.png";
+                  border: 7 7 7 7;
+               }
+               fill.smooth: 0;
+
                rel1 {
                   relative: 0.0 0.0;
                   offset: -5 -5;
@@ -6435,7 +6430,7 @@ type: RECT;
             description { state: "selected" 0.0;
                inherit: "default" 0.0;
                visible: 1;
-               color: 0 255 0 255;
+               color: 255 255 255 255;
                rel1 {
                   relative: 0.0 0.0;
                   offset: -2 -2;
@@ -6528,7 +6523,7 @@ type: RECT;
             }
             description { state: "selected" 0.0;
                inherit: "default" 0.0;
-               color: 0 0 0 255;
+               color: 255 255 255 255;
                color3: 0 0 0 64;
             }
          }
@@ -6559,6 +6554,7 @@ type: RECT;
             target:  "bg";
 
             target:  "elm.text";
+            transition: DECELERATE 0.2;
          }
          program {
             name:    "go_passive";
@@ -6568,7 +6564,7 @@ type: RECT;
             target:  "bg";
 
             target:  "elm.text";
-            transition: LINEAR 0.1;
+//            transition: LINEAR 0.1;
          }
          program {
             name:    "go_disabled";
@@ -6617,7 +6613,7 @@ type: RECT;
             mouse_events: 0;
             description {
                state: "default" 0.0;
-		color: 0 255 0 255;
+		//color: 0 255 0 255;
                image {
                   normal: "bt_base2.png";
                   border: 7 7 7 7;
@@ -6868,7 +6864,7 @@ type: RECT;
             mouse_events: 0;
             description {
                state: "default" 0.0;
-		color: 0 255 0 255;
+		//color: 0 255 0 255;
                image {
                   normal: "bt_base2.png";
                   border: 7 7 7 7;
@@ -7406,26 +7402,26 @@ type: RECT;
 	    scale: 1;
 		type: IMAGE;
 	    description { state: "default" 0.0;
-		//color: 0 255 0 255;
                image {
                  normal: "check_on.png";
-                  border: 0 0 0 0;
+                  //border: 0 0 0 0;
                }
                fill.smooth : 0;
                rel1 {
                   to: "bg";
-                  offset: 1 1;
+//                  offset: 1 1;
                }
                rel2 {
                   to: "bg";
-                  offset: -2 -2;
+//                  offset: -2 -2;
                }
-               visible: 0;
-               
+//               visible: 0;
+               color: 255 255 255 0;             
 	    }
 	    description { state: "visible" 0.0;
                inherit: "default" 0.0;
-               visible: 1;
+               color: 255 255 255 255;
+//               visible: 1;
             }
 	 }
 	 part { name: "elm.swallow.content";
@@ -7492,12 +7488,14 @@ type: RECT;
 	    signal: "elm,state,check,on";
 	    source: "elm";
 	    action:  STATE_SET "visible" 0.0;
+            transition: DECELERATE 0.2;
 	    target: "check";
 	 }
 	 program { name: "check_off";
 	    signal: "elm,state,check,off";
 	    source: "elm";
 	    action:  STATE_SET "default" 0.0;
+            transition: ACCELERATE 0.2;
 	    target: "check";
 	 }
 	 program { name: "text_show";
@@ -7530,14 +7528,15 @@ type: RECT;
 ///////////////////////////////////////////////////////////////////////////////
    group { name: "elm/radio/base/default";
       images {
-         image: "bt_base1.png" COMP;
+         image: "radio_on.png" COMP;
+         image: "radio_off.png" COMP;
       }
       parts {      
          part { name: "bg";
 	    mouse_events: 0;
 	    scale: 1;
 	    description { state: "default" 0.0;
-		color: 0 255 0 255;
+//		color: 0 255 0 255;
 	       rel1.offset: 1 1;
 	       rel2.relative: 0.0 1.0;
 	       rel2.offset: 1 -2;
@@ -7546,15 +7545,17 @@ type: RECT;
 	       max: 16 16;
 	       aspect: 1.0 1.0;
 	       aspect_preference: VERTICAL;
-               image.normal: "bt_base1.png";
+               image.normal: "radio_off.png";
+               image.border: 2 2 2 2;
 	    }
 	 }
          part { name: "radio";
 	    mouse_events: 0;
 	    scale: 1;
-		type: RECT;
+//		type: RECT;
 	    description { state: "default" 0.0;
-               color: 0 255 0 255;
+               image.normal: "radio_on.png";
+               color: 255 255 255 0;;
 			   rel1.to: "bg";
                rel2.to: "bg";
                visible: 0;
@@ -7562,6 +7563,7 @@ type: RECT;
 	    }
 	    description { state: "visible" 0.0;
                inherit: "default" 0.0;
+               color: 255 255 255 255;
                visible: 1;
             }
 	 }
@@ -7630,12 +7632,14 @@ type: RECT;
 	    source: "elm";
 	    action:  STATE_SET "visible" 0.0;
 	    target: "radio";
+            transition: DECELERATE 0.2;
 	 }
 	 program { name: "radio_off";
 	    signal: "elm,state,radio,off";
 	    source: "elm";
 	    action:  STATE_SET "default" 0.0;
 	    target: "radio";
+            transition: ACCELERATE 0.2;
 	 }
 	 program { name: "text_show";
 	    signal: "elm,state,text,visible";
