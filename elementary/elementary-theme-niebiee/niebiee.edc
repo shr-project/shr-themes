@@ -7929,7 +7929,7 @@ type: RECT;
 	    mouse_events:  0;
             clip_to: "clip";
 	    description { state: "default" 0.0;
-		color: 0 97 159 255;
+		color: 0 97 159 0;
 	       image {
 		  normal: "frame_1.png";
 		  border: 5 5 32 26;
@@ -7964,7 +7964,7 @@ type: RECT;
                }
 	       image {
 		  normal: "frame_2.png";
-		  border: 2 2 28 22;
+		  border: 2 2 2 2;
 		  middle: 0;
 	       }
 	       fill.smooth : 0;
