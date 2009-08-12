@@ -1,6 +1,7 @@
+list-compress
+genlist-tree
+genlist-doublelabel
 frames
-list-compress (t)
-genlist (t)
 bubbles (x11-16)
 clock
 icons
