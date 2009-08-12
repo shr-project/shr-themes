@@ -1418,14 +1418,13 @@ part { name: "shadow";
 	 part { name: "base";
 	    scale: 1;
 	    description { state: "default" 0.0;
-		color: 255 255 255 255;
 	       rel1.offset: 4 4;
 	       rel2.offset: -5 -5;
 	       // FIXME 48x96 should be the native pixel design, right now
 	       // its 80x160. fix int he artwork later
 	       min: 24 48;
                aspect: 0.5 0.5;
-//	       max: 24 48;
+	       //max: 24 48;
 	       image.normal: "flip_base.png";
 	    }
 	 }
@@ -1884,7 +1883,7 @@ part { name: "shadow";
 	    mouse_events: 0;
 	    scale: 1;
 	    description { state: "default" 0.0;
-		color: 255 255 255 255;
+		color: 0 0 0 255;
 	       visible: 0;
 	       min: 15 15;
 	       max: 15 15;
@@ -1894,7 +1893,7 @@ part { name: "shadow";
 	       image.normal: "arrow_up.png";
 	    }
 	    description { state: "visible" 0.0;
-		color: 255 255 255 255;
+		color: 0 0 0 255;
 	       inherit: "default" 0.0;
 	       visible: 1;
 	    }
@@ -1903,7 +1902,7 @@ part { name: "shadow";
 	    mouse_events: 0;
 	    scale: 1;
 	    description { state: "default" 0.0;
-		color: 255 255 255 255;
+		color: 0 0 0 255;
 	       visible: 0;
 	       min: 15 15;
 	       max: 15 15;
@@ -1913,7 +1912,7 @@ part { name: "shadow";
 	       image.normal: "arrow_down.png";
 	    }
 	    description { state: "visible" 0.0;
-		color: 255 255 255 255;
+		color: 0 0 0 255;
 	       inherit: "default" 0.0;
 	       visible: 1;
 	    }
@@ -2183,7 +2182,7 @@ part { name: "shadow";
 	    mouse_events: 0;
 	    scale: 1;
 	    description { state: "default" 0.0;
-		color: 255 255 255 255;
+		color: 0 0 0 255;
 	       visible: 0;
 	       min: 15 15;
 	       max: 15 15;
@@ -2193,7 +2192,7 @@ part { name: "shadow";
 	       image.normal: "arrow_up.png";
 	    }
 	    description { state: "visible" 0.0;
-		color: 255 255 255 255;
+		color: 0 0 0 255;
 	       inherit: "default" 0.0;
 	       visible: 1;
 	    }
@@ -2202,7 +2201,7 @@ part { name: "shadow";
 	    mouse_events: 0;
 	    scale: 1;
 	    description { state: "default" 0.0;
-		color: 255 255 255 255;
+		color: 0 0 0 255;
 	       visible: 0;
 	       min: 15 15;
 	       max: 15 15;
@@ -2212,7 +2211,7 @@ part { name: "shadow";
 	       image.normal: "arrow_down.png";
 	    }
 	    description { state: "visible" 0.0;
-		color: 255 255 255 255;
+		color: 0 0 0 255;
 	       inherit: "default" 0.0;
 	       visible: 1;
 	    }
