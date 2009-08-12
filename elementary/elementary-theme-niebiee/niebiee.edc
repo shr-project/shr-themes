@@ -1883,7 +1883,7 @@ part { name: "shadow";
 	    mouse_events: 0;
 	    scale: 1;
 	    description { state: "default" 0.0;
-		color: 0 0 0 255;
+		//color: 0 0 0 255;
 	       visible: 0;
 	       min: 15 15;
 	       max: 15 15;
@@ -1893,7 +1893,7 @@ part { name: "shadow";
 	       image.normal: "arrow_up.png";
 	    }
 	    description { state: "visible" 0.0;
-		color: 0 0 0 255;
+		//color: 0 0 0 255;
 	       inherit: "default" 0.0;
 	       visible: 1;
 	    }
@@ -1902,7 +1902,7 @@ part { name: "shadow";
 	    mouse_events: 0;
 	    scale: 1;
 	    description { state: "default" 0.0;
-		color: 0 0 0 255;
+		//color: 0 0 0 255;
 	       visible: 0;
 	       min: 15 15;
 	       max: 15 15;
@@ -1912,7 +1912,7 @@ part { name: "shadow";
 	       image.normal: "arrow_down.png";
 	    }
 	    description { state: "visible" 0.0;
-		color: 0 0 0 255;
+		//color: 0 0 0 255;
 	       inherit: "default" 0.0;
 	       visible: 1;
 	    }
@@ -2182,7 +2182,7 @@ part { name: "shadow";
 	    mouse_events: 0;
 	    scale: 1;
 	    description { state: "default" 0.0;
-		color: 0 0 0 255;
+		//color: 0 0 0 255;
 	       visible: 0;
 	       min: 15 15;
 	       max: 15 15;
@@ -2192,7 +2192,7 @@ part { name: "shadow";
 	       image.normal: "arrow_up.png";
 	    }
 	    description { state: "visible" 0.0;
-		color: 0 0 0 255;
+		//color: 0 0 0 255;
 	       inherit: "default" 0.0;
 	       visible: 1;
 	    }
@@ -2201,7 +2201,7 @@ part { name: "shadow";
 	    mouse_events: 0;
 	    scale: 1;
 	    description { state: "default" 0.0;
-		color: 0 0 0 255;
+		//color: 0 0 0 255;
 	       visible: 0;
 	       min: 15 15;
 	       max: 15 15;
@@ -2211,7 +2211,7 @@ part { name: "shadow";
 	       image.normal: "arrow_down.png";
 	    }
 	    description { state: "visible" 0.0;
-		color: 0 0 0 255;
+		//color: 0 0 0 255;
 	       inherit: "default" 0.0;
 	       visible: 1;
 	    }
