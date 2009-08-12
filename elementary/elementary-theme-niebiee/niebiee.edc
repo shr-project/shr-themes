@@ -4617,7 +4617,7 @@ type: RECT;
 			type: RECT;
             description { state: "default" 0.0;
                visible: 0;
-               color: 0 255 0 0;
+               color: 0 52 93 0;
               
             }
             description { state: "selected" 0.0;
