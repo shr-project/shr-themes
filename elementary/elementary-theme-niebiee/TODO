@@ -1,6 +1,6 @@
 list-compress
-genlist-tree
 genlist-doublelabel
+genlist-doublelabel-tree
 frames
 bubbles (x11-16)
 clock
