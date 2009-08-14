@@ -2624,18 +2624,22 @@ collections {
    group {
       name: "e/modules/busycover/default";
       images {
-	 image: "busy-2.png" COMP;
+	 image: "busy_bg.png" COMP;
       }
       parts {
 	 part { name: "base";
-	    type: RECT;
+//	    type: RECT;
 	    description { state: "default" 0.0;
-	       color: 0 0 0 128;
+//	       color: 255 255 255 255;
+               image {
+                  normal: "busy_bg.png";
+                  border: 0 0 0 10;
+               }
 	       align: 0.0 1.0;
-	       max: 640 70;
+	       max: 99999 70;
 	    }
 	 }
-	 part { name: "busy";
+/*	 part { name: "busy";
 	    mouse_events: 0;
 	    description { state: "default" 0.0;
 	       image {
@@ -2652,7 +2656,7 @@ collections {
 	      rel2.offset: 10 0;
 	    }
 	 }
-	 part { name: "e.text.title";
+*/	 part { name: "e.text.title";
 	    mouse_events: 0;
 	    type: TEXT;
 	    mouse_events: 0;
@@ -2677,12 +2681,12 @@ collections {
 	 }
       }
       programs {
-	 program { name: "go1";
+/*	 program { name: "go1";
 	    signal: "show";
 	    source: "";
 	    action: STATE_SET "default" 0.0;
 	    target: "busy";
-	 }
+	 }*/
 	 program { name: "up";
 	    signal: "mouse,up,1";
 	    source: "base";
