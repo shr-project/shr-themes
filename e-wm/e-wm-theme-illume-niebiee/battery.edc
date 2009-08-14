@@ -5,8 +5,8 @@
 	 image: "battery_over.png" COMP;
 	 image: "battery_power.png" COMP;
       }
-      min: 16 32;
-      max: 64 128;
+      min: 22 32;
+      max: 88 128;
       script {
        public message(Msg_Type:type, id, ...) {
 	  if ((type == MSG_FLOAT) && (id == 1)) {
