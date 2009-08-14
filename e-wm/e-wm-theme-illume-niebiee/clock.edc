@@ -34,7 +34,7 @@
             description { state: "default" 0.0;
                fixed: 1 1;
                align: 0.5 1.0;
-               color: 210 210 210 255;
+               color: 255 255 255 255;
                text {
                   text: "00:00";
                   font: "Liberation-Bold";
@@ -47,6 +47,7 @@
          part { name: "events";
             type: RECT;
             description { state: "default" 0.0;
+               min: 100 50;
                color: 0 0 0 0;
             }
          }
