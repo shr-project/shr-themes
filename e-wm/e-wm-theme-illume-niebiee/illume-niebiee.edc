@@ -2630,7 +2630,7 @@ collections {
 	 part { name: "base";
 //	    type: RECT;
 	    description { state: "default" 0.0;
-//	       color: 255 255 255 255;
+	       color: 255 255 255 254;
                image {
                   normal: "busy_bg.png";
                   border: 0 0 0 10;
