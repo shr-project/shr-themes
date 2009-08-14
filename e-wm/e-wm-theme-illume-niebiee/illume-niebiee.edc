@@ -407,13 +407,13 @@ collections {
    
    group { name: "e/modules/slipshelf/controls/default";
       images {
-         image: "bt_base1.png" COMP;
+//         image: "bt_base1.png" COMP;
 	 image: "bt_base2.png" COMP;
-	 image: "bt_hilight.png" COMP;
-	 image: "bt_shine.png" COMP;
-         image: "bt_glow.png" COMP;
-         image: "bt_dis_base.png" COMP;
-         image: "bt_dis_hilight.png" COMP;
+//	 image: "bt_hilight.png" COMP;
+//	 image: "bt_shine.png" COMP;
+//         image: "bt_glow.png" COMP;
+//         image: "bt_dis_base.png" COMP;
+//         image: "bt_dis_hilight.png" COMP;
 	 image: "illume-apps.png" COMP;
 	 image: "illume-home.png" COMP;
 	 image: "illume-close.png" COMP;
@@ -445,14 +445,16 @@ collections {
 	    }
 	    description { state: "clicked" 0.0;
 	       inherit: "default" 0.0;
-	       image.normal: "bt_base1.png";
+//	       image.normal: "bt_base1.png";
+//                color: 0 52 93 255;
 	    }
 	    description { state: "disabled" 0.0;
 	       inherit:  "default" 0.0;
-	       image {
-		  normal: "bt_dis_base.png";
-		  border: 4 4 4 4;
-	       }
+               color: 255 255 255 32;
+//	       image {
+//		  normal: "bt_dis_base.png";
+//		  border: 4 4 4 4;
+//	       }
 	    }
 	 }
 	 part { name: "apps_icon";
@@ -468,11 +470,7 @@ collections {
 	       image.normal: "illume-apps.png";
 	    }
 	 }
-         part { name: "apps_over1";
-	    mouse_events: 0;
-	    description { state: "default" 0.0;
-	       rel1.to: "apps_image";
-	       rel2.to: "apps_image";
+/*	       rel2.to: "apps_image";
 	       rel2.relative: 1.0 0.5;
 	       image {
 		  normal: "bt_hilight.png";
@@ -502,23 +500,25 @@ collections {
 	       visible: 0;
 	    }
 	 }
-	 part { name: "apps_over3";
+*/	 part { name: "apps_over3";
 	    mouse_events: 0;
+            type: RECT;
 	    description { state: "default" 0.0;
 	       rel1.to: "apps_image";
 	       rel2.to: "apps_image";
                visible: 0;
-               color: 255 255 255 0;
-	       image {
-		  normal: "bt_glow.png";
-		  border: 12 12 12 12;
-	       }
-               fill.smooth : 0;
+               color: 0 112 172 0;
+//               color: 255 255 255 0;
+//	       image {
+//		  normal: "bt_glow.png";
+//		  border: 12 12 12 12;
+//	       }
+//               fill.smooth : 0;
 	    }
 	    description { state: "clicked" 0.0;
 	       inherit:  "default" 0.0;
 	       visible: 1;
-               color: 255 255 255 255;
+               color: 0 112 172 128;
 	    }
 	 }
 	 part { name: "apps";
@@ -551,14 +551,15 @@ collections {
 	    }
 	    description { state: "clicked" 0.0;
 	       inherit: "default" 0.0;
-	       image.normal: "bt_base1.png";
+//	       image.normal: "bt_base1.png";
 	    }
 	    description { state: "disabled" 0.0;
 	       inherit:  "default" 0.0;
-	       image {
-		  normal: "bt_dis_base.png";
-		  border: 4 4 4 4;
-	       }
+               color: 255 255 255 32;
+//	       image {
+//		  normal: "bt_dis_base.png";
+//		  border: 4 4 4 4;
+//	       }
 	    }
 	 }
 	 part { name: "home_icon";
@@ -574,7 +575,7 @@ collections {
 	       image.normal: "illume-home.png";
 	    }
 	 }
-         part { name: "home_over1";
+/*         part { name: "home_over1";
 	    mouse_events: 0;
 	    description { state: "default" 0.0;
 	       rel1.to: "home_image";
@@ -608,23 +609,24 @@ collections {
 	       visible: 0;
 	    }
 	 }
-	 part { name: "home_over3";
+*/	 part { name: "home_over3";
 	    mouse_events: 0;
+            type: RECT;
 	    description { state: "default" 0.0;
 	       rel1.to: "home_image";
 	       rel2.to: "home_image";
                visible: 0;
-               color: 255 255 255 0;
-	       image {
-		  normal: "bt_glow.png";
-		  border: 12 12 12 12;
-	       }
-               fill.smooth : 0;
+               color: 0 112 172 0;
+//	       image {
+//		  normal: "bt_glow.png";
+//		  border: 12 12 12 12;
+//	       }
+//               fill.smooth : 0;
 	    }
 	    description { state: "clicked" 0.0;
 	       inherit:  "default" 0.0;
 	       visible: 1;
-               color: 255 255 255 255;
+               color: 0 112 172 128;
 	    }
 	 }
  	 part { name: "home";
@@ -657,14 +659,15 @@ collections {
 	    }
 	    description { state: "clicked" 0.0;
 	       inherit: "default" 0.0;
-	       image.normal: "bt_base1.png";
+//	       image.normal: "bt_base1.png";
 	    }
 	    description { state: "disabled" 0.0;
 	       inherit:  "default" 0.0;
-	       image {
-		  normal: "bt_dis_base.png";
-		  border: 4 4 4 4;
-	       }
+               color: 255 255 255 32;
+//	       image {
+//		  normal: "bt_dis_base.png";
+//		  border: 4 4 4 4;
+//	       }
 	    }
 	 }
 	 part { name: "close_icon";
@@ -680,7 +683,7 @@ collections {
 	       image.normal: "illume-close.png";
 	    }
 	 }
-         part { name: "close_over1";
+/*         part { name: "close_over1";
 	    mouse_events: 0;
 	    description { state: "default" 0.0;
 	       rel1.to: "close_image";
@@ -714,23 +717,24 @@ collections {
 	       visible: 0;
 	    }
 	 }
-	 part { name: "close_over3";
+*/	 part { name: "close_over3";
 	    mouse_events: 0;
+            type: RECT;
 	    description { state: "default" 0.0;
 	       rel1.to: "close_image";
 	       rel2.to: "close_image";
                visible: 0;
-               color: 255 255 255 0;
-	       image {
-		  normal: "bt_glow.png";
-		  border: 12 12 12 12;
-	       }
-               fill.smooth : 0;
+               color: 0 112 172 0;
+//	       image {
+//		  normal: "bt_glow.png";
+//		  border: 12 12 12 12;
+//	       }
+//               fill.smooth : 0;
 	    }
 	    description { state: "clicked" 0.0;
 	       inherit:  "default" 0.0;
 	       visible: 1;
-               color: 255 255 255 255;
+               color: 0 112 172 128;
 	    }
 	 }
  	 part { name: "close";
@@ -756,6 +760,7 @@ collections {
 	    action: STATE_SET "clicked" 0.0;
 	    target: "apps_image";
 	    target: "apps_over3";
+            transition: DECELERATE 0.2;
 	 }
 	 program { name: "appsup";
 	    signal: "mouse,up,1";
@@ -774,8 +779,6 @@ collections {
 	    action: STATE_SET "default" 0.0;
 	    target: "apps_image";
 	    target: "apps_icon";
-	    target: "apps_over1";
-	    target: "apps_over2";
 	    target: "apps";
 	 }
 	 program { name: "appsdisabled";
@@ -784,8 +787,6 @@ collections {
 	    action: STATE_SET "disabled" 0.0;
 	    target: "apps_image";
 	    target: "apps_icon";
-	    target: "apps_over1";
-	    target: "apps_over2";
 	    target: "apps";
 	 }
 	 
@@ -795,6 +796,7 @@ collections {
 	    action: STATE_SET "clicked" 0.0;
 	    target: "home_image";
 	    target: "home_over3";
+            transition: DECELERATE 0.2;
 	 }
 	 program { name: "homeup";
 	    signal: "mouse,up,1";
@@ -813,8 +815,6 @@ collections {
 	    action: STATE_SET "default" 0.0;
 	    target: "home_image";
 	    target: "home_icon";
-	    target: "home_over1";
-	    target: "home_over2";
 	    target: "home";
 	 }
 	 program { name: "homedisabled";
@@ -823,8 +823,6 @@ collections {
 	    action: STATE_SET "disabled" 0.0;
 	    target: "home_image";
 	    target: "home_icon";
-	    target: "home_over1";
-	    target: "home_over2";
 	    target: "home";
 	 }
 	 
@@ -834,6 +832,7 @@ collections {
 	    action: STATE_SET "clicked" 0.0;
 	    target: "close_image";
 	    target: "close_over3";
+            transition: DECELERATE 0.2;
 	 }
 	 program { name: "closeup";
 	    signal: "mouse,up,1";
@@ -852,8 +851,6 @@ collections {
 	    action: STATE_SET "default" 0.0;
 	    target: "close_image";
 	    target: "close_icon";
-	    target: "close_over1";
-	    target: "close_over2";
 	    target: "close";
 	 }
 	 program { name: "closedisabled";
@@ -862,8 +859,6 @@ collections {
 	    action: STATE_SET "disabled" 0.0;
 	    target: "close_image";
 	    target: "close_icon";
-	    target: "close_over1";
-	    target: "close_over2";
 	    target: "close";
 	 }
       }
@@ -2288,14 +2283,23 @@ collections {
    /*** MOD: ILLUME SIMPLELOCK ***/
    group {
       name: "e/modules/simplelock/base/default";
+      images {
+         image: "base_bg.png" COMP;
+      }
       min: 0 1;
       parts {
 	 part { name: "base";
-	    type: RECT;
+//	    type: RECT;
 	    mouse_events: 0;
-	    description { state: "default" 0.0;
-	       color: 0 0 0 255;
-	    }
+//	    description { state: "default" 0.0;
+//	       color: 0 0 0 255;
+//	    }
+            description { state: "default" 0.0;
+               image.normal: "base_bg.png";
+//             image.border: 2 2 2 2;
+               fill.smooth: 0;
+            }
+
 	 }
 	 part { name: "e.text.label";
 	    type: TEXT;
@@ -2625,7 +2629,7 @@ collections {
 	 part { name: "base";
 	    type: RECT;
 	    description { state: "default" 0.0;
-	       color: 0 0 0 205;
+	       color: 0 0 0 128;
 	       align: 0.0 1.0;
 	       max: 640 70;
 	    }

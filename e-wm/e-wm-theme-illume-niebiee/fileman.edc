@@ -3087,7 +3087,7 @@
 	       color3: 0 0 0 32;
 	       text {
                   font: "Sans:style=Bold";
-		  size: 10;
+		  size: 8;
 		  min: 0 1;
 		  align: 0.5 0.5;
 		  text_class: "desktop_icon";
@@ -3181,7 +3181,7 @@
 //	    target:  "fg1";
 //	    target:  "fg2";
 	    target:  "e.text.label";
-//	    transition: LINEAR 0.2;
+	    transition: LINEAR 0.2;
 	 }
 	 program { name: "go_passive";
 	    signal:  "e,state,unselected";
