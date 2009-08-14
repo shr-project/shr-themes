@@ -2036,7 +2036,7 @@ collections {
 	       aspect: 1.0 1.0;
 	       aspect_preference: BOTH;
 	       align: 0.5 1.0;
-	       color: 255 255 255 176;
+	       color: 255 255 255 255;
 	       image.normal: "wifi_0.png";
 	       rel1.to: "base";
 	       rel2.to: "base";
@@ -2215,7 +2215,7 @@ collections {
 	       aspect: 1.0 1.0;
 	       aspect_preference: BOTH;
 	       align: 0.5 0.5;
-	       color: 255 255 255 176;
+	       color: 255 255 255 255;
 	       image.normal: "bluetooth.png";
 	       rel1.to: "base";
 	       rel2.to: "base";
