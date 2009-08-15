@@ -17,30 +17,25 @@
 
 	     val = getfarg(2);
 
-	     if (val < 0.35)
-	       {
-		  new Float:val1;
-		  new Float:val2;
+		if (val > 0.5)
+		  {
+                    new Float:val1;
+                    val1 = 1.0 - val;
+                    val1 = val1 * 2.0;
+                  
+		    r = round(val1 * 255.0, ROUND);
+                    g = 200;
+                    b = 0;
+		  }
+		else
+		  {
+                    new Float:val1;
+		    val1 = val * 2.0;
 
-		  val1 = val - 0.10;
-		  if (val1 < 0.0) val1 = 0.0;
-
-		  val2 = 0.125 - val1;
-		  if (val2 < 0.0) val2 = 0.0;
-		  val2 = val2 / 0.125;
-		  r = round(val2 * 255.0, ROUND);
-
-		  val2 = val1;
-		  if (val2 > 0.125) val2 = 0.125;
-		  val2 = val2 / 0.125;
-		  g = round(val2 * 200.0, ROUND);
-
-		  b = 0;
-	       }
-	     else
-	       {
-		  r = 0; g = 200; b = 0;
-	       }
+		    r = 255;
+		    g = round(val1 * 200.0, ROUND);
+		    b = 0;
+		  }
 
 	     custom_state(PART:"fill", "default", 0.0);
 	     set_state_val(PART:"fill", STATE_REL1, 0.0, 1.0 - val);
