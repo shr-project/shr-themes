@@ -3,16 +3,15 @@ collections {
 /////////////////////////////////////////////////////////////////////////////
    /*** OVERRIDES FROM BASE ***/
    group { name: "e/desktop/background";
-//      images {
-//	 image: "vgrad_dark.png" COMP;
-//      }
+      images {
+	 image: "wallpaper.png" COMP;
+      }
       parts {
 	 part { name: "background_image";
-            type: RECT;
+//            type: RECT;
 	    description { state: "default" 0.0;
-                  color: 0 97 159 255;
-//                color: 0 85 148 255;
-//	       image.normal: "vgrad_dark.png";
+//                  color: 0 97 159 255;
+	       image.normal: "wallpaper.png";
 //	       fill {
 //		  smooth: 0;
 //		  size {
