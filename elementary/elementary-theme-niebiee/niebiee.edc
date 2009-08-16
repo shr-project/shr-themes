@@ -8,7 +8,7 @@ collections {
 		 type: RECT;
 	    mouse_events:  0;
 	    description { state: "default" 0.0;
-	       color: 0 68 117 255;
+	       color: 0 86 147 255;
 	     
 	    }
 	 }
