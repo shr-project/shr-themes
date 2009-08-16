@@ -3332,7 +3332,7 @@ part { name: "shadow";
 	    }
 	    description { state: "visible" 0.0;
 	       inherit: "default" 1.0;
-	       color: 0 0 0 128;
+//	       color: 0 0 0 128;
 	    }
 	 }
          
