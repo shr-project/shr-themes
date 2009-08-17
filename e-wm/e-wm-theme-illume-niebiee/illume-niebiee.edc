@@ -2701,7 +2701,7 @@ collections {
 #include "battery.edc"
 #include "fileman.edc"
 #include "syscon.edc"
+#include "system.edc"
 
 }
-
 
