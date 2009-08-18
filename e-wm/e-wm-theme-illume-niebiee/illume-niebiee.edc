@@ -56,7 +56,6 @@ collections {
    
 #include "slipshelf.edc"
 #include "slipwin.edc"
-#include "busywin.edc"
 #include "kdb.edc"
 #include "cfg.edc"
 #include "wifi.edc"
