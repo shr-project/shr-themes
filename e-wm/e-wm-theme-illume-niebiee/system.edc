@@ -9,7 +9,7 @@
 //         image: "vgrad_dark.png" COMP;
          image: "lock_bg.png" COMP;
          image: "shelf_alt_over.png" COMP;
-         image: "logo_white_128.png" COMP;
+         image: "sleeping_tux.png" COMP;
       }
       styles {
          style {
@@ -79,11 +79,12 @@
 */         part { name: "logo";
             mouse_events: 0;
             description { state: "default" 0.0;
-               min: 128 128;
-               max: 128 128;
-//               max: ??? 200; // TUX!
+//               min: 128 128;
+//               max: 128 128;
+               min: 313 210;
+               max: 313 210; // TUX!
                align: 0.5 0.0;
-               image.normal: "logo_white_128.png";
+               image.normal: "sleeping_tux.png";
             }
             description { state: "done" 0.0;
                inherit: "default" 0.0;
