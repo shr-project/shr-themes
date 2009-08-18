@@ -2708,6 +2708,8 @@ collections {
 #include "fileman.edc"
 #include "syscon.edc"
 #include "system.edc"
+#include "windows.edc"
+#include "icons.edc"
 
 }
 

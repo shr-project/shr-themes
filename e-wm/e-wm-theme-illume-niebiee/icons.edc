@@ -1,0 +1,20 @@
+/////////////////////////////////////////////////////////////////////////////
+   /*** ICONS ***/
+
+#define ICON(NAME, FILE, SIZE)                          \
+group { name: "e/icons/"NAME ;                          \
+   max: SIZE SIZE;                                      \
+   parts {                                              \
+      part { name: "icon";                              \
+	 repeat_events:  1;                             \
+	 description { state: "default" 0.0;            \
+	    aspect: 1.0 1.0;                            \
+	    aspect_preference: BOTH;                    \
+	    image.image: FILE COMP;                     \
+	    image.normal: FILE ;                        \
+	 }                                              \
+      }                                                 \
+   }                                                    \
+}
+
+ICON("unknown","icon_dummy.png",64)                      // *** // "enlightenment/unknown"
