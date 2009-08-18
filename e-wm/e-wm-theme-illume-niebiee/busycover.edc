@@ -1,0 +1,75 @@
+/////////////////////////////////////////////////////////////////////////////
+   /*** MOD: ILLUME BUSYCOVER ***/
+   group {
+      name: "e/modules/busycover/default";
+      images {
+	 image: "busy_bg.png" COMP;
+      }
+      parts {
+	 part { name: "base";
+//	    type: RECT;
+	    description { state: "default" 0.0;
+	       color: 255 255 255 254;
+               image {
+                  normal: "busy_bg.png";
+                  border: 0 0 0 10;
+               }
+	       align: 0.0 1.0;
+	       max: 99999 70;
+	    }
+	 }
+/*	 part { name: "busy";
+	    mouse_events: 0;
+	    description { state: "default" 0.0;
+	       image {
+		  normal: "busy-2.png";
+	       }
+	      min: 0 0;
+	      max: 0 0;
+	      align: 0.0 0.5;
+	      rel1.to: "base";
+	      rel1.relative: 0.0 0.5;
+	      rel1.offset: 10 0;
+	      rel2.to: "base";
+	      rel2.relative: 0.0 0.5;
+	      rel2.offset: 10 0;
+	    }
+	 }
+*/	 part { name: "e.text.title";
+	    mouse_events: 0;
+	    type: TEXT;
+	    mouse_events: 0;
+	    scale: 1;
+	    description { state: "default" 0.0;
+	    align: 0.5 0.0;
+	    rel1.to: "base";
+	    rel1.relative: 0.5 0.5;
+	    rel1.offset: 0 -8;
+	    rel2.to: "base";
+	    rel2.relative: 0.5 0.5;
+	    rel2.offset: 0 -8;
+	    color: 255 255 255 255;
+	       text {
+		  font: "Sans:style=Bold";
+		  text: "LOADING";
+		  size: 8;
+		  align: 0.5 0.0;
+		  min: 1 1;
+	       }
+	    }
+	 }
+      }
+      programs {
+/*	 program { name: "go1";
+	    signal: "show";
+	    source: "";
+	    action: STATE_SET "default" 0.0;
+	    target: "busy";
+	 }*/
+	 program { name: "up";
+	    signal: "mouse,up,1";
+	    source: "base";
+	    action: SIGNAL_EMIT "e,action,do,select" "";
+	 }
+      }
+   }
