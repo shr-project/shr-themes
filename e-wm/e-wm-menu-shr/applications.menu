@@ -90,6 +90,7 @@
           <Category>Applications</Category>
 	  <Category>Utility</Category>
           <Category>PIM</Category>
+          <Category>GTK</Category>
 	</Or>
         <Not>
           <Category>System</Category>
