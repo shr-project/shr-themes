@@ -3933,7 +3933,7 @@ type: RECT;
 	    type: RECT;
 	    mouse_events: 0;
 	    description { state: "default" 0.0;
-	       color: 128 0 0 64;
+	       color: 0 0 128 64;
 	    }
 	 }
       }
