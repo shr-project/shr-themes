@@ -96,8 +96,10 @@
           <Category>System</Category>
           <Category>Office</Category>
           <Category>Internet</Category>
+          <Category>Network</Category>
           <Category>AudioVideo</Category>
           <Category>Graphics</Category>
+          <Category>Game</Category>
           <Category>Games</Category>
         </Not>
       </And>
