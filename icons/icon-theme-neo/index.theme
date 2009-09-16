@@ -1,0 +1,30 @@
+[Icon Theme]
+Name=nEo
+Comment=nEo Icon Theme
+
+Directories=86x86/apps,48x48/stock,36x36/stock,32x32/stock,22x22/stock
+
+[86x86/apps]
+Size=86
+Context=apps
+Type=Fixed
+
+[48x48/stock]
+Size=48
+Context=stock
+Type=Fixed
+
+[36x36/stock]
+Size=36
+Context=stock
+Type=Fixed
+
+[32x32/stock]
+Size=32
+Context=stock
+Type=Fixed
+
+[22x22/stock]
+Size=22
+Context=stock
+Type=Fixed
