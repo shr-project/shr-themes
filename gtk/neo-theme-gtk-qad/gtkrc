@@ -1,0 +1,172 @@
+# Set the default font and font size (if not using settings daemon)
+
+
+gtk-color-scheme = "base_color:#000000\nfg_color:#ffffff\ntooltip_fg_color:#ffffff\nselected_bg_color:#007f00\nselected_fg_color:#ffffff\ntext_color:#ffffff\nbg_color:#000000\ntooltip_bg_color:#F5F5B5"
+
+#gtk-icon-sizes = "gtk-button=32,32:gtk-small-toolbar=48,48:gtk-large-toolbar=48,48"
+gtk-toolbar-style = GTK_TOOLBAR_ICONS
+# Note: libtaku supports multiple orientations. To enable:
+# TakuIconTile::orientation = GTK_ORIENTATION_VERTICAL
+# Might also want to set
+# TakuIconTile::show-secondary-text = False
+
+gtk_button_images = 0
+gtk_menu_images = 0
+
+style "default" {
+
+	####################
+	# Color Definitions
+	####################
+	bg[NORMAL]        = @bg_color
+	bg[PRELIGHT]      = @bg_color
+	bg[SELECTED]      = @selected_bg_color
+	bg[INSENSITIVE]   = @bg_color
+	bg[ACTIVE]        = @bg_color
+
+	fg[NORMAL]        = @fg_color
+	fg[PRELIGHT]      = @fg_color
+	fg[SELECTED]      = @selected_fg_color
+	fg[INSENSITIVE]   = @bg_color
+	fg[ACTIVE]        = @fg_color
+
+	text[NORMAL]      = @text_color
+	text[PRELIGHT]    = @text_color
+	text[SELECTED]    = @selected_fg_color
+	text[INSENSITIVE] = @bg_color
+	text[ACTIVE]      = @selected_fg_color
+
+	base[NORMAL]      = @base_color
+	base[PRELIGHT]    = @bg_color
+	base[SELECTED]    = @selected_bg_color
+	base[INSENSITIVE] = @bg_color
+	base[ACTIVE]      = @selected_bg_color
+	GtkFrame::shadow_type = GTK_SHADOW_NONE
+}
+class "GtkWidget" style "default"
+
+style "wide" {
+	xthickness = 4
+        ythickness = 4
+}
+
+include "workarounds"
+#include "transparent"
+
+include "gtkassistant"
+include "gtkbutton"
+include "gtkentry"
+#include "gtkeventbox"
+#include "gtkframe"
+include "gtkmenu"
+include "gtkmenuitem"
+include "gtknotebook"
+include "gtkpaned"
+include "gtkprogressbar"
+include "gtkscale"
+#include "gtkscrolledwindow"
+include "gtkscrollbar"
+include "gtktextview"
+include "gtktoolbar"
+include "gtktreeview"
+include "gtkradiobutton"
+include "gtktoolbutton"
+include "gtkspinbutton"
+include "gtkcheckbutton"
+include "gtkcombobox"
+
+# The default style is applied to every widget
+class "GtkWidget" style "default"
+
+class "GtkSeparator" style "wide"
+class "GtkFrame" style "wide"
+class "GtkCalendar" style "wide"
+class "GtkEntry" style "entry"
+
+class "GtkSpinButton" style "spinbutton"
+class "GtkScale" style "scale"
+class "GtkVScale" style "vscale"
+class "GtkHScale" style "hscale"
+class "GtkScrollbar" style "scrollbar"
+class "GtkHScrollbar" style "hscrollbar"
+class "GtkVScrollbar" style "vscrollbar"
+class "GtkToolbar" style "toolbar"
+
+# General matching follows. The order is choosen so that the right styles override
+# each other. EG. progressbar needs to be more important than the menu match.
+widget_class "*<GtkNotebook>" style "notebook_bg"
+# This is not perfect, it could be done better.
+# (That is modify *every* widget in the notebook, and change those back that
+# we really don't want changed)
+widget_class "*<GtkNotebook>*<GtkEventBox>" style "notebook_bg"
+widget_class "*<GtkNotebook>*<GtkDrawingArea>" style "notebook_bg"
+widget_class "*<GtkNotebook>*<GtkLayout>" style "notebook_bg"
+widget_class "*<GtkNotebook>*<GtkViewport>" style "notebook_bg"
+widget_class "*<GtkNotebook>*<GtkScrolledWindow>" style "notebook_bg"
+
+widget_class "*<GtkButton>" style "button"
+widget_class "*<GtkButton>*" style "button-text"
+widget_class "*<GtkCheckButton>" style "checkbutton"
+widget_class "*<GtkCheckButton>*" style "checkbutton-text"
+widget_class "*<GtkRadioButton>" style "radiobutton"
+widget_class "*<GtkRadioButton>*" style "radiobutton-text"
+widget_class "*<GtkNotebook>" style "notebook"
+widget_class "*<GtkNotebook>.<GtkLabel>" style "notebook-header"
+widget_class "*<GtkStatusbar>*" style "statusbar"
+
+widget_class "*<GtkCombo>*" style "combobox-text"
+widget_class "*<GtkComboBoxEntry>*" style "comboboxentry"
+
+widget_class "*<GtkMenuBar>*" style "menubar"
+widget_class "*<GtkMenu>*" style "menu"
+widget_class "*<GtkMenuItem>*" style "menu_item"
+widget_class "*<GtkSeparatorMenuItem>*" style "separator_menu_item"
+widget_class "*<GtkToolbar>*" style "toolbar"
+widget_class "*<GtkToolItem>*.<GtkButton>" style "toolbutton"
+
+widget_class "*.<GtkFrame>.<GtkLabel>" style "frame_title"
+widget_class "*.<GtkTreeView>*" style "treeview"
+
+widget_class "*<GtkProgress>" style "progressbar"
+
+# Treeview headers (and similar stock GTK+ widgets)
+widget_class "*.<GtkTreeView>.<GtkButton>" style "treeview_header"
+widget_class "*.<GtkCTree>.<GtkButton>" style "treeview_header"
+widget_class "*.<GtkList>.<GtkButton>" style "treeview_header"
+widget_class "*.<GtkCList>.<GtkButton>" style "treeview_header"
+
+# The window of the tooltip is called "gtk-tooltip"
+##################################################################
+# FIXME:
+# This will not work if one embeds eg. a button into the tooltip.
+# As far as I can tell right now we will need to rework the theme
+# quite a bit to get this working correctly.
+# (It will involve setting different priorities, etc.)
+##################################################################
+widget "gtk-tooltip*" style "tooltips"
+
+##########################################################################
+# Following are special cases and workarounds for issues in applications.
+##########################################################################
+
+# Workaround for the evolution ETable (bug #527532)
+widget_class "*.ETable.ECanvas" style "treeview_header"
+# Workaround for the evolution ETree
+widget_class "*.ETree.ECanvas" style "treeview_header"
+
+
+widget_class "*.<GtkComboBox>.<GtkCellView>" style "combobox-text"
+# Work around for http://bugzilla.gnome.org/show_bug.cgi?id=382646
+# Note that this work around assumes that the combobox is _not_ in appears-as-list mode.
+#widget_class "*.<GtkComboBox>.<GtkCellView>" style "text_is_fg_color_workaround"
+# This is the part of the workaround that fixes the menus
+widget "*.gtk-combobox-popup-menu.*" style "menuitem_text_is_fg_color_workaround"
+
+# Work around the usage of GtkLabel inside GtkListItems to display text.
+# This breaks because the label is shown on a background that is based on the base color.
+widget_class "*<GtkListItem>*<GtkLabel>" style "fg_is_text_color_workaround"
+# GtkCList also uses the fg color to draw text on top of the base colors.
+widget_class "*<GtkCList>" style "fg_is_text_color_workaround"
+# Nautilus when renaming files, and maybe other places.
+widget_class "*<EelEditableLabel>" style "fg_is_text_color_workaround"
+

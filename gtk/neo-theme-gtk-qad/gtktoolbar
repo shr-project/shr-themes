@@ -1,0 +1,26 @@
+style "toolbar"
+{
+  xthickness = 0
+  ythickness = 0
+  engine "pixmap"
+  {
+    image
+    {
+      function      = BOX
+      file          = "toolbar/toolbar.png"
+      stretch       = TRUE
+    }
+  }
+}
+
+style "toolbar-text" {
+    fg[NORMAL]  = "#ffffff"
+    fg[INSENSITIVE] = "#ffffff"
+    fg[ACTIVE] = "#ffffff"
+    text[NORMAL] = "#ffffff"
+    text[ACTIVE] = "#ffffff"
+    text[INSENSITIVE] = "#ffffff"
+}
+
+style "menubar" = "toolbar" {
+}
