@@ -4799,9 +4799,9 @@ collections {
 	    description { state: "default" 0.0;
 	       color: COLOR_DARK_GRAY;
 	       rel1.to: "elm.swallow.content";
-	       rel1.offset: -64 -64;
+	       rel1.offset: -10 -10;
 	       rel2.to: "elm.swallow.content";
-	       rel2.offset: 63 63;
+	       rel2.offset: 9 9;
 
 	    }
 	 }
@@ -4875,9 +4875,9 @@ collections {
 	    description { state: "default" 0.0;
 	       color: COLOR_DARK_GRAY;
 	       rel1.to: "elm.swallow.content";
-	       rel1.offset: -64 -64;
+	       rel1.offset: -10 -10;
 	       rel2.to: "elm.swallow.content";
-	       rel2.offset: 63 63;
+	       rel2.offset: 9 9;
 
 	    }
 	 }
@@ -4951,9 +4951,9 @@ collections {
 	    description { state: "default" 0.0;
 	       color: COLOR_DARK_GRAY;
 	       rel1.to: "elm.swallow.content";
-	       rel1.offset: -64 -64;
+	       rel1.offset: -10 -10;
 	       rel2.to: "elm.swallow.content";
-	       rel2.offset: 63 63;
+	       rel2.offset: 9 9;
 
 	    }
 	 }
