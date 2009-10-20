@@ -1,0 +1,1010 @@
+
+
+images {
+   image: "boot_image.png" COMP;
+   image: "b-01.png" COMP;
+   image: "b-02.png" COMP;
+   image: "b-03.png" COMP;
+   image: "b-04.png" COMP;
+   image: "b-05.png" COMP;
+   image: "b-06.png" COMP;
+   image: "b-07.png" COMP;
+   image: "b-08.png" COMP;
+   image: "b-09.png" COMP;
+   image: "b-10.png" COMP;
+   image: "b-11.png" COMP;
+   image: "b-12.png" COMP;
+}
+
+   group { name: "e/init/splash";
+      parts {
+	 part { name: "background_image";
+	    description { state: "default" 0.0;
+	       aspect: 0.75 0.75;
+	       aspect_preference: NONE;
+	       image.normal: "boot_image.png";
+	    }
+	 }
+         
+	 part { name: "bar_bg";
+		type: RECT;
+	    description { state: "default" 0.0;
+	       rel1.relative: 0.0 0.4;
+	       rel2.relative: 1.0 0.6;
+		   color: COLOR_BLACK;
+	      
+	    }
+	 }	 part { name: "bar_fg";
+		type: RECT;
+	    description { state: "default" 0.0;
+		rel1.to: "bar_bg";
+		   rel2.to: "bar_bg";
+		   rel2.relative: 1.0 0.5;
+		   color: COLOR_DARK_GRAY;
+	      
+	    }
+	    
+	 }	 part { name: "bar_progress";
+		type: RECT;
+	    description { state: "default" 0.0;
+		rel1.to: "bar_bg";
+		rel1.offset: 0 0;
+		   rel2.to: "bar_bg";
+		   rel2.offset: -466 0; 
+		   color: COLOR_ORANGE;
+	      
+	    }
+		description { state: "1" 0.0;
+		inherit: "default" 0.0;
+	    rel1.offset: 0 0;
+		rel2.offset: -466 0; 
+		}
+		description { state: "2" 0.0;
+		inherit: "default" 0.0;
+	    rel1.offset: 0 0;
+		rel2.offset: -452 0; 
+		}
+		description { state: "3" 0.0;
+		inherit: "default" 0.0;
+	    rel1.offset: 0 0;
+		rel2.offset: -438 0; 
+		}
+		description { state: "4" 0.0;
+		inherit: "default" 0.0;
+	    rel1.offset: 0 0;
+		rel2.offset: -424 0; 
+		}
+		description { state: "5" 0.0;
+		inherit: "default" 0.0;
+	    rel1.offset: 0 0;
+		rel2.offset: -410 0; 
+		}
+		description { state: "6" 0.0;
+		inherit: "default" 0.0;
+	    rel1.offset: 0 0;
+		rel2.offset: -396 0; 
+		}
+		description { state: "7" 0.0;
+		inherit: "default" 0.0;
+	    rel1.offset: 0 0;
+		rel2.offset: -382 0; 
+		}
+		description { state: "8" 0.0;
+		inherit: "default" 0.0;
+	    rel1.offset: 0 0;
+		rel2.offset: -368 0; 
+		}
+		description { state: "9" 0.0;
+		inherit: "default" 0.0;
+	    rel1.offset: 0 0;
+		rel2.offset: -354 0; 
+		}
+		description { state: "10" 0.0;
+		inherit: "default" 0.0;
+	    rel1.offset: 0 0;
+		rel2.offset: -340 0; 
+		}
+		description { state: "11" 0.0;
+		inherit: "default" 0.0;
+	    rel1.offset: 0 0;
+		rel2.offset: -326 0; 
+		}
+		description { state: "12" 0.0;
+		inherit: "default" 0.0;
+	    rel1.offset: 0 0;
+		rel2.offset: -312 0; 
+		}
+		description { state: "13" 0.0;
+		inherit: "default" 0.0;
+	    rel1.offset: 0 0;
+		rel2.offset: -298 0; 
+		}
+		description { state: "14" 0.0;
+		inherit: "default" 0.0;
+	    rel1.offset: 0 0;
+		rel2.offset: -284 0; 
+		}
+		description { state: "15" 0.0;
+		inherit: "default" 0.0;
+	    rel1.offset: 0 0;
+		rel2.offset: -270 0; 
+		}
+		description { state: "16" 0.0;
+		inherit: "default" 0.0;
+	    rel1.offset: 0 0;
+		rel2.offset: -256 0; 
+		}
+		description { state: "17" 0.0;
+		inherit: "default" 0.0;
+	    rel1.offset: 0 0;
+		rel2.offset: -242 0; 
+		}
+		description { state: "18" 0.0;
+		inherit: "default" 0.0;
+	    rel1.offset: 0 0;
+		rel2.offset: -228 0; 
+		}
+		description { state: "19" 0.0;
+		inherit: "default" 0.0;
+	    rel1.offset: 0 0;
+		rel2.offset: -214 0; 
+		}
+		description { state: "20" 0.0;
+		inherit: "default" 0.0;
+	    rel1.offset: 0 0;
+		rel2.offset: -200 0; 
+		}
+		description { state: "21" 0.0;
+		inherit: "default" 0.0;
+	    rel1.offset: 0 0;
+		rel2.offset: -186 0; 
+		}
+		description { state: "22" 0.0;
+		inherit: "default" 0.0;
+	    rel1.offset: 0 0;
+		rel2.offset: -172 0; 
+		}
+		description { state: "23" 0.0;
+		inherit: "default" 0.0;
+	    rel1.offset: 0 0;
+		rel2.offset: -158 0; 
+		}
+		description { state: "24" 0.0;
+		inherit: "default" 0.0;
+	    rel1.offset: 0 0;
+		rel2.offset: -144 0; 
+		}
+		description { state: "25" 0.0;
+		inherit: "default" 0.0;
+	    rel1.offset: 0 0;
+		rel2.offset: -130 0; 
+		}
+		description { state: "26" 0.0;
+		inherit: "default" 0.0;
+	    rel1.offset: 0 0;
+		rel2.offset: -116 0; 
+		}
+		description { state: "27" 0.0;
+		inherit: "default" 0.0;
+	    rel1.offset: 0 0;
+		rel2.offset: -102 0; 
+		}
+		description { state: "28" 0.0;
+		inherit: "default" 0.0;
+	    rel1.offset: 0 0;
+		rel2.offset: -88 0; 
+		}
+		description { state: "29" 0.0;
+		inherit: "default" 0.0;
+	    rel1.offset: 0 0;
+		rel2.offset: -74 0; 
+		}
+		description { state: "30" 0.0;
+		inherit: "default" 0.0;
+	    rel1.offset: 0 0;
+		rel2.offset: -60 0; 
+		}
+		description { state: "31" 0.0;
+		inherit: "default" 0.0;
+	    rel1.offset: 0 0;
+		rel2.offset: -46 0; 
+		}
+		description { state: "32" 0.0;
+		inherit: "default" 0.0;
+	    rel1.offset: 0 0;
+		rel2.offset: -32 0; 
+		}
+		description { state: "33" 0.0;
+		inherit: "default" 0.0;
+	    rel1.offset: 0 0;
+		rel2.offset: -18 0; 
+		}
+		description { state: "34" 0.0;
+		inherit: "default" 0.0;
+	    rel1.offset: 0 0;
+		rel2.offset: -4 0; 
+		}
+		description { state: "35" 0.0;
+		inherit: "default" 0.0;
+	    rel1.offset: 0 0;
+		rel2.offset: 0 0; 
+		}
+		
+	 }
+	 
+	 
+	 part { name: "exquisite.progress";
+	    mouse_events: 0;
+	    	    description { state: "default" 0.0;
+		
+		  color: 255 255 255 255;
+	       aspect: 1.0 1.0;
+	       aspect_preference: BOTH;
+	       rel1 {
+		   to: "background_image";
+		  relative:   0.0 0.0;
+		  offset: 370.0 0.0;
+	       }
+	       rel2 {
+		   to: "background_image";
+		  relative: 1.0 1.0;
+		offset: 0.0 -551.0;
+	       }
+	       image {
+		  normal: "b-01.png";
+		  tween:  "b-02.png";
+		  tween:  "b-03.png";
+		  tween:  "b-04.png";
+		  tween:  "b-05.png";
+		  tween:  "b-06.png";
+		  tween:  "b-07.png";
+		  tween:  "b-08.png";
+		  tween:  "b-09.png";
+		  tween:  "b-10.png";
+		  tween:  "b-11.png";
+		  tween:  "b-12.png";
+	       }
+	    }
+	 }
+	  part { name: "asterisk";
+	    mouse_events: 0;
+	    	    description { state: "default" 0.0;
+		
+		  color: 255 255 255 255;
+		  max: 11 11;
+	       aspect_preference: BOTH;
+	       rel1 {
+		   to: "background_image";
+		  relative:   0.0 0.0;
+		  offset: 192.0 555.0;
+	       }
+	      
+	        image {
+		  normal: "b-01.png";
+		  tween:  "b-02.png";
+		  tween:  "b-03.png";
+		  tween:  "b-04.png";
+		  tween:  "b-05.png";
+		  tween:  "b-06.png";
+		  tween:  "b-07.png";
+		  tween:  "b-08.png";
+		  tween:  "b-09.png";
+		  tween:  "b-10.png";
+		  tween:  "b-11.png";
+		  tween:  "b-12.png";
+	       }
+	    }
+	 }
+	 
+	 
+      
+      part {
+	    name: "e.text.label";
+	    type: TEXT;
+	    mouse_events: 0;
+	    description {
+	       state: "default" 0.0;
+		   color: 255 255 255 255;
+	       align: 0.5 0.0;
+	       rel1 {
+		  relative: 0.0  1.0;
+		  offset: 0 0;
+		  to: "bar_bg";
+	       }
+	       rel2 {
+		  relative: 1.0 1.0;
+		  offset:   -1  0;
+		  to: "bar_bg";
+	       }
+	       text {
+		  text: "PI is exactly 4!!!***";
+                  font: "Sans:style=Bold";
+		  size: 20;
+		  min:  1 1;
+		  align: 0.5 0.5;
+	       }
+	    }
+		description { state: "1" 0.0;
+		text {
+		  text: "Challenging everything...";
+                  font: "Sans:style=Bold";
+		  size: 20;
+		  min:  1 1;
+		  align: 0.5 0.5;
+	       }
+	    }
+		description { state: "2" 0.0;
+		text {
+		  text: "Testing for perfection...";
+                  font: "Sans:style=Bold";
+		  size: 20;
+		  min:  1 1;
+		  align: 0.5 0.5;
+	       }
+	    }
+		description { state: "3" 0.0;
+		text {
+		  text: "Bending the spoon...";
+                  font: "Sans:style=Bold";
+		  size: 20;
+		  min:  1 1;
+		  align: 0.5 0.5;
+	       }
+	    }
+		description { state: "4" 0.0;
+		text {
+		  text: "Distilling beauty...";
+                  font: "Sans:style=Bold";
+		  size: 20;
+		  min:  1 1;
+		  align: 0.5 0.5;
+	       }
+	    }
+		description { state: "5" 0.0;
+		text {
+		  text: "Programming the flux capacitor...";
+                  font: "Sans:style=Bold";
+		  size: 20;
+		  min:  1 1;
+		  align: 0.5 0.5;
+	       }
+	    }
+		description { state: "6" 0.0;
+		text {
+		  text: "Swapping time and space...";
+                  font: "Sans:style=Bold";
+		  size: 20;
+		  min:  1 1;
+		  align: 0.5 0.5;
+	       }
+	    }
+		description { state: "7" 0.0;
+		text {
+		  text: "Spinning up the hamsters...";
+                  font: "Sans:style=Bold";
+		  size: 20;
+		  min:  1 1;
+		  align: 0.5 0.5;
+		  text_class: "init_title";
+	       }
+	    }
+		description { state: "8" 0.0;
+		text {
+		  text: "Ignoring temptations...";
+                  font: "Sans:style=Bold";
+		  size: 20;
+		  min:  1 1;
+		  align: 0.5 0.5;
+	       }
+	    }
+		description { state: "9" 0.0;
+		text {
+		  text: "Revoolving independence...";
+                  font: "Sans:style=Bold";
+		  size: 20;
+		  min:  1 1;
+		  align: 0.5 0.5;
+	       }
+	    }
+		description { state: "10" 0.0;
+		text {
+		  text: "Twisting nerves...";
+                  font: "Sans:style=Bold";
+		  size: 20;
+		  min:  1 1;
+		  align: 0.5 0.5;
+	       }
+	    }
+		description { state: "11" 0.0;
+		text {
+		  text: "Adding more cowbell...";
+                  font: "Sans:style=Bold";
+		  size: 20;
+		  min:  1 1;
+		  align: 0.5 0.5;
+	       }
+	    }
+		description { state: "12" 0.0;
+		text {
+		  text: "Joining the dark side...";
+                  font: "Sans:style=Bold";
+		  size: 20;
+		  min:  1 1;
+		  align: 0.5 0.5;
+	       }
+	    }
+		description { state: "13" 0.0;
+		text {
+		  text: "Getting a headache...";
+                  font: "Sans:style=Bold";
+		  size: 20;
+		  min:  1 1;
+		  align: 0.5 0.5;
+	       }
+	    }
+		description { state: "14" 0.0;
+		text {
+		  text: "Spreading rumors...";
+                  font: "Sans:style=Bold";
+		  size: 20;
+		  min:  1 1;
+		  align: 0.5 0.5;
+	       }
+	    }
+		description { state: "15" 0.0;
+		text {
+		  text: "Cheating...";
+                  font: "Sans:style=Bold";
+		  size: 20;
+		  min:  1 1;
+		  align: 0.5 0.5;
+	       }
+	    }
+		description { state: "16" 0.0;
+		text {
+		  text: "Releasing hamsters...";
+                  font: "Sans:style=Bold";
+		  size: 20;
+		  min:  1 1;
+		  align: 0.5 0.5;
+	       }
+	    }
+		description { state: "17" 0.0;
+		text {
+		  text: "Unfolding awesomeness...";
+                  font: "Sans:style=Bold";
+		  size: 20;
+		  min:  1 1;
+		  align: 0.5 0.5;
+	       }
+	    }
+		description { state: "18" 0.0;
+		text {
+		  text: "Going for speed...";
+                  font: "Sans:style=Bold";
+		  size: 20;
+		  min:  1 1;
+		  align: 0.5 0.5;
+	       }
+	    }
+		description { state: "19" 0.0;
+		text {
+		  text: "Teaching goldfish to bounce...";
+                  font: "Sans:style=Bold";
+		  size: 20;
+		  min:  1 1;
+		  align: 0.5 0.5;
+	       }
+	    }
+		description { state: "20" 0.0;
+		text {
+		  text: "Running blades...";
+                  font: "Sans:style=Bold";
+		  size: 20;
+		  min:  1 1;
+		  align: 0.5 0.5;
+	       }
+	    }
+		description { state: "21" 0.0;
+		text {
+		  text: "Teaching pigs how to fly...";
+                  font: "Sans:style=Bold";
+		  size: 20;
+		  min:  1 1;
+		  align: 0.5 0.5;
+	       }
+	    }
+		description { state: "22" 0.0;
+		text {
+		  text: "Scanning your sd card for pr0n...";
+                  font: "Sans:style=Bold";
+		  size: 20;
+		  min:  1 1;
+		  align: 0.5 0.5;
+	       }
+	    }
+		description { state: "23" 0.0;
+		text {
+		  text: "Dividing eternity by zero...";
+                  font: "Sans:style=Bold";
+		  size: 20;
+		  min:  1 1;
+		  align: 0.5 0.5;
+	       }
+	    }
+		description { state: "24" 0.0;
+		text {
+		  text: "Pwning up...";
+                  font: "Sans:style=Bold";
+		  size: 20;
+		  min:  1 1;
+		  align: 0.5 0.5;
+	       }
+		}
+		description { state: "25" 0.0;
+		text {
+		  text: "Watering flowers...";
+                  font: "Sans:style=Bold";
+		  size: 20;
+		  min:  1 1;
+		  align: 0.5 0.5;
+	       }
+	    }
+		description { state: "26" 0.0;
+		text {
+		  text: "Shaking...";
+                  font: "Sans:style=Bold";
+		  size: 20;
+		  min:  1 1;
+		  align: 0.5 0.5;
+	       }
+	    }
+		description { state: "27" 0.0;
+		text {
+		  text: "Testing ozone...";
+                  font: "Sans:style=Bold";
+		  size: 20;
+		  min:  1 1;
+		  align: 0.5 0.5;
+	       }
+	    }
+		description { state: "28" 0.0;
+		text {
+		  text: "Debating self as art...";
+                  font: "Sans:style=Bold";
+		  size: 20;
+		  min:  1 1;
+		  align: 0.5 0.5;
+	       }
+	    }
+		description { state: "29" 0.0;
+		text {
+		  text: "Faithfully re-imagining...";
+                  font: "Sans:style=Bold";
+		  size: 20;
+		  min:  1 1;
+		  align: 0.5 0.5;
+	       }
+	    }
+		description { state: "30" 0.0;
+		text {
+		  text: "Applying innovation...";
+                  font: "Sans:style=Bold";
+		  size: 20;
+		  min:  1 1;
+		  align: 0.5 0.5;
+	       }
+	    }
+		description { state: "31" 0.0;
+		text {
+		  text: "Self-affirming...";
+                  font: "Sans:style=Bold";
+		  size: 20;
+		  min:  1 1;
+		  align: 0.5 0.5;
+	       }
+	    }
+		description { state: "32" 0.0;
+		text {
+		  text: "Sandbagging expectations...";
+                  font: "Sans:style=Bold";
+		  size: 20;
+		  min:  1 1;
+		  align: 0.5 0.5;
+	       }
+	    }
+		description { state: "33" 0.0;
+		text {
+		  text: "Tokenizing innovation...";
+                  font: "Sans:style=Bold";
+		  size: 20;
+		  min:  1 1;
+		  align: 0.5 0.5;
+	       }
+	    }
+		description { state: "34" 0.0;
+		text {
+		  text: "Recalculating PI...";
+                  font: "Sans:style=Bold";
+		  size: 20;
+		  min:  1 1;
+		  align: 0.5 0.5;
+	       }
+	    }
+		description { state: "35" 0.0;
+		text {
+		  text: "Recalculating PI...";
+                  font: "Sans:style=Bold";
+		  size: 20;
+		  min:  1 1;
+		  align: 0.5 0.5;
+	       }
+	    }
+	 }
+	}
+      programs {
+	  program { name: "load_1";
+	    signal: "show";
+	    source: "";
+	    action: STATE_SET "1" 0.0;
+	    transition: LINEAR 0.001;
+	    target: "e.text.label";
+		target: "bar_progress";
+		after: "load_2";
+	 }
+	  program { name: "load_2";
+	    signal: "show";
+	    source: "";
+	    action: STATE_SET "2" 0.0;
+	    transition: LINEAR 0.3333;
+	    target: "e.text.label";
+		target: "bar_progress";
+		after: "load_3";
+	 }
+	  program { name: "load_3";
+	    signal: "show";
+	    source: "";
+	    action: STATE_SET "3" 0.0;
+	    transition: LINEAR 0.3333;
+	    target: "e.text.label";
+		target: "bar_progress";
+		after: "load_4";
+	 }
+	  program { name: "load_4";
+	    signal: "show";
+	    source: "";
+	    action: STATE_SET "4" 0.0;
+	    transition: LINEAR 0.3333;
+	    target: "e.text.label";
+		target: "bar_progress";
+		after: "load_5";
+	 }
+	  program { name: "load_5";
+	    signal: "show";
+	    source: "";
+	    action: STATE_SET "5" 0.0;
+	    transition: LINEAR 0.3333;
+	    target: "e.text.label";
+		target: "bar_progress";
+		after: "load_6";
+	 }
+	  program { name: "load_6";
+	    signal: "show";
+	    source: "";
+	    action: STATE_SET "6" 0.0;
+	    transition: LINEAR 0.3333;
+	    target: "e.text.label";
+		target: "bar_progress";
+		after: "load_7";
+	 }
+	  program { name: "load_7";
+	    signal: "show";
+	    source: "";
+	    action: STATE_SET "7" 0.0;
+	    transition: LINEAR 0.3333;
+	    target: "e.text.label";
+		target: "bar_progress";
+		after: "load_8";
+	 }
+	  program { name: "load_8";
+	    signal: "show";
+	    source: "";
+	    action: STATE_SET "8" 0.0;
+	    transition: LINEAR 0.3333;
+	    target: "e.text.label";
+		target: "bar_progress";
+		after: "load_9";
+	 }
+	  program { name: "load_9";
+	    signal: "show";
+	    source: "";
+	    action: STATE_SET "9" 0.0;
+	    transition: LINEAR 0.3333;
+	    target: "e.text.label";
+		target: "bar_progress";
+		after: "load_10";
+	 }
+	  program { name: "load_10";
+	    signal: "show";
+	    source: "";
+	    action: STATE_SET "10" 0.0;
+	    transition: LINEAR 0.3333;
+	    target: "e.text.label";
+		target: "bar_progress";
+		after: "load_11";
+	 }
+	  program { name: "load_11";
+	    signal: "show";
+	    source: "";
+	    action: STATE_SET "11" 0.0;
+	    transition: LINEAR 0.3333;
+	    target: "e.text.label";
+		target: "bar_progress";
+		after: "load_12";
+	 }
+	  program { name: "load_12";
+	    signal: "show";
+	    source: "";
+	    action: STATE_SET "12" 0.0;
+	    transition: LINEAR 0.3333;
+	    target: "e.text.label";
+		target: "bar_progress";
+		after: "load_13";
+	 }
+	  program { name: "load_13";
+	    signal: "show";
+	    source: "";
+	    action: STATE_SET "13" 0.0;
+	    transition: LINEAR 0.3333;
+	    target: "e.text.label";
+		target: "bar_progress";
+		after: "load_14";
+	 }
+	  program { name: "load_14";
+	    signal: "show";
+	    source: "";
+	    action: STATE_SET "14" 0.0;
+	    transition: LINEAR 0.3333;
+	    target: "e.text.label";
+		target: "bar_progress";
+		after: "load_15";
+	 }
+	  program { name: "load_15";
+	    signal: "show";
+	    source: "";
+	    action: STATE_SET "15" 0.0;
+	    transition: LINEAR 0.3333;
+	    target: "e.text.label";
+		target: "bar_progress";
+		after: "load_16";
+	 }
+	  program { name: "load_16";
+	    signal: "show";
+	    source: "";
+	    action: STATE_SET "16" 0.0;
+	    transition: LINEAR 0.3333;
+	    target: "e.text.label";
+		target: "bar_progress";
+		after: "load_17";
+	 }
+	  program { name: "load_17";
+	    signal: "show";
+	    source: "";
+	    action: STATE_SET "17" 0.0;
+	    transition: LINEAR 0.3333;
+	    target: "e.text.label";
+		target: "bar_progress";
+		after: "load_18";
+	 }
+	  program { name: "load_18";
+	    signal: "show";
+	    source: "";
+	    action: STATE_SET "18" 0.0;
+	    transition: LINEAR 0.3333;
+	    target: "e.text.label";
+		target: "bar_progress";
+		after: "load_19";
+	 }
+	  program { name: "load_19";
+	    signal: "show";
+	    source: "";
+	    action: STATE_SET "19" 0.0;
+	    transition: LINEAR 0.3333;
+	    target: "e.text.label";
+		target: "bar_progress";
+		after: "load_20";
+	 }
+	  program { name: "load_20";
+	    signal: "show";
+	    source: "";
+	    action: STATE_SET "20" 0.0;
+	    transition: LINEAR 0.3333;
+	    target: "e.text.label";
+		target: "bar_progress";
+		after: "load_21";
+	 }
+	  program { name: "load_21";
+	    signal: "show";
+	    source: "";
+	    action: STATE_SET "21" 0.0;
+	    transition: LINEAR 0.3333;
+	    target: "e.text.label";
+		target: "bar_progress";
+		after: "load_22";
+	 }
+	  program { name: "load_22";
+	    signal: "show";
+	    source: "";
+	    action: STATE_SET "22" 0.0;
+	    transition: LINEAR 0.3333;
+	    target: "e.text.label";
+		target: "bar_progress";
+		after: "load_23";
+	 }
+	  program { name: "load_23";
+	    signal: "show";
+	    source: "";
+	    action: STATE_SET "23" 0.0;
+	    transition: LINEAR 0.3333;
+	    target: "e.text.label";
+		target: "bar_progress";
+		after: "load_24";
+	 }
+	  program { name: "load_24";
+	    signal: "show";
+	    source: "";
+	    action: STATE_SET "24" 0.0;
+	    transition: LINEAR 0.3333;
+	    target: "e.text.label";
+		target: "bar_progress";
+		after: "load_25";
+	 }
+	  program { name: "load_25";
+	    signal: "show";
+	    source: "";
+	    action: STATE_SET "25" 0.0;
+	    transition: LINEAR 0.3333;
+	    target: "e.text.label";
+		target: "bar_progress";
+		after: "load_26";
+	 }
+	  program { name: "load_26";
+	    signal: "show";
+	    source: "";
+	    action: STATE_SET "26" 0.0;
+	    transition: LINEAR 0.3333;
+	    target: "e.text.label";
+		target: "bar_progress";
+		after: "load_27";
+	 }
+	  program { name: "load_27";
+	    signal: "show";
+	    source: "";
+	    action: STATE_SET "27" 0.0;
+	    transition: LINEAR 0.3333;
+	    target: "e.text.label";
+		target: "bar_progress";
+		after: "load_28";
+	 }
+	  program { name: "load_28";
+	    signal: "show";
+	    source: "";
+	    action: STATE_SET "28" 0.0;
+	    transition: LINEAR 0.3333;
+	    target: "e.text.label";
+		target: "bar_progress";
+		after: "load_29";
+	 }
+	  program { name: "load_29";
+	    signal: "show";
+	    source: "";
+	    action: STATE_SET "29" 0.0;
+	    transition: LINEAR 0.3333;
+	    target: "e.text.label";
+		target: "bar_progress";
+		after: "load_30";
+	 }
+	  program { name: "load_30";
+	    signal: "show";
+	    source: "";
+	    action: STATE_SET "30" 0.0;
+	    transition: LINEAR 0.3333;
+	    target: "e.text.label";
+		target: "bar_progress";
+		after: "load_31";
+	 }
+	  program { name: "load_31";
+	    signal: "show";
+	    source: "";
+	    action: STATE_SET "31" 0.0;
+	    transition: LINEAR 0.3333;
+	    target: "e.text.label";
+		target: "bar_progress";
+		after: "load_32";
+	 }
+	  program { name: "load_32";
+	    signal: "show";
+	    source: "";
+	    action: STATE_SET "32" 0.0;
+	    transition: LINEAR 0.3333;
+	    target: "e.text.label";
+		target: "bar_progress";
+		after: "load_33";
+	 }
+	  program { name: "load_33";
+	    signal: "show";
+	    source: "";
+	    action: STATE_SET "33" 0.0;
+	    transition: LINEAR 0.3333;
+	    target: "e.text.label";
+		target: "bar_progress";
+		after: "load_34";
+	 }
+	  program { name: "load_34";
+	    signal: "show";
+	    source: "";
+	    action: STATE_SET "34" 0.0;
+	    transition: LINEAR 0.3333;
+	    target: "e.text.label";
+		target: "bar_progress";
+		after: "load_35";
+	 }
+	  program { name: "load_35";
+	    signal: "show";
+	    source: "";
+	    action: STATE_SET "35" 0.0;
+	    transition: LINEAR 0.3333;
+	    target: "e.text.label";
+		target: "bar_progress";
+		after: "finish";
+	 }
+	  
+	  
+	  
+	  
+	 program {
+	    name: "logo-anim";
+	    in: 0.5 0.0;
+	    signal: "show";
+	    source: "";
+	    action: STATE_SET "visible" 0.0;
+	    target: "exquisite.progress";
+	    transition: LINEAR 0.3;
+	    after: "pulsate";
+	 }
+
+	 program {
+	    name: "exit";
+	    signal: "e,state,done";
+	    source: "e";
+		after: "load_35";
+	
+	 } program {
+	    name: "finish";
+		in: 0.5 0.0;
+	    action: SIGNAL_EMIT "e,state,done_ok" "e";
+	
+	 }
+	
+	 
+	 program {	
+		name: "pulsate";
+	    action: STATE_SET "default" 0.0;
+	    transition: LINEAR 3.0;
+		target: "exquisite.progress";
+		after: "pulsate";
+	 }
+	 	 program {	
+		name: "pulsate2";
+			    signal: "show";
+	    source: "";
+	    action: STATE_SET "default" 0.0;
+	    transition: LINEAR 3.0;
+		target: "asterisk";
+		after: "pulsate2";
+	 }
+	
+	
+      }
+   }
+
