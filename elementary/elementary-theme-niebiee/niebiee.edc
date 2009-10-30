@@ -660,7 +660,7 @@ part { name: "shadow";
       }
    }
 
-   group { name: "elm/button/base/hoversel_vertical";
+   group { name: "elm/button/base/hoversel_vertical/default";
       images {
 	 image: "bt_base1.png" COMP;
 	 image: "bt_base2.png" COMP;
@@ -870,8 +870,9 @@ part { name: "shadow";
       }
    }
 
-   group { name: "elm/button/base/hoversel_vertical_entry";
-
+   group { name: "elm/button/base/hoversel_vertical_entry/default";
+      alias: "elm/button/base/hoversel_vertical_entry/entry";
+   
       parts {      
 	 part { name: "button_image";
 	    mouse_events: 1;
@@ -3264,7 +3265,8 @@ part { name: "shadow";
       }
    }
 
-   group { name: "elm/hover/base/hoversel_vertical";
+   group { name: "elm/hover/base/hoversel_vertical/default";
+      alias: "elm/hover/base/hoversel_vertical/entry";
       images {
 
 	 image: "bt_base2.png" COMP;
