@@ -494,6 +494,11 @@ part { name: "shadow";
 	       //image.normal: "bt_base1.png";
                image.middle: SOLID;
 	    }
+    	    description { state: "disabled" 0.0;
+	       inherit:  "default" 0.0;
+	       color: 255 255 255 64;
+	    }
+
 	 }
 	 part { name: "elm.swallow.content";
 	    type: SWALLOW;
@@ -513,6 +518,7 @@ part { name: "shadow";
 	       aspect_preference: VERTICAL;
 	       rel2.offset: 4 -5;
 	    }
+
 	    description { state: "icononly" 0.0;
 	       inherit: "default" 0.0;
                fixed: 0 0;
@@ -550,6 +556,18 @@ part { name: "shadow";
 	       visible: 1;
 	       text.min: 1 1;
 	    }
+	    description { state: "disabled" 0.0;
+	       inherit: "default" 0.0;
+	       color: 255 255 255 128;
+	       color3: 0 0 0 0;
+	    }
+	    description { state: "disabled_visible" 0.0;
+	       inherit: "default" 0.0;
+	       color: 255 255 255 128;
+	       color3: 0 0 0 0;
+	       visible: 1;
+	       text.min: 1 1;
+	    }
 	 }
 
 	 part { name: "over2";
@@ -576,6 +594,18 @@ part { name: "shadow";
                color: 0 112 172 128;
             }
          }
+ 	 part { name: "disabler";
+	    type: RECT;
+	    description { state: "default" 0.0;
+	       color: 0 0 0 0;
+	       visible: 0;
+	    }
+	    description { state: "disabled" 0.0;
+	       inherit: "default" 0.0;
+	       visible: 1;
+	    }
+	 }
+
       }
       programs {
 	 program {
@@ -657,6 +687,45 @@ part { name: "shadow";
 	    action:  STATE_SET "default" 0.0;
 	    target: "elm.swallow.content";
 	 }
+	 program { name: "disable";
+	    signal: "elm,state,disabled";
+	    source: "elm";
+	    action: STATE_SET "disabled" 0.0;
+	    target: "button_image";
+	    target: "disabler";
+            after: "disable_text";
+	 }
+         program { name: "disable_text";
+	    script {
+	       new st[31];
+	       new Float:vl;
+	       get_state(PART:"elm.text", st, 30, vl);
+	       if (!strcmp(st, "visible"))
+		 set_state(PART:"elm.text", "disabled_visible", 0.0);
+	       else
+		 set_state(PART:"elm.text", "disabled", 0.0);
+	    }
+         }
+	 program { name: "enable";
+	    signal: "elm,state,enabled";
+	    source: "elm";
+	    action: STATE_SET "default" 0.0;
+	    target: "button_image";
+	    target: "disabler";
+            after: "enable_text";
+	 }
+         program { name: "enable_text";
+	    script {
+	       new st[31];
+	       new Float:vl;
+	       get_state(PART:"elm.text", st, 30, vl);
+	       if (!strcmp(st, "disabled_visible"))
+		 set_state(PART:"elm.text", "visible", 0.0);
+	       else
+		 set_state(PART:"elm.text", "default", 0.0);
+	    }
+         }
+
       }
    }
 
@@ -683,6 +752,11 @@ part { name: "shadow";
 	       //image.normal: "bt_base1.png";
                image.middle: SOLID;
 	    }
+	    description { state: "disabled" 0.0;
+	       inherit:  "default" 0.0;
+	       color: 255 255 255 64;
+	    }
+
 	 }
 	 part { name: "arrow";
 	    mouse_events: 0;
@@ -1137,6 +1211,10 @@ part { name: "shadow";
 	       rel2.to: "offrect";
 	       image.normal: "tog_base.png";
 	    }
+	    description { state: "disabled" 0.0;
+	       inherit: "default" 0.0;
+	       color: 0 112 172 64;
+	    }
 	 }
          part { name: "elm.offtext";
 	    type: TEXT;
@@ -1155,6 +1233,10 @@ part { name: "shadow";
 		  align:    0.5 0.5;
 		  text:     "OFF";
 	       }
+	    }
+	    description { state: "disabled" 0.0;
+	       inherit: "default" 0.0;
+	       color: 255 255 255 64;
 	    }
 	 }
          part { name: "elm.ontext";
@@ -1178,6 +1260,10 @@ part { name: "shadow";
 		  align:    0.5 0.5;
 		  text:     "ON";
 	       }
+	    }
+	    description { state: "disabled" 0.0;
+	       inherit: "default" 0.0;
+	       color: 255 255 255 64;
 	    }
 	 }
 	 part { name: "conf_over";
@@ -1243,6 +1329,17 @@ part { name: "shadow";
 	       aspect_preference: VERTICAL;
 	       rel2.offset: 4 -5;
 	    }
+	    description { state: "disabled" 0.0;
+	       inherit: "default" 0.0;
+	       color: 128 128 128 128;
+	    }
+	    description { state: "disabled_visible" 0.0;
+	       inherit: "default" 0.0;
+	       color: 128 128 128 128;
+               fixed: 1 1;
+	       visible: 1;
+	       aspect: 1.0 1.0;
+	    }
 	 }
          part { name: "elm.text";
 	    type: TEXT;
@@ -1269,7 +1366,28 @@ part { name: "shadow";
 	       visible: 1;
 	       text.min: 1 1;
 	    }
+	    description { state: "disabled" 0.0;
+	       inherit: "default" 0.0;
+	       color: 255 255 255 64;
+	    }
+	    description { state: "disabled_visible" 0.0;
+	       inherit: "default" 0.0;
+	       color: 255 255 255 64;
+	       visible: 1;
+	    }
 	 }
+ 	 part { name: "disabler";
+	    type: RECT;
+	    description { state: "default" 0.0;
+	       color: 0 0 0 0;
+	       visible: 0;
+	    }
+	    description { state: "disabled" 0.0;
+	       inherit: "default" 0.0;
+	       visible: 1;
+	    }
+	 }
+
       }
       programs {
 	 program { name:   "drag_end";
@@ -1328,6 +1446,58 @@ part { name: "shadow";
 	    action:  STATE_SET "default" 0.0;
 	    target: "elm.swallow.content";
 	 }
+	 program { name: "disable";
+	    signal: "elm,state,disabled";
+	    source: "elm";
+	    action: STATE_SET "disabled" 0.0;
+	    target: "togbase";
+	    target: "elm.offtext";
+	    target: "elm.ontext";
+	    target: "disabler";
+            after: "disable_text";
+	 }
+         program { name: "disable_text";
+	    script {
+	       new st[31];
+	       new Float:vl;
+	       get_state(PART:"elm.text", st, 30, vl);
+	       if (!strcmp(st, "visible"))
+		 set_state(PART:"elm.text", "disabled_visible", 0.0);
+	       else
+		 set_state(PART:"elm.text", "disabled", 0.0);
+
+               get_state(PART:"elm.swallow.content", st, 30, vl);
+	       if (!strcmp(st, "visible"))
+		 set_state(PART:"elm.swallow.content", "disabled_visible", 0.0);
+	       else
+		 set_state(PART:"elm.swallow.content", "disabled", 0.0);
+	    }
+         }
+	 program { name: "enable";
+	    signal: "elm,state,enabled";
+	    source: "elm";
+	    action: STATE_SET "default" 0.0;
+	    target: "disabler";
+            after: "enable_text";
+	 }
+         program { name: "enable_text";
+	    script {
+	       new st[31];
+	       new Float:vl;
+	       get_state(PART:"elm.text", st, 30, vl);
+	       if (!strcmp(st, "disabled_visible"))
+		 set_state(PART:"elm.text", "visible", 0.0);
+	       else
+		 set_state(PART:"elm.text", "default", 0.0);
+
+               get_state(PART:"elm.swallow.content", st, 30, vl);
+	       if (!strcmp(st, "visible"))
+		 set_state(PART:"elm.swallow.content", "visible", 0.0);
+	       else
+		 set_state(PART:"elm.swallow.content", "default", 0.0);
+	    }
+         }
+
       }
    }
 
@@ -8619,6 +8789,17 @@ type: RECT;
                color: 255 255 255 255;
 //               visible: 1;
             }
+	    description { state: "disabled" 0.0;
+	       inherit: "default" 0.0;
+               visible: 0;
+	       color: 255 255 255 64;
+	    }
+	    description { state: "disabled_visible" 0.0;
+	       inherit: "default" 0.0;
+	       color: 255 255 255 64;
+	       visible: 1;
+	    }
+
 	 }
 	 part { name: "elm.swallow.content";
 	    type: SWALLOW;
@@ -8640,6 +8821,18 @@ type: RECT;
 	       aspect: 1.0 1.0;
 	       aspect_preference: VERTICAL;
 	    }
+	    description { state: "disabled" 0.0;
+	       inherit: "default" 0.0;
+	       color: 255 255 255 64;
+	    }
+	    description { state: "disabled_visible" 0.0;
+	       inherit: "default" 0.0;
+	       color: 255 255 255 64;
+               fixed: 1 1;
+	       visible: 1;
+	       aspect: 1.0 1.0;
+	    }
+
 	 }
          part { name: "elm.text";
 	    type: TEXT;
@@ -8665,6 +8858,19 @@ type: RECT;
 	       visible: 1;
 	       text.min: 1 1;
 	    }
+	    description { state: "disabled" 0.0;
+	       inherit: "default" 0.0;
+	       color: 255 255 255 64;
+	       color3: 0 0 0 0;
+	    }
+	    description { state: "disabled_visible" 0.0;
+	       inherit: "default" 0.0;
+	       color: 255 255 255 64;
+	       color3: 0 0 0 0;
+	       visible: 1;
+	       text.min: 1 1;
+	    }
+
 	 }
          part { name: "events";
 	    type: RECT;
@@ -8673,6 +8879,18 @@ type: RECT;
 	       color: 0 0 0 0;
 	    }
 	 }
+ 	 part { name: "disabler";
+	    type: RECT;
+	    description { state: "default" 0.0;
+	       color: 0 0 0 0;
+	       visible: 0;
+	    }
+	    description { state: "disabled" 0.0;
+	       inherit: "default" 0.0;
+	       visible: 1;
+	    }
+	 }
+
       }
       programs {
 	 program { name: "click";
@@ -8718,6 +8936,67 @@ type: RECT;
 	    action:  STATE_SET "default" 0.0;
 	    target: "elm.swallow.content";
 	 }
+	 program { name: "disable";
+	    signal: "elm,state,disabled";
+	    source: "elm";
+	    action: STATE_SET "disabled" 0.0;
+	    target: "disabler";
+            after: "disable_text";
+	 }
+         program { name: "disable_text";
+	    script {
+	       new st[31];
+	       new Float:vl;
+	       get_state(PART:"elm.text", st, 30, vl);
+	       if (!strcmp(st, "visible"))
+		 set_state(PART:"elm.text", "disabled_visible", 0.0);
+	       else
+		 set_state(PART:"elm.text", "disabled", 0.0);
+
+               get_state(PART:"elm.swallow.content", st, 30, vl);
+	       if (!strcmp(st, "visible"))
+		 set_state(PART:"elm.swallow.content", "disabled_visible", 0.0);
+	       else
+		 set_state(PART:"elm.swallow.content", "disabled", 0.0);
+
+               get_state(PART:"check", st, 30, vl);
+	       if (!strcmp(st, "visible"))
+		 set_state(PART:"check", "disabled_visible", 0.0);
+	       else
+		 set_state(PART:"check", "disabled", 0.0);
+	    }
+         }
+	 program { name: "enable";
+	    signal: "elm,state,enabled";
+	    source: "elm";
+	    action: STATE_SET "default" 0.0;
+	    target: "disabler";
+            after: "enable_text";
+	 }
+         program { name: "enable_text";
+	    script {
+	       new st[31];
+	       new Float:vl;
+	       get_state(PART:"elm.text", st, 30, vl);
+	       if (!strcmp(st, "disabled_visible"))
+		 set_state(PART:"elm.text", "visible", 0.0);
+	       else
+		 set_state(PART:"elm.text", "default", 0.0);
+
+               get_state(PART:"elm.swallow.content", st, 30, vl);
+	       if (!strcmp(st, "visible"))
+		 set_state(PART:"elm.swallow.content", "visible", 0.0);
+	       else
+		 set_state(PART:"elm.swallow.content", "default", 0.0);
+
+               get_state(PART:"check", st, 30, vl);
+	       if (!strcmp(st, "visible"))
+		 set_state(PART:"check", "visible", 0.0);
+	       else
+		 set_state(PART:"check", "default", 0.0);
+	    }
+         }
+
       }
    }
 
@@ -8783,6 +9062,16 @@ type: RECT;
 	       aspect: 1.0 1.0;
 	       aspect_preference: VERTICAL;
 	    }
+	    description { state: "disabled" 0.0;
+	       inherit: "default" 0.0;
+	       color: 255 255 255 64;
+	    }
+	    description { state: "disabled_visible" 0.0;
+	       inherit: "default" 0.0;
+	       color: 255 255 255 64;
+	       visible: 1;
+	    }
+
 	 }
          part { name: "elm.text";
 	    type: TEXT;
@@ -8808,6 +9097,19 @@ type: RECT;
 	       visible: 1;
 	       text.min: 1 1;
 	    }
+	    description { state: "disabled" 0.0;
+	       inherit: "default" 0.0;
+	       color: 255 255 255 64;
+	       color3: 0 0 0 0;
+	    }
+	    description { state: "disabled_visible" 0.0;
+	       inherit: "default" 0.0;
+	       color: 255 255 255 64;
+	       color3: 0 0 0 0;
+	       visible: 1;
+	       text.min: 1 1;
+	    }
+
 	 }
          part { name: "events";
 	    type: RECT;
@@ -8816,6 +9118,18 @@ type: RECT;
 	       color: 0 0 0 0;
 	    }
 	 }
+ 	 part { name: "disabler";
+	    type: RECT;
+	    description { state: "default" 0.0;
+	       color: 0 0 0 0;
+	       visible: 0;
+	    }
+	    description { state: "disabled" 0.0;
+	       inherit: "default" 0.0;
+	       visible: 1;
+	    }
+	 }
+
       }
       programs {
 	 program { name: "click";
@@ -8861,6 +9175,55 @@ type: RECT;
 	    action:  STATE_SET "default" 0.0;
 	    target: "elm.swallow.content";
 	 }
+	 program { name: "disable";
+	    signal: "elm,state,disabled";
+	    source: "elm";
+	    action: STATE_SET "disabled" 0.0;
+	    target: "disabler";
+            after: "disable_text";
+	 }
+         program { name: "disable_text";
+	    script {
+	       new st[31];
+	       new Float:vl;
+	       get_state(PART:"elm.text", st, 30, vl);
+	       if (!strcmp(st, "visible"))
+		 set_state(PART:"elm.text", "disabled_visible", 0.0);
+	       else
+		 set_state(PART:"elm.text", "disabled", 0.0);
+
+               get_state(PART:"elm.swallow.content", st, 30, vl);
+	       if (!strcmp(st, "visible"))
+		 set_state(PART:"elm.swallow.content", "disabled_visible", 0.0);
+	       else
+		 set_state(PART:"elm.swallow.content", "disabled", 0.0);
+	    }
+         }
+	 program { name: "enable";
+	    signal: "elm,state,enabled";
+	    source: "elm";
+	    action: STATE_SET "default" 0.0;
+	    target: "disabler";
+            after: "enable_text";
+	 }
+         program { name: "enable_text";
+	    script {
+	       new st[31];
+	       new Float:vl;
+	       get_state(PART:"elm.text", st, 30, vl);
+	       if (!strcmp(st, "disabled_visible"))
+		 set_state(PART:"elm.text", "visible", 0.0);
+	       else
+		 set_state(PART:"elm.text", "default", 0.0);
+
+               get_state(PART:"elm.swallow.content", st, 30, vl);
+	       if (!strcmp(st, "visible"))
+		 set_state(PART:"elm.swallow.content", "visible", 0.0);
+	       else
+		 set_state(PART:"elm.swallow.content", "default", 0.0);
+	    }
+         }
+
       }
    }
 
