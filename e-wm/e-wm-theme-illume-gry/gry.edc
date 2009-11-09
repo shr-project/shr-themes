@@ -202,7 +202,7 @@ collections {
 	       color: COLOR_BLACK;
 	       text {
                   font: "Sans:style=Bold";
-		  text: ".:[alpha]:.";
+		  text: "alpha";
 		  size: 10;
 		  min: 1 1;
 	       }
