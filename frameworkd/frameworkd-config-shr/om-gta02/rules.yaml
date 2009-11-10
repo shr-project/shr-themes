@@ -110,3 +110,7 @@
     actions:
              - Command('xset -display localhost:0 s blank')
              - Command('xset -display localhost:0 s activate')
+-
+    trigger: IdleState()
+    filters: HasAttr(status, "suspend")
+    actions: SuspendAction()
