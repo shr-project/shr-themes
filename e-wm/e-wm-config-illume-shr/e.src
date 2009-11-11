@@ -258,8 +258,7 @@ group "E_Config" struct {
       value "context" int: 9;
       value "modifiers" int: 0;
       value "key" string: "Execute";
-      value "action" string: "delayed_action";
-      value "params" string: "[0.0 syscon] [2.0 halt_now]";
+      value "action" string: "syscon";
       value "any_mod" uchar: 1;
     }
   }
@@ -268,8 +267,7 @@ group "E_Config" struct {
       value "context" int: 9;
       value "modifiers" int: 0;
       value "key" string: "Keycode-219";
-      value "action" string: "delayed_action";
-      value "params" string: "[0.0 syscon] [2.0 halt_now]";
+      value "action" string: "syscon";
       value "any_mod" uchar: 1;
     }
   }
@@ -278,28 +276,7 @@ group "E_Config" struct {
       value "context" int: 9;
       value "modifiers" int: 0;
       value "key" string: "XF86PowerOff";
-      value "action" string: "delayed_action";
-      value "params" string: "[0.0 syscon] [2.0 halt_now]";
-      value "any_mod" uchar: 1;
-    }
-  }
-  group "key_bindings" list {
-    group "E_Config_Binding_Key" struct {
-      value "context" int: 9;
-      value "modifiers" int: 0;
-      value "key" string: "XF86Phone";
-      value "action" string: "simple_lock";
-      value "params" string: "";
-      value "any_mod" uchar: 1;
-    }
-  }
-  group "key_bindings" list {
-    group "E_Config_Binding_Key" struct {
-      value "context" int: 9;
-      value "modifiers" int: 0;
-      value "key" string: "Keycode-177";
-      value "action" string: "simple_lock";
-      value "params" string: "";
+      value "action" string: "syscon";
       value "any_mod" uchar: 1;
     }
   }
