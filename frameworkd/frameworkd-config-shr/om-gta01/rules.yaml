@@ -112,4 +112,4 @@
 -
     trigger: IdleState()
     filters: HasAttr(status, "suspend")
-    actions: SuspendAction()
+    actions: Suspend()
