@@ -37,11 +37,11 @@
              - SetLed("gta02_aux_red", "blink")
              - OccupyResource(Display)
 -
-#    while: CallStatus()
-#    filters: Or(HasAttr(status, "outgoing"), HasAttr(status, "active"))
-#    actions:
-#            - OccupyResource(CPU)
-#-
+    while: CallStatus()
+    filters: Or(HasAttr(status, "outgoing"), HasAttr(status, "active"))
+    actions:
+            - OccupyResource(CPU)
+-
 #    while: CallStatus()
 #    filters:
 #            - Or(Or(HasAttr(status, "outgoing"), HasAttr(status, "active")), And(HasAttr(status, "incoming"), CallListContains("active")))
