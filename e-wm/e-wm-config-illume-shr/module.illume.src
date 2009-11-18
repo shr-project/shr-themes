@@ -3,7 +3,7 @@ group "Illume_Cfg" struct {
   value "launcher.mode" int: 1;
   value "launcher.icon_size" int: 120;
   value "launcher.single_click" int: 1;
-  value "power.auto_suspend" int: 1;
+  value "power.auto_suspend" int: 0;
   value "power.auto_suspend_delay" int: 1;
   value "performance.cache_level" int: 3;
   value "performance.fps" int: 25;
