@@ -882,7 +882,7 @@ group "E_Config" struct {
   }
   group "syscon.actions" list {
     group "E_Config_Syscon_Action" struct {
-      value "action" string: "desk_lock";
+      value "action" string: "lock";
       value "button" string: "button";
       value "icon" string: "system-lock-screen";
       value "is_main" int: 1;
