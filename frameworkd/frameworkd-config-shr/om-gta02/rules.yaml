@@ -37,11 +37,6 @@
              - SetLed("gta02_aux_red", "blink")
              - OccupyResource(Display)
 -
-    while: CallStatus()
-    filters: Or(HasAttr(status, "outgoing"), HasAttr(status, "active"))
-    actions:
-            - OccupyResource(CPU)
--
 #    while: CallStatus()
 #    filters:
 #            - Or(Or(HasAttr(status, "outgoing"), HasAttr(status, "active")), And(HasAttr(status, "incoming"), CallListContains("active")))
@@ -60,12 +55,6 @@
     while: PowerStatus()
     filters: HasAttr(status, "charging")
     actions: SetLed("gta02_power_orange", "light")
-
--
-    while: PowerStatus()
-    filters: Not(HasAttr(status, "discharging"))
-    actions: OccupyResource(CPU)
-
 -
     while: PowerStatus()
     filters: HasAttr(status, "critical")
@@ -95,22 +84,3 @@
              - HasAttr(event, "released")
     actions: Command('amixer -d sset "Amp Spk" unmute')
 
-
-    #
-    # Idleness Brightness Handling
-    # (activating the user's screen saver from a central daemon is quite hacky 
-    #  we really want some user's application to listen for the right signals)
--
-    trigger: IdleState()
-    filters: HasAttr(status, "busy")
-    actions: Command('xset -display localhost:0 s reset')
--
-    trigger: IdleState()
-    filters: HasAttr(status, "idle_dim")
-    actions:
-             - Command('xset -display localhost:0 s blank')
-             - Command('xset -display localhost:0 s activate')
--
-    trigger: IdleState()
-    filters: HasAttr(status, "suspend")
-    actions: Suspend()
