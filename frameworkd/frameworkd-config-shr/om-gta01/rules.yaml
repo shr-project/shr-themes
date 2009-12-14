@@ -33,7 +33,6 @@
     filters: Not(CallListContains("active"))
     actions:
              - RingTone()
-             - Command('xset -display localhost:0 s reset')
              - OccupyResource(Display)
 -
 #    while: CallStatus()

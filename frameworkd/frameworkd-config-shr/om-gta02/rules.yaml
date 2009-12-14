@@ -33,7 +33,6 @@
     filters: Not(CallListContains("active"))
     actions:
              - RingTone()
-             - Command('xset -display localhost:0 s reset')
              - SetLed("gta02_aux_red", "blink")
              - OccupyResource(Display)
 -
