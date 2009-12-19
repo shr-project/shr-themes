@@ -7,13 +7,13 @@
       }
       parts {
 	 part { name: "base";
-//	    type: RECT;
+	    type: RECT;
 	    description { state: "default" 0.0;
-	       color: 255 255 255 254;
-               image {
-                  normal: "busy_bg.png";
-                  border: 0 0 0 10;
-               }
+	       color: 0 0 0 200;
+//               image {
+//                  normal: "busy_bg.png";
+//                  border: 0 0 0 10;
+//               }
 	       align: 0.0 1.0;
 	       max: 99999 70;
 	    }
