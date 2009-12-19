@@ -1,0 +1,62 @@
+/////////////////////////////////////////////////////////////////////////////
+   /*** MOD: ILLUME WIFI ***/
+   group { name: "e/modules/illume/gadget/wifi";
+      images {
+	 image: "wifi_0.png" COMP;
+	 image: "wifi_1.png" COMP;
+	 image: "wifi_2.png" COMP;
+	 image: "wifi_3.png" COMP;
+	 image: "wifi_4.png" COMP;
+      }
+      min: 19 23;
+      max: 19 42;
+      script {
+       public message(Msg_Type:type, id, ...) {
+	  if ((type == MSG_FLOAT) && (id == 1)) {
+	     new Float:val;
+	     val = getfarg(2);
+	     set_state(PART:"wifi", "default", val);
+	  }
+       }
+      }
+      parts {
+	 part { name: "base";
+	    type: RECT;
+	    description { state: "default" 0.0;
+	       color: 0 0 0 0;
+	       rel1.offset: 2 4;
+	       rel2.offset: -3 -5;
+	    }
+	 }
+	 part { name: "wifi";
+	    mouse_events: 0;
+	    description { state: "default" 0.0;
+	       min: 5 5;
+	       max: 15 15;
+	       aspect: 1.0 1.0;
+	       aspect_preference: BOTH;
+	       align: 0.5 1.0;
+	       color: 255 255 255 255;
+	       image.normal: "wifi_0.png";
+	       rel1.to: "base";
+	       rel2.to: "base";
+	    }
+	    description { state: "default" 0.25;
+	       inherit: "default" 0.0;
+	       image.normal: "wifi_1.png";
+	    }
+	    description { state: "default" 0.5;
+	       inherit: "default" 0.0;
+	       image.normal: "wifi_2.png";
+	    }
+	    description { state: "default" 0.75;
+	       inherit: "default" 0.0;
+	       image.normal: "wifi_3.png";
+	    }
+	    description { state: "default" 1.0;
+	       inherit: "default" 0.0;
+	       image.normal: "wifi_4.png";
+	    }
+	 }
+      }
+   }

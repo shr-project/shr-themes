@@ -1,0 +1,155 @@
+/////////////////////////////////////////////////////////////////////////////
+  /*** MOD: ILLUME FLAUNCH ***/
+  
+/*  group {
+      name: "e/modules/flaunch/button/start";
+      parts {
+	 part { name: "base";
+	    type: RECT;
+	    description { state: "default" 0.0;
+	       color: 0 0 0 0;
+		   min: 0 70;
+	       rel1.offset: 0 0;
+	       rel2.offset: 0 0;
+	    }
+	 }
+         part {
+	    name: "e.text.label";
+	    type: TEXT;
+	    mouse_events: 0;
+	    description {
+	       state: "default" 0.0;
+	       color: 0 0 0 0;
+	       text {
+		  text: "0";
+		  font: "Sans";
+		  size: 28;
+		  align: 0.0 1.0;
+	       }
+	       rel1 {
+		  relative: 0.0 0.0;
+		  offset: 4 8;
+//		  to: "asterisk.button";
+	       }
+	       rel2 {
+		  relative: 1.0 1.0;
+		  offset: 0 11;
+//		  to: "asterisk.button";
+	       }
+	    }
+	 }
+/*	 
+	 part { name: "e.text.label";
+	    type: TEXT;
+	    mouse_events: 0;
+	    description { state: "default" 0.0;
+	       align: 0.0 1.0;
+	       rel1.offset: 4 10;
+	       rel1.relative: 0.0 1.0;
+	       rel2.offset: -5 10;
+	       rel2.relative: 1.0 1.0;
+	       color: 0 0 0 0;
+	       text {
+		  font: "Sans";
+		  size: 32;
+		  align: center;
+		  min: 0 1;
+	       }
+	    }
+	 }
+ */
+/*      }
+      programs {
+	 program { name: "up";
+	    signal: "mouse,up,1";
+	    source: "base";
+            action: SIGNAL_EMIT "e,action,do,select" "";
+	 }
+      }
+   }
+*/  
+   group {
+      images{
+	  image: "bt_base2.png" COMP;
+	  }
+      name: "e/modules/flaunch/button/default";
+      
+	parts {
+	
+
+	 part { name: "base";
+	    
+	    description { state: "default" 0.0;
+//		color: 0 255 0 255;
+		min: 0 65;
+		image{
+		normal: bt_base2.png;
+		border: 7 7 7 7;
+	    }
+		
+	       rel1.offset:  -30 10;
+	       rel2.offset:  -30 -10;
+	    }
+	 }
+	 part { name: "e.text.label";
+	    type: TEXT;
+	    mouse_events: 0;
+	    description { state: "default" 0.0;
+			      rel1.offset:  -30 10;
+	       rel2.offset:  -30 -10;
+		min: 0 65;
+	       color: 255 255 255 255;
+	       visible: 1;
+	       text {
+		  font: "Sans";
+		  size: 20;
+		  align: 0.5 0.5;
+		  min: 0 1;
+	       }
+	    }
+	 }
+          part { name: "over3";
+            mouse_events: 0;
+                type: RECT;
+            description { state: "default" 0.0;
+                min: 0 65;
+               visible: 0;
+               color: 0 0 0 0;
+                              rel1.offset:  -30 10;
+               rel2.offset:  -30 -10;
+
+            }
+            description { state: "clicked" 0.0;
+               inherit:  "default" 0.0;
+               visible: 1;
+               color: 0 0 0 64;
+            }
+         }
+
+      }
+      programs {
+	 program { name: "up";
+	    signal: "mouse,up,1";
+	    source: "base";
+            action: SIGNAL_EMIT "e,action,do,select" "";
+	 }
+	 
+	 program {
+	    name:   "button_click";
+	    signal: "mouse,down,1";
+	    source: "base";
+	    action: STATE_SET "clicked" 0.0;
+	    target: "over3";
+	    transition: LINEAR 0.2;
+	 }
+	 program {
+	    name:   "button_unclick";
+	    signal: "mouse,up,1";
+	    source: "base";
+	    action: STATE_SET "default" 0.0;
+	    target: "over3";
+	    transition: LINEAR 0.3;
+	 }
+	 
+      }
+   }

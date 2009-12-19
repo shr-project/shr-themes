@@ -1,0 +1,104 @@
+/////////////////////////////////////////////////////////////////////////////
+   /*** MOD: ILLUME CFG ***/
+   // FIXME: will die
+ /*  group { name: "e/modules/illume/config/dialog";
+      parts {
+	 part { name: "base";
+	    type: RECT;
+	    description { state: "default" 0.0;
+	       color: 255 255 255 255;
+	    }
+	 }
+	 part { name: "e.swallow.content";
+	    type: SWALLOW;
+	    description { state: "default" 0.0;
+	       rel1 {
+		  relative: 0.0 0.0;
+		  offset: 0 0;
+	       }
+	       rel2 {
+		  to: "ok";
+		  relative: 1.0 0.0;
+		  offset: -1 -1;
+	       }
+	    }
+	 }
+	 part { name: "e.text.label";
+	    type: TEXT;
+	    mouse_events: 0;
+	    scale: 1;
+	    description { state: "default" 0.0;
+	       align: 0.5 1.0;
+	       rel1 {
+		  relative: 0.0 1.0;
+		  offset:   0 -9;
+	       }
+	       rel2 {
+		  relative: 1.0 1.0;
+		  offset:   -1 -9;
+	       }
+	       color: 0 0 0 255;
+	       text {
+                  font: "Sans"; 
+		  size: 24;
+		  min: 1 1;
+		  align: 0.5 1.0;
+	       }
+	    }
+	 }
+	 part { name: "ok";
+	    type: RECT;
+	    description { state: "default" 0.0;
+	       color: 0 0 0 0;
+	       rel1.to_y: "e.text.label";
+	       rel1.offset: 0 -15;
+	    }
+	 }
+      }
+      programs {
+         program { name: "press";
+	    signal: "mouse,up,1";
+	    source: "ok";
+	    action: SIGNAL_EMIT "e,action,do,ok" "";
+	 }
+      }
+   }
+   */
+   /////////////////////////////////////////////////////////////////////////////
+   /*** MOD: ILLUME CFG ***/
+   group { name: "e/modules/illume/gadget/cfg";
+      images {
+	 image: "cfg.png" COMP;
+      }
+      min: 32 32;
+      max: 256 256;
+      parts {
+	 part { name: "base";
+	    type: RECT;
+	    description { state: "default" 0.0;
+	       color: 0 0 0 0;
+	       rel1.offset: 0 0;
+	       rel2.offset: -1 -1;
+	    }
+	 }
+	 part { name: "cfg";
+	    mouse_events: 0;
+	    description { state: "default" 0.0;
+	       min: 8 8;
+	       max: 24 24;
+	       aspect: 1.0 1.0;
+	       aspect_preference: BOTH;
+	       align: 0.5 0.5;
+	       color: 255 255 255 176;
+	       image.normal: "cfg.png";
+	       rel1.to: "base";
+	       rel2.to: "base";
+	    }
+	    description { state: "off" 1.0;
+	       inherit: "default" 0.0;
+	       visible: 0;
+	    }
+	 }
+      }
+   }
+
