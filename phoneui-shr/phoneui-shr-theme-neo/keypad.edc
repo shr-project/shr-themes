@@ -41,11 +41,11 @@ group { name: "phoneui/keypad";
 				color: COLOR_BLACK;
 				rel1 {
 					relative: 0 0.01;
-					offset: 4 4;
+					offset: 5 5;
 				}
 				rel2 {
 					relative: 0.32 0.245;
-					offset: -4 -4;
+					offset: -5 -5;
 				}
 			}
 			description {
@@ -53,11 +53,11 @@ group { name: "phoneui/keypad";
 				color: COLOR_HALF;
 				rel1 {
 					relative: 0 0.01;
-					offset: 2 2;
+					offset: -2 -2;
 				}
 				rel2 {
 					relative: 0.32 0.245;
-					offset: -2 -2;
+					offset: 2 2;
 				}
 			}
 		}
@@ -85,11 +85,11 @@ group { name: "phoneui/keypad";
 				color: COLOR_BLACK;
 				rel1 {
 					relative: 0.33 0.01;
-					offset: 4 4;
+					offset: 5 5;
 				}
 				rel2 {
 					relative: 0.66 0.245;
-					offset: -4 -4;
+					offset: -5 -5;
 				}
 			}
 			description {
@@ -97,11 +97,11 @@ group { name: "phoneui/keypad";
 				color: COLOR_HALF;
 				rel1 {
 					relative: 0.33 0.01;
-					offset: 2 2;
+					offset: -2 -2;
 				}
 				rel2 {
 					relative: 0.66 0.245;
-					offset: -2 -2;
+					offset: 2 2;
 				}
 			}
 		}
@@ -130,11 +130,11 @@ group { name: "phoneui/keypad";
 				color: COLOR_BLACK;
 				rel1 {
 					relative: 0.67 0.01;
-					offset: 4 4;
+					offset:  5 5;
 				}
 				rel2 {
 					relative: 1.0 0.245;
-					offset: -4 -4;
+					offset: -5 -5;
 				}
 			}
 			description {
@@ -217,7 +217,7 @@ group { name: "phoneui/keypad";
 					text: "";
 					font: "redensek";
 					size: 20;
-					align: 0.5 0.9;
+					align: 0.5 0.98;
 				}
 			}
 		}
@@ -265,7 +265,7 @@ group { name: "phoneui/keypad";
 					text: "";
 					font: "redensek";
 					size: 20;
-					align: 0.5 0.9;
+					align: 0.5 0.98;
 				}
 			}
 		}
@@ -295,11 +295,11 @@ group { name: "phoneui/keypad";
 				color: COLOR_BLACK;
 				rel1 {
 					relative: 0 0.255;
-					offset: 4 4;
+					offset: 5 5;
 				}
 				rel2 {
 					relative: 0.32 0.495;
-					offset, -4 -4;
+					offset, -5 -5;
 				}
 			}
 			description {
@@ -307,11 +307,11 @@ group { name: "phoneui/keypad";
 				color: COLOR_HALF;
 				rel1 {
 					relative: 0 0.255;
-					offset: 2 2;
+					offset: -2 -2;
 				}
 				rel2 {
 					relative: 0.32 0.495;
-					offset: -2 -2;
+					offset: 2 2;
 				}
 			}
 		}
@@ -340,22 +340,22 @@ group { name: "phoneui/keypad";
 				color: COLOR_BLACK;
 				rel1 {
 					relative: 0.33 0.255;
-					offset:  4 4;
+					offset:  5 5;
 				}
 				rel2 {
 					relative: 0.66 0.495;
-					offset: -4 -4;
+					offset: -5 -5;
 				}
 			}
 			description { state: "clicked" 0.0;
 				color: COLOR_HALF;
 				rel1 {
 					relative: 0.33 0.255;
-					offset: 2 2;
+					offset: -2 -2;
 				}
 				rel2 {
 					relative: 0.66 0.495;
-					offset: -2 -2;
+					offset: 2 2;
 				}
 			}
 		}
@@ -384,11 +384,11 @@ group { name: "phoneui/keypad";
 				color: COLOR_BLACK;
 				rel1 {
 					relative: 0.67 0.255;
-					offset: 4 4;
+					offset: 5 5;
 				}
 				rel2 {
 					relative: 1.0 0.495;
-					offset: -4 -4;
+					offset: -5 -5;
 				}
 			}
 			description {
@@ -396,11 +396,11 @@ group { name: "phoneui/keypad";
 				color: COLOR_HALF;
 				rel1 {
 					relative: 0.67 0.255;
-					offset: 2 2;
+					offset: -2 -2;
 				}
 				rel2 {
 					relative: 1.0 0.495;
-					offset: -2 -2;
+					offset: 2 2;
 				}
 			}
 		}
@@ -448,7 +448,7 @@ group { name: "phoneui/keypad";
 					text: "";
 					font: "redensek";
 					size: 20;
-					align: 0.5 0.9;
+					align: 0.5 0.98;
 				}
 			}
 		}
@@ -496,7 +496,7 @@ group { name: "phoneui/keypad";
 					text: "";
 					font: "redensek";
 					size: 20;
-					align: 0.5 0.9;
+					align: 0.5 0.98;
 				}
 			}
 		}
@@ -546,7 +546,7 @@ group { name: "phoneui/keypad";
 					text: "";
 					font: "redensek";
 					size: 20;
-					align: 0.5 0.9;
+					align: 0.5 0.98;
 				}
 			}
 		}
@@ -576,11 +576,11 @@ group { name: "phoneui/keypad";
 				color: COLOR_BLACK;
 				rel1 {
 					relative: 0 0.505;
-					offset: 4 4;
+					offset: 5 5;
 				}
 				rel2 {
 					relative: 0.32 0.745;
-					offset: -4 -4;
+					offset: -5 -5;
 				}
 			}
 			description {
@@ -588,11 +588,11 @@ group { name: "phoneui/keypad";
 				color: COLOR_HALF;
 				rel1 {
 					relative: 0 0.505;
-					offset: 2 2;
+					offset: -2 -2;
 				}
 				rel2 {
 					relative: 0.32 0.745;
-					offset: -2 -2;
+					offset: 2 2;
 				}
 			}
 		}
@@ -621,11 +621,11 @@ group { name: "phoneui/keypad";
 				color: COLOR_BLACK;
 				rel1 {
 					relative: 0.33 0.505;
-					offset: 4 4;
+					offset: 5 5;
 				}
 				rel2 {
 					relative: 0.66 0.745;
-					offset: -4 -4;
+					offset: -5 -5;
 				}
 			}
 			description {
@@ -633,11 +633,11 @@ group { name: "phoneui/keypad";
 				color: COLOR_HALF;
 				rel1 {
 					relative: 0.33 0.505;
-					offset: 2 2;
+					offset: -2 -2;
 				}
 				rel2 {
 					relative: 0.66 0.745;
-					offset: -2 -2;
+					offset: 2 2;
 				}
 			}
 		}
@@ -666,11 +666,11 @@ group { name: "phoneui/keypad";
 				color: COLOR_BLACK;
 				rel1 {
 					relative: 0.67 0.505;
-					offset: 4 4;
+					offset: 5 5;
 				}
 				rel2 {
 					relative: 1.0 0.745;
-					offset: -4 -4;
+					offset: -5 -5;
 				}
 			}
 			description {
@@ -678,11 +678,11 @@ group { name: "phoneui/keypad";
 				color: COLOR_HALF;
 				rel1 {
 					relative: 0.67 0.505;
-					offset: 2 2;
+					offset: -2 -2;
 				}
 				rel2 {
 					relative: 1.0 0.745;
-					offset: -2 -2;
+					offset: 2 2;
 				}
 			}
 		}
@@ -730,7 +730,7 @@ group { name: "phoneui/keypad";
 					text: "";
 					font: "redensek";
 					size: 20;
-					align: 0.5 0.9;
+					align: 0.5 0.98;
 				}
 			}
 		}
@@ -778,7 +778,7 @@ group { name: "phoneui/keypad";
 					text: "";
 					font: "redensek";
 					size: 20;
-					align: 0.5 0.9;
+					align: 0.5 0.98;
 				}
 			}
 		}
@@ -827,7 +827,7 @@ group { name: "phoneui/keypad";
 					text: "";
 					font: "redensek";
 					size: 20;
-					align: 0.5 0.9;
+					align: 0.5 0.98;
 				}
 			}
 		}
@@ -858,11 +858,11 @@ group { name: "phoneui/keypad";
 				color: COLOR_BLACK;
 				rel1 {
 					relative: 0.0 0.755;
-					offset: 4 4;
+					offset: 5 5;
 				}
 				rel2 {
 					relative: 0.32 1.0;
-					offset: -4 -4;
+					offset: -5 -5;
 				}
 			}
 			description {
@@ -870,11 +870,11 @@ group { name: "phoneui/keypad";
 				color: COLOR_HALF;
 				rel1 {
 					relative: 0.0 0.755;
-					offset: 2 2;
+					offset: -2 -2;
 				}
 				rel2 {
 					relative: 0.32 1.0;
-					offset: -2 -2;
+					offset: 2 2;
 				}
 			}
 		}
@@ -903,11 +903,11 @@ group { name: "phoneui/keypad";
 				color: COLOR_BLACK;
 				rel1 {
 					relative: 0.33 0.755;
-					offset: 4 4;
+					offset: 5 5;
 				}
 				rel2 {
 					relative: 0.66 1.0;
-					offset: -4 -4;
+					offset: -5 -5;
 				}
 			}
 			description {
@@ -915,11 +915,11 @@ group { name: "phoneui/keypad";
 				color: COLOR_HALF;
 				rel1 {
 					relative: 0.33 0.755;
-					offset: 2 2;
+					offset: -2 -2;
 				}
 				rel2 {
 					relative: 0.66 1.0;
-					offset: -2 -2;
+					offset: 2 2;
 				}
 			}
 		}
@@ -948,11 +948,11 @@ group { name: "phoneui/keypad";
 				color: COLOR_BLACK;
 				rel1 {
 					relative: 0.67 0.755;
-					offset: 4 4;
+					offset: 5 5;
 				}
 				rel2 {
 					relative: 1.0 1.0;
-					offset: -4 -4;
+					offset: -5 -5;
 				}
 			}
 			description {
@@ -960,11 +960,11 @@ group { name: "phoneui/keypad";
 				color: COLOR_HALF;
 				rel1 {
 					relative: 0.67 0.755;
-					offset: 2 2;
+					offset: -2 -2;
 				}
 				rel2 {
 					relative: 1.0 1.0;
-					offset: -2 -2;
+					offset: 2 2;
 				}
 			}
 		}
@@ -1036,7 +1036,7 @@ group { name: "phoneui/keypad";
 					text: "+";
 					font: "redensek:style=bold";
 					size: 25;
-					align: 0.5 0.9;
+					align: 0.5 0.98;
 				}
 			}
 		}
@@ -1153,6 +1153,7 @@ group { name: "phoneui/keypad";
 			source: "button1";
 			action: STATE_SET "clicked" 0.0;
 			target: "button1";
+      target: "button1under";
 		}
 		program {
 			name: "button2_click";
@@ -1160,6 +1161,7 @@ group { name: "phoneui/keypad";
 			source: "button2";
 			action: STATE_SET "clicked" 0.0;
 			target: "button2";
+			target: "button2under";
 		}
 		program {
 			name: "button3_click";
@@ -1167,6 +1169,7 @@ group { name: "phoneui/keypad";
 			source: "button3";
 			action: STATE_SET "clicked" 0.0;
 			target: "button3";
+			target: "button3under";
 		}
 		program {
 			name: "button4_click";
@@ -1174,6 +1177,7 @@ group { name: "phoneui/keypad";
 			source: "button4";
 			action: STATE_SET "clicked" 0.0;
 			target: "button4";
+			target: "button4under";
 		}
 		program {
 			name: "button5_click";
@@ -1181,6 +1185,7 @@ group { name: "phoneui/keypad";
 			source: "button5";
 			action: STATE_SET "clicked" 0.0;
 			target: "button5";
+			target: "button5under";
 		}
 		program {
 			name: "button6_click";
@@ -1188,6 +1193,7 @@ group { name: "phoneui/keypad";
 			source: "button6";
 			action: STATE_SET "clicked" 0.0;
 			target: "button6";
+			target: "button6under";
 		}
 		program {
 			name: "button7_click";
@@ -1195,6 +1201,7 @@ group { name: "phoneui/keypad";
 			source: "button7";
 			action: STATE_SET "clicked" 0.0;
 			target: "button7";
+			target: "button7under";
 		}
 		program {
 			name: "button8_click";
@@ -1202,6 +1209,7 @@ group { name: "phoneui/keypad";
 			source: "button8";
 			action: STATE_SET "clicked" 0.0;
 			target: "button8";
+			target: "button8under";
 		}
 		program {
 			name: "button9_click";
@@ -1209,6 +1217,7 @@ group { name: "phoneui/keypad";
 			source: "button9";
 			action: STATE_SET "clicked" 0.0;
 			target: "button9";
+			target: "button9under";
 		}
 		program {
 			name: "button_star_click";
@@ -1216,6 +1225,7 @@ group { name: "phoneui/keypad";
 			source: "button_star";
 			action: STATE_SET "clicked" 0.0;
 			target: "button_star";
+			target: "buttonstarunder";
 		}
 		program {
 			name: "button0_click";
@@ -1223,6 +1233,7 @@ group { name: "phoneui/keypad";
 			source: "button0";
 			action: STATE_SET "clicked" 0.0;
 			target: "button0";
+			target: "button0under";
 		}
 		program {
 			name: "button_rhomb_click";
@@ -1230,90 +1241,115 @@ group { name: "phoneui/keypad";
 			source: "button_rhomb";
 			action: STATE_SET "clicked" 0.0;
 			target: "button_rhomb";
+			target: "buttonrunder";
 		}
 		program {
 			name: "button1_unclick";
 			signal: "mouse,up,1";
 			source: "button1";
 			action: STATE_SET "default" 0.0;
+      transition: DECELERATE 0.3;
 			target: "button1";
+			target: "button1under";
 		}
 		program {
 			name: "button2_unclick";
 			signal: "mouse,up,1";
 			source: "button2";
 			action: STATE_SET "default" 0.0;
+      transition: DECELERATE 0.3;
 			target: "button2";
+			target: "button2under";
 		}
 		program {
 			name: "button3_unclick";
 			signal: "mouse,up,1";
 			source: "button3";
 			action: STATE_SET "default" 0.0;
+      transition: DECELERATE 0.3;
 			target: "button3";
+			target: "button3under";
 		}
 		program {
 			name: "button4_unclick";
 			signal: "mouse,up,1";
 			source: "button4";
 			action: STATE_SET "default" 0.0;
+      transition: DECELERATE 0.3;
 			target: "button4";
+			target: "button4under";
 		}
 		program {
 			name: "button5_unclick";
 			signal: "mouse,up,1";
 			source: "button5";
 			action: STATE_SET "default" 0.0;
+      transition: DECELERATE 0.3;
 			target: "button5";
+			target: "button5under";
 		}
 		program {
 			name: "button6_unclick";
 			signal: "mouse,up,1";
 			source: "button6";
 			action: STATE_SET "default" 0.0;
+      transition: DECELERATE 0.3;
 			target: "button6";
+			target: "button6under";
 		}
 		program {
 			name: "button7_unclick";
 			signal: "mouse,up,1";
 			source: "button7";
 			action: STATE_SET "default" 0.0;
+      transition: DECELERATE 0.3;
 			target: "button7";
+			target: "button7under";
 		}
 		program {
 			name: "button8_unclick";
 			signal: "mouse,up,1";
 			source: "button8";
 			action: STATE_SET "default" 0.0;
+      transition: DECELERATE 0.3;
 			target: "button8";
+			target: "button8under";
 		}
 		program {
 			name: "button9_unclick";
 			signal: "mouse,up,1";
 			source: "button9";
 			action: STATE_SET "default" 0.0;
+      transition: DECELERATE 0.3;
 			target: "button9";
+			target: "button9under";
 		}
 		program {
 			name: "button_star_unclick";
 			signal: "mouse,up,1";
 			source: "button_star";
 			action: STATE_SET "default" 0.0;
+      transition: DECELERATE 0.3;
 			target: "button_star";
+			target: "buttonstarunder";
 		}
 		program {
 			name: "button0_unclick";
 			signal: "mouse,up,1";
 			source: "button0";
 			action: STATE_SET "default" 0.0;
+      transition: DECELERATE 0.3;
 			target: "button0";
+			target: "button0under";
 		}
 		program {
 			name: "button_rhomb_unclick";
 			signal: "mouse,up,1";
 			source: "button_rhomb";
 			action: STATE_SET "default" 0.0;
+      transition: DECELERATE 0.3;
 			target: "button_rhomb";
+			target: "buttonrunder";
 		}
 	} /* Close Prog */
 } /* phoneui/keypad */
