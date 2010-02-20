@@ -5841,7 +5841,7 @@ collections {
             relative: 0.0 0.0;
             offset: -5 4;
           }
-          color: COLOR_BLACK;
+          color: COLOR_FULL;
           text {
             font: "Sans:style=Bold,Edje-Vera-Bold";
             size: 10;
@@ -5866,7 +5866,7 @@ collections {
             relative: 1.0 0.0;
             offset: -5 4;
           }
-          color: COLOR_BLACK;
+          color: COLOR_WHITE;
           text {
             font: "Sans:style=Bold,Edje-Vera-Bold";
             size: 10;
@@ -5948,7 +5948,7 @@ collections {
             relative: 0.0 0.0;
             offset: -5 4;
           }
-          color: COLOR_BLACK;
+          color: COLOR_FULL;
           text {
             font: "Sans:style=Bold,Edje-Vera-Bold";
             size: 10;
@@ -5974,7 +5974,7 @@ collections {
             relative: 0.0 0.0;
             offset: -5 4;
           }
-          color: COLOR_BLACK;
+          color: COLOR_WHITE;
           text {
             font: "Sans:style=Bold,Edje-Vera-Bold";
             size: 10;
@@ -6057,7 +6057,7 @@ collections {
             relative: 0.0 1.0;
             offset: -5 -5;
           }
-          color: COLOR_BLACK;
+          color: COLOR_FULL;
           text {
             font: "Sans:style=Bold,Edje-Vera-Bold";
             size: 10;
@@ -6082,7 +6082,7 @@ collections {
             relative: 1.0 1.0;
             offset: -5 -5;
           }
-          color: COLOR_BLACK;
+          color: COLOR_WHITE;
           text {
             font: "Sans:style=Bold,Edje-Vera-Bold";
             size: 10;
@@ -6164,7 +6164,7 @@ collections {
             relative: 0.0 1.0;
             offset: -5 -5;
           }
-          color: COLOR_BLACK;
+          color: COLOR_FULL;
           text {
             font: "Sans:style=Bold,Edje-Vera-Bold";
             size: 10;
@@ -6190,7 +6190,7 @@ collections {
             relative: 0.0 1.0;
             offset: -5 -5;
           }
-          color: COLOR_BLACK;
+          color: COLOR_WHITE;
           text {
             font: "Sans:style=Bold,Edje-Vera-Bold";
             size: 10;
