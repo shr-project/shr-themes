@@ -541,6 +541,7 @@ collections {
 	    }
 	    description { state: "clicked" 0.0;
 	       inherit: "default" 0.0;
+         color: COLOR_WHITE;
 	    }
 	    description { state: "disabled" 0.0;
 	       inherit: "default" 0.0;
@@ -646,8 +647,9 @@ collections {
             repeat_events: 1;
             type: RECT;
             description { state: "default" 0.0;
-               color: COLOR_NONE;
-               
+               color: COLOR_NONE;               
+		   rel1.offset: 4 4;
+		   rel2.offset: -4 -4;
             }
             description { state: "clicked" 0.0;
                inherit:  "default" 0.0;
@@ -678,8 +680,7 @@ collections {
 	 program {
 	    name:   "button_click_anim";
 	    action: STATE_SET "clicked" 0.0;
-      transition: DECELERATE 0.5;
-	    target: "over3";
+	    target: "button_image";
 	 }
 	 program {
 	    name:   "button_unclick";
@@ -691,15 +692,14 @@ collections {
 	 program {
 	    name:   "button_unclick_anim";
 	    action: STATE_SET "default" 0.0;
-      transition: DECELERATE 0.5;
-	    target: "over3";
+            transition: DECELERATE 0.5;
+	    target: "button_image";
 	 }
 	 program {
 	    name:   "button_click2";
 	    signal: "mouse,down,1";
 	    source: "over3";
 	    action: STATE_SET "clicked" 0.0;
-      transition: DECELERATE 0.5;
 	    target: "over3";
 	 }
 	 program {
@@ -707,7 +707,7 @@ collections {
 	    signal: "mouse,up,1";
 	    source: "over3";
 	    action: STATE_SET "default" 0.0;
-            transition: DECELERATE 0.5;
+            transition: DECELERATE 1.0;
 	    target: "over3";
 	 }
 	 program {
