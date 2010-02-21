@@ -541,6 +541,7 @@ collections {
 	    }
 	    description { state: "clicked" 0.0;
 	       inherit: "default" 0.0;
+         color: COLOR_WHITE;
 	    }
 	    description { state: "disabled" 0.0;
 	       inherit: "default" 0.0;
@@ -646,8 +647,9 @@ collections {
             repeat_events: 1;
             type: RECT;
             description { state: "default" 0.0;
-               color: COLOR_NONE;
-               
+               color: COLOR_NONE;               
+		   rel1.offset: 4 4;
+		   rel2.offset: -4 -4;
             }
             description { state: "clicked" 0.0;
                inherit:  "default" 0.0;
@@ -678,8 +680,7 @@ collections {
 	 program {
 	    name:   "button_click_anim";
 	    action: STATE_SET "clicked" 0.0;
-      transition: DECELERATE 0.5;
-	    target: "over3";
+	    target: "button_image";
 	 }
 	 program {
 	    name:   "button_unclick";
@@ -691,15 +692,14 @@ collections {
 	 program {
 	    name:   "button_unclick_anim";
 	    action: STATE_SET "default" 0.0;
-      transition: DECELERATE 0.5;
-	    target: "over3";
+            transition: DECELERATE 0.5;
+	    target: "button_image";
 	 }
 	 program {
 	    name:   "button_click2";
 	    signal: "mouse,down,1";
 	    source: "over3";
 	    action: STATE_SET "clicked" 0.0;
-      transition: DECELERATE 0.5;
 	    target: "over3";
 	 }
 	 program {
@@ -707,7 +707,7 @@ collections {
 	    signal: "mouse,up,1";
 	    source: "over3";
 	    action: STATE_SET "default" 0.0;
-            transition: DECELERATE 0.5;
+            transition: DECELERATE 1.0;
 	    target: "over3";
 	 }
 	 program {
@@ -1258,14 +1258,20 @@ collections {
    }
 
    group { name: "elm/button/base/anchor";
+      images {
+	 image: "bt_base2.png" COMP;
+	 image: "bt_shine.png" COMP;
+      }
       parts {
 	 part { name: "button_image";
 	    mouse_events: 1;
-      type: RECT;
 	    description { state: "default" 0.0;
-           color: COLOR_FULL;
-           rel1.offset: 2  2;
-           rel2.offset:-2 -2;
+           color: 255 255 255 0;
+	       image {
+		  normal: "bt_base2.png";
+		  border: 7 7 7 7;
+	       }
+               image.middle: SOLID;
 	    }
        description { state: "visible" 0.0;
 	       inherit: "default" 0.0;
@@ -1278,29 +1284,7 @@ collections {
 	    description { state: "disabled" 0.0;
 	       inherit:  "default" 0.0;
           inherit: "visible" 0.0;
-	        color: COLOR_GRAY;
-	    }
-	 }
-   	 
-  part {	  name: "over1";
-	    mouse_events: 0;
-      type: RECT;
-	    description { state: "default" 0.0;
-           color: COLOR_BLACK;
-	       rel1.offset: 4  4;
-         rel2.offset: -4 -2;
-	       
-	    }
-       description { state: "visible" 0.0;
-	       inherit:  "default" 0.0;
-          color: COLOR_BLACK;
-          rel1.offset: 4  4;
-          rel2.offset: -4 -4;
-	    }
-	    description { state: "disabled" 0.0;
-	       inherit:  "default" 0.0;
-          inherit:  "visible" 0.0;
-	      
+	       color: COLOR_GRAY;
 	    }
 	 }
 	 part { name: "elm.swallow.content";
@@ -1335,6 +1319,7 @@ collections {
          part {
 	    name:          "elm.text";
 	    type:          TEXT;
+      effect: OUTLINE;
 	    mouse_events:  0;
 	    scale: 1;
 	    description { state: "default" 0.0;
@@ -1344,6 +1329,7 @@ collections {
                rel1.offset: 0 4;
 	       rel2.offset: -5 -5;
 	       color: COLOR_WHITE;
+         color3: COLOR_BLACK;
 	       text {
 		  font:     "Sans,Edje-Vera";
 		  size:     10;
@@ -1362,23 +1348,25 @@ collections {
 	    }
 	    description { state: "disabled_visible" 0.0;
 	       inherit: "default" 0.0;
-         color: COLOR_GRAY;
+	       color: COLOR_GRAY;
 	       visible: 1;
 	       text.min: 1 1;
 	    }
 	 }
-
 	 part { name: "over2";
 	    mouse_events: 1;
 	    repeat_events: 1;
             ignore_flags: ON_HOLD;
-            type: RECT;
 	    description { state: "default" 0.0;
-	       color: COLOR_NONE;
+	       image {
+		  normal: "bt_shine.png";
+		  border: 7 7 7 7;
+	       }
+         color: COLOR_FULL;
 	    }
 	    description { state: "disabled" 0.0;
 	       inherit:  "default" 0.0;
-	       visible: 0;
+	       color: COLOR_GRAY;
 	    }
 	 }
          part { name: "over3";
@@ -1387,7 +1375,6 @@ collections {
             type: RECT;
             description { state: "default" 0.0;
                color: COLOR_NONE;
-               
             }
             description { state: "clicked" 0.0;
                inherit:  "default" 0.0;
@@ -1414,7 +1401,6 @@ collections {
 	    source: "over2";
 	    action: STATE_SET "visible" 0.0;
 	    target: "button_image";
-       target: "over1";
        transition: DECELERATE 0.5;
 	 }
 	 program {
@@ -1423,7 +1409,6 @@ collections {
 	    source: "over2";
 	    action: STATE_SET "default" 0.0;
 	    target: "button_image";
-       target: "over1";
        transition: DECELERATE 0.5;
 	 }
 	 program {
@@ -1502,7 +1487,6 @@ collections {
 	    source: "elm";
 	    action: STATE_SET "disabled" 0.0;
 	    target: "button_image";
-	    target: "over1";
 	    target: "over2";
 	    target: "disabler";
             after: "disable_text";
@@ -1523,7 +1507,6 @@ collections {
 	    source: "elm";
 	    action: STATE_SET "default" 0.0;
 	    target: "button_image";
-	    target: "over1";
 	    target: "over2";
 	    target: "disabler";
             after: "enable_text";
@@ -5841,7 +5824,7 @@ collections {
             relative: 0.0 0.0;
             offset: -5 4;
           }
-          color: COLOR_BLACK;
+          color: COLOR_FULL;
           text {
             font: "Sans:style=Bold,Edje-Vera-Bold";
             size: 10;
@@ -5866,7 +5849,7 @@ collections {
             relative: 1.0 0.0;
             offset: -5 4;
           }
-          color: COLOR_BLACK;
+          color: COLOR_WHITE;
           text {
             font: "Sans:style=Bold,Edje-Vera-Bold";
             size: 10;
@@ -5948,7 +5931,7 @@ collections {
             relative: 0.0 0.0;
             offset: -5 4;
           }
-          color: COLOR_BLACK;
+          color: COLOR_FULL;
           text {
             font: "Sans:style=Bold,Edje-Vera-Bold";
             size: 10;
@@ -5974,7 +5957,7 @@ collections {
             relative: 0.0 0.0;
             offset: -5 4;
           }
-          color: COLOR_BLACK;
+          color: COLOR_WHITE;
           text {
             font: "Sans:style=Bold,Edje-Vera-Bold";
             size: 10;
@@ -6057,7 +6040,7 @@ collections {
             relative: 0.0 1.0;
             offset: -5 -5;
           }
-          color: COLOR_BLACK;
+          color: COLOR_FULL;
           text {
             font: "Sans:style=Bold,Edje-Vera-Bold";
             size: 10;
@@ -6082,7 +6065,7 @@ collections {
             relative: 1.0 1.0;
             offset: -5 -5;
           }
-          color: COLOR_BLACK;
+          color: COLOR_WHITE;
           text {
             font: "Sans:style=Bold,Edje-Vera-Bold";
             size: 10;
@@ -6164,7 +6147,7 @@ collections {
             relative: 0.0 1.0;
             offset: -5 -5;
           }
-          color: COLOR_BLACK;
+          color: COLOR_FULL;
           text {
             font: "Sans:style=Bold,Edje-Vera-Bold";
             size: 10;
@@ -6190,7 +6173,7 @@ collections {
             relative: 0.0 1.0;
             offset: -5 -5;
           }
-          color: COLOR_BLACK;
+          color: COLOR_WHITE;
           text {
             font: "Sans:style=Bold,Edje-Vera-Bold";
             size: 10;
