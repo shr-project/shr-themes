@@ -7,8 +7,8 @@ group "Illume_Config" struct {
         }
     }
     value "version" int: 1;
-    value "animation.vkbd.duration" int: 1000;
-    value "animation.quickpanel.duration" int: 1000;
+    value "animation.vkbd.duration" int: 250;
+    value "animation.quickpanel.duration" int: 250;
     value "policy.name" string: "illume";
     value "policy.vkbd.class" string: "Virtual-Keyboard";
     value "policy.vkbd.name" string: "Virtual-Keyboard";
