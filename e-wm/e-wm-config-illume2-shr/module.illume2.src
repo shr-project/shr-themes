@@ -5,11 +5,6 @@ group "Illume_Config" struct {
             value "mode.dual" int: 0;
             value "mode.side" int: 1;
         }
-        group "Illume_Config_Zone" struct {
-            value "id" int: 1;
-            value "mode.dual" int: 0;
-            value "mode.side" int: 1;
-        }
     }
     value "version" int: 1;
     value "animation.vkbd.duration" int: 1000;
