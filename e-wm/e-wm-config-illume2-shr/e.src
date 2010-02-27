@@ -202,7 +202,7 @@ group "E_Config" struct {
 	group "themes" list {
 		group "E_Config_Theme" struct {
 			value "category" string: "theme";
-			value "file" string: "default.edj";
+			value "file" string: "gry.edj";
 		}
 	}
 	group "key_bindings" list {
