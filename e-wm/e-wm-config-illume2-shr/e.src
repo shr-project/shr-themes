@@ -210,14 +210,16 @@ group "E_Config" struct {
 			value "context" int: 9;
 			value "modifiers" int: 0;
 			value "key" string: "Execute";
-			value "action" string: "syscon";
+			value "action" string: "exec";
+			value "params" string: "phoneui-quick-settings"
 			value "any_mod" uchar: 1;
 		}
 		group "E_Config_Binding_Key" struct {
 			value "context" int: 9;
 			value "modifiers" int: 0;
 			value "key" string: "Keycode-219";
-			value "action" string: "syscon";
+			value "action" string: "exec";
+			value "params" string: "phoneui-quick-settings"
 			value "any_mod" uchar: 1;
 		}
 		group "E_Config_Binding_Key" struct {
@@ -227,40 +229,6 @@ group "E_Config" struct {
 			value "action" string: "exec";
 			value "params" string: "phoneui-quick-settings"
 			value "any_mod" uchar: 1;
-		}
-	}
-	group "edge_bindings" list {
-		group "E_Config_Binding_Edge" struct {
-			value "context" int: 3;
-			value "modifiers" int: 0;
-			value "action" string: "desk_flip_in_direction";
-			value "edge" uchar: 1;
-			value "any_mod" uchar: 0;
-			value "delay" float: 0.3000000119209289550781250;
-		}
-		group "E_Config_Binding_Edge" struct {
-			value "context" int: 3;
-			value "modifiers" int: 0;
-			value "action" string: "desk_flip_in_direction";
-			value "edge" uchar: 2;
-			value "any_mod" uchar: 0;
-			value "delay" float: 0.3000000119209289550781250;
-		}
-		group "E_Config_Binding_Edge" struct {
-			value "context" int: 3;
-			value "modifiers" int: 0;
-			value "action" string: "desk_flip_in_direction";
-			value "edge" uchar: 3;
-			value "any_mod" uchar: 0;
-			value "delay" float: 0.3000000119209289550781250;
-		}
-		group "E_Config_Binding_Edge" struct {
-			value "context" int: 3;
-			value "modifiers" int: 0;
-			value "action" string: "desk_flip_in_direction";
-			value "edge" uchar: 4;
-			value "any_mod" uchar: 0;
-			value "delay" float: 0.3000000119209289550781250;
 		}
 	}
 	group "signal_bindings" list {
@@ -596,17 +564,17 @@ group "E_Config" struct {
 					value "resizable" uchar: 0;
 				}
 				group "E_Config_Gadcon_Client" struct {
-					value "name" string: "start";
-					value "id" string: "start";
-					value "geom.pos" int: 0;
-					value "geom.size" int: 41;
-					value "geom.res" int: 474;
+					value "name" string: "clock";
+					value "id" string: "clock";
+					value "geom.pos" int: 720;
+					value "geom.size" int: 42;
+					value "geom.res" int: 138;
 					value "geom.pos_x" double: 0.0000000000000000000000000;
 					value "geom.pos_y" double: 0.0000000000000000000000000;
 					value "geom.size_w" double: 0.0000000000000000000000000;
 					value "geom.size_h" double: 0.0000000000000000000000000;
 					value "state_info.seq" int: 1;
-					value "state_info.flags" int: 3;
+					value "state_info.flags" int: 1;
 					value "style" string: "plain";
 					value "orient" int: 0;
 					value "autoscroll" uchar: 0;
