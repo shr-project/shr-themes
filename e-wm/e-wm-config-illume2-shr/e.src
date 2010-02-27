@@ -586,6 +586,18 @@ group "E_Config" struct {
 			value "zone" int: 0;
 		}
 	}
+	group "gadcons" list {
+		group "E_Config_Gadcon" struct {
+			value "name" string: "gadman";
+			value "id" int: 114;
+		}
+	}
+	group "gadcons" list {
+		group "E_Config_Gadcon" struct {
+			value "name" string: "gadman_top";
+			value "id" int: 115;
+		}
+	}
 	group "mime_icons" list {
 		group "E_Config_Mime_Icon" struct {
 			value "mime" string: "image/jpeg";
@@ -808,7 +820,7 @@ group "E_Config" struct {
 	value "screensaver_interval" int: 0;
 	value "screensaver_blanking" int: 0;
 	value "screensaver_expose" int: 0;
-	value "screensaver_ask_presentation" uchar: 1;
+	value "screensaver_ask_presentation" uchar: 0;
 	value "screensaver_ask_presentation_timeout" double: 30.0000000000000000000000000;
 	value "dpms_enable" int: 0;
 	value "dpms_standby_enable" int: 0;
@@ -874,7 +886,7 @@ group "E_Config" struct {
 	value "scale.base_dpi" int: 142;
 	value "scale.use_dpi" uchar: 1;
 	value "scale.use_custom" uchar: 0;
-	value "show_cursor" uchar: 1;
+	value "show_cursor" uchar: 0;
 	value "idle_cursor" uchar: 0;
 	value "default_system_menu" string: "/etc/xdg/menus/gnome-applications.menu";
 	value "cfgdlg_normal_wins" uchar: 1;
