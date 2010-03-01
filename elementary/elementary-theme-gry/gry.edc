@@ -41,6 +41,7 @@ collections {
 	    type: SWALLOW;
             clip_to: "clip";
 	    description { state: "default" 0.0;
+	       fixed: 1 1;
                align: 1.0 0.5;
                rel1 {
                   relative: 1.0 0.5;
@@ -119,6 +120,7 @@ collections {
 	    scale: 1;
             clip_to: "clip";
 	    description { state: "default" 0.0;
+	       fixed: 1 1;
                align: 1.0 0.5;
 	       rel1 {
                   to_x: "elm.swallow.event.0";
@@ -184,6 +186,7 @@ collections {
 	 part { name: "elm.swallow.event.0";
 	    type: SWALLOW;
 	    description { state: "default" 0.0;
+	       fixed: 1 1;
                align: 1.0 0.5;
                rel1 {
                   relative: 1.0 0.0;
