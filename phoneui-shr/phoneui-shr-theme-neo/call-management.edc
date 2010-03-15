@@ -21,7 +21,7 @@ group { name: "phoneui/call_management/incoming_call";
 			mouse_events: 0;
 			description {
 				state: "default" 0.0;
-				color: COLOR_WHITE;
+				color: COLOR_FULL;
 				rel1 {
 					relative: 0.0 0.35;
 					offset: 0 5;
@@ -41,7 +41,7 @@ group { name: "phoneui/call_management/incoming_call";
 			mouse_events: 0;
 			description {
 				state: "default" 0.0;
-				color: COLOR_FULL;
+				color: COLOR_WHITE;
 				rel1 {
 					relative: 0.0 0.5;
 					offset: 0 5;
@@ -104,7 +104,7 @@ group { name: "phoneui/call_management/active_call";
 			mouse_events: 0;
 			description {
 				state: "default" 0.0;
-				color: COLOR_WHITE;
+				color: COLOR_FULL;
 				rel1.relative: 0.2 0.3;
 				rel1.offset: 0 5;
 				rel2.relative: 0.8 0.35;
@@ -120,7 +120,7 @@ group { name: "phoneui/call_management/active_call";
 			mouse_events: 0;
 			description {
 				state: "default" 0.0;
-				color: COLOR_FULL;
+				color: COLOR_WHITE;
 				rel1.relative: 0.2 0.35;
 				rel1.offset: 0 5;
 				rel2.relative: 0.8 0.4;

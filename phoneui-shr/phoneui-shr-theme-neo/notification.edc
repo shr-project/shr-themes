@@ -6,7 +6,7 @@ group { name: "phoneui/notification/sim_auth_message";
 			mouse_events: 0;
 			description {
 				state: "default" 0.0;
-				color: COLOR_FULL;
+				color: COLOR_WHITE;
 				rel1 {
 					relative: 0.0 0.0;
 				}
@@ -33,7 +33,7 @@ group { name: "phoneui/notification/sim_auth_input";
 			mouse_events: 0;
 			description {
 				state: "default" 0.0;
-				color: COLOR_WHITE;
+				color: COLOR_FULL;
 				rel1 {
 					relative: 0.0 0.0;
 				}
