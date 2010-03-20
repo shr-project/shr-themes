@@ -67,18 +67,3 @@
     filters: HasAttr(status, "empty")
     actions: Command('poweroff')
 
-    #
-    # Headset Audio Scenario Support. There is still work to be done. 
-    #
--
-    trigger: InputEvent()
-    filters:
-             - HasAttr(switch, "HEADSET")
-             - HasAttr(event, "pressed")
-    actions: Command('amixer -d sset "Amp Spk" mute')
--
-    trigger: InputEvent()
-    filters:
-             - HasAttr(switch, "HEADSET")
-             - HasAttr(event, "released")
-    actions: Command('amixer -d sset "Amp Spk" unmute')
