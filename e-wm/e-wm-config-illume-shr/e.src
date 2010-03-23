@@ -258,16 +258,24 @@ group "E_Config" struct {
       value "context" int: 9;
       value "modifiers" int: 0;
       value "key" string: "Execute";
-      value "action" string: "syscon";
+      value "action" string: "exec";
+      value "params" string: "phoneui-quick-settings"
       value "any_mod" uchar: 1;
     }
-  }
-  group "key_bindings" list {
     group "E_Config_Binding_Key" struct {
       value "context" int: 9;
       value "modifiers" int: 0;
       value "key" string: "Keycode-219";
-      value "action" string: "syscon";
+      value "action" string: "exec";
+      value "params" string: "phoneui-quick-settings"
+      value "any_mod" uchar: 1;
+    }
+    group "E_Config_Binding_Key" struct {
+      value "context" int: 9;
+      value "modifiers" int: 0;
+      value "key" string: "XF86PowerOff";
+      value "action" string: "exec";
+      value "params" string: "phoneui-quick-settings"
       value "any_mod" uchar: 1;
     }
   }
