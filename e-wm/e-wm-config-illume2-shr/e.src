@@ -679,7 +679,7 @@ group "E_Config" struct {
 		}
 	}
 	value "config_version" int: 65844;
-	value "show_splash" int: 1;
+	value "show_splash" int: 0;
 	value "init_default_theme" string: "default.edj";
 	value "desktop_default_name" string: "Desktop %i, %i";
 	value "menus_scroll_speed" double: 1000.0000000000000000000000000;
