@@ -509,7 +509,7 @@ group "E_Config" struct {
 				group "E_Config_Gadcon_Client" struct {
 					value "name" string: "illume-mode-toggle";
 					value "id" string: "illume-mode-toggle.0";
-					value "geom.pos" int: 192;
+					value "geom.pos" int: 128;
 					value "geom.size" int: 64;
 					value "geom.res" int: 474;
 					value "geom.pos_x" double: 0.0000000000000000000000000;
@@ -517,7 +517,7 @@ group "E_Config" struct {
 					value "geom.size_w" double: 0.0000000000000000000000000;
 					value "geom.size_h" double: 0.0000000000000000000000000;
 					value "state_info.seq" int: 3;
-					value "state_info.flags" int: 1;
+					value "state_info.flags" int: 3;
 					value "style" string: "plain";
 					value "orient" int: 0;
 					value "autoscroll" uchar: 0;
