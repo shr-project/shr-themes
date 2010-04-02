@@ -12,6 +12,8 @@ EXTRA_DIST = \
 	module.pager.src \
 	module.illume2.src \
 	module.illume-home.src \
+	module.illume-softkey.src \
+	module.illume-indicator.src \
 	module.illume-keyboard.src
 
 filesdir = $(datadir)/enlightenment/data/config/illume2-shr
@@ -25,6 +27,8 @@ files_DATA = \
 	module.pager.cfg \
 	module.illume2.cfg \
 	module.illume-home.cfg \
+	module.illume-softkey.cfg \
+	module.illume-indicator.cfg \
 	module.illume-keyboard.cfg
 
 %.cfg: %.src
