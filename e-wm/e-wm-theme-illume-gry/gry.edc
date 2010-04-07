@@ -1805,6 +1805,7 @@ collections {
 	 image: "gsm_2.png" COMP;
 	 image: "gsm_3.png" COMP;
 	 image: "gsm_4.png" COMP;
+	 image: "gsm_5.png" COMP;
       }
       min: 29 23;
       max: 29 42;
@@ -1813,7 +1814,7 @@ collections {
 	  if ((type == MSG_FLOAT) && (id == 1)) {
 	     new Float:val;
 	     val = getfarg(2);
-	     set_state(PART:"gsm", "default", val);
+             set_state(PART:"gsm", "default", val);
 	  }
 	  if ((type == MSG_STRING) && (id == 1)) {
 	     new val[100];
@@ -1847,7 +1848,7 @@ collections {
 	    }
 	 }
 	 part { name: "nogsm";
-	    mouse_events: 0;
+	    mouse_events: 1;
 	    description { state: "default" 0.0;
 	       min: 7 5;
 	       max: 25 15;
@@ -1875,7 +1876,7 @@ collections {
 	    }
 	 }
 	 part { name: "gsm";
-	    mouse_events: 0;
+	    mouse_events: 1;
 	    clip_to: "gsm_clip";
 	    description { state: "default" 0.0;
 	       min: 7 5;
@@ -1888,21 +1889,25 @@ collections {
 	       rel1.to: "base";
 	       rel2.to: "base";
 	    }
-	    description { state: "default" 0.25;
+	    description { state: "default" 0.2;
 	       inherit: "default" 0.0;
 	       image.normal: "gsm_1.png";
-	    }
-	    description { state: "default" 0.5;
+	    }	    
+	    description { state: "default" 0.4;
 	       inherit: "default" 0.0;
 	       image.normal: "gsm_2.png";
 	    }
-	    description { state: "default" 0.75;
+	    description { state: "default" 0.6;
 	       inherit: "default" 0.0;
 	       image.normal: "gsm_3.png";
 	    }
-	    description { state: "default" 1.0;
+	    description { state: "default" 0.8;
 	       inherit: "default" 0.0;
 	       image.normal: "gsm_4.png";
+	    }
+	    description { state: "default" 1.0;
+	       inherit: "default" 0.0;
+	       image.normal: "gsm_5.png";
 	    }
 	 }
       }
