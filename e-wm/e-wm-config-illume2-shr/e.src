@@ -61,6 +61,12 @@ group "E_Config" struct {
 			value "priority" int: 0;
 		}
 		group "E_Config_Module" struct {
+			value "name" string: "illume-rightclick-toggle";
+			value "enabled" uchar: 1;
+			value "delayed" uchar: 0;
+			value "priority" int: 0;
+		}
+		group "E_Config_Module" struct {
 			value "name" string: "conf_engine";
 			value "enabled" uchar: 1;
 			value "delayed" uchar: 1;
@@ -475,15 +481,15 @@ group "E_Config" struct {
 				group "E_Config_Gadcon_Client" struct {
 					value "name" string: "illume-kbd-toggle";
 					value "id" string: "illume-kbd-toggle.0";
-					value "geom.pos" int: 64;
-					value "geom.size" int: 64;
+					value "geom.pos" int: 100;
+					value "geom.size" int: 50;
 					value "geom.res" int: 474;
 					value "geom.pos_x" double: 0.0000000000000000000000000;
 					value "geom.pos_y" double: 0.0000000000000000000000000;
 					value "geom.size_w" double: 0.0000000000000000000000000;
 					value "geom.size_h" double: 0.0000000000000000000000000;
 					value "state_info.seq" int: 2;
-					value "state_info.flags" int: 3;
+					value "state_info.flags" int: 1;
 					value "style" string: "plain";
 					value "orient" int: 0;
 					value "autoscroll" uchar: 0;
@@ -493,14 +499,14 @@ group "E_Config" struct {
 					value "name" string: "illume-home";
 					value "id" string: "illume-home.0";
 					value "geom.pos" int: 0;
-					value "geom.size" int: 80;
-					value "geom.res" int: 800;
+					value "geom.size" int: 50;
+					value "geom.res" int: 474;
 					value "geom.pos_x" double: 0.0000000000000000000000000;
 					value "geom.pos_y" double: 0.0000000000000000000000000;
 					value "geom.size_w" double: 0.0000000000000000000000000;
 					value "geom.size_h" double: 0.0000000000000000000000000;
 					value "state_info.seq" int: 1;
-					value "state_info.flags" int: 0;
+					value "state_info.flags" int: 3;
 					value "style" string: "plain";
 					value "orient" int: 0;
 					value "autoscroll" uchar: 0;
@@ -509,8 +515,25 @@ group "E_Config" struct {
 				group "E_Config_Gadcon_Client" struct {
 					value "name" string: "illume-mode-toggle";
 					value "id" string: "illume-mode-toggle.0";
-					value "geom.pos" int: 128;
-					value "geom.size" int: 64;
+					value "geom.pos" int: 150;
+					value "geom.size" int: 50;
+					value "geom.res" int: 474;
+					value "geom.pos_x" double: 0.0000000000000000000000000;
+					value "geom.pos_y" double: 0.0000000000000000000000000;
+					value "geom.size_w" double: 0.0000000000000000000000000;
+					value "geom.size_h" double: 0.0000000000000000000000000;
+					value "state_info.seq" int: 4;
+					value "state_info.flags" int: 3;
+					value "style" string: "plain";
+					value "orient" int: 0;
+					value "autoscroll" uchar: 0;
+					value "resizable" uchar: 0;
+				}
+				group "E_Config_Gadcon_Client" struct {
+					value "name" string: "illume-rightclick-toggle";
+					value "id" string: "illume-rightclick-toggle.0";
+					value "geom.pos" int: 100;
+					value "geom.size" int: 50;
 					value "geom.res" int: 474;
 					value "geom.pos_x" double: 0.0000000000000000000000000;
 					value "geom.pos_y" double: 0.0000000000000000000000000;
@@ -526,14 +549,14 @@ group "E_Config" struct {
 				group "E_Config_Gadcon_Client" struct {
 					value "name" string: "configuration";
 					value "id" string: "configuration";
-					value "geom.pos" int: 192;
-					value "geom.size" int: 64;
+					value "geom.pos" int: 200;
+					value "geom.size" int: 50;
 					value "geom.res" int: 474;
 					value "geom.pos_x" double: 0.0000000000000000000000000;
 					value "geom.pos_y" double: 0.0000000000000000000000000;
 					value "geom.size_w" double: 0.0000000000000000000000000;
 					value "geom.size_h" double: 0.0000000000000000000000000;
-					value "state_info.seq" int: 4;
+					value "state_info.seq" int: 5;
 					value "state_info.flags" int: 3;
 					value "style" string: "plain";
 					value "orient" int: 0;
@@ -543,15 +566,15 @@ group "E_Config" struct {
 				group "E_Config_Gadcon_Client" struct {
 					value "name" string: "battery";
 					value "id" string: "battery";
-					value "geom.pos" int: 433;
-					value "geom.size" int: 41;
+					value "geom.pos" int: 440;
+					value "geom.size" int: 34;
 					value "geom.res" int: 474;
 					value "geom.pos_x" double: 0.0000000000000000000000000;
 					value "geom.pos_y" double: 0.0000000000000000000000000;
 					value "geom.size_w" double: 0.0000000000000000000000000;
 					value "geom.size_h" double: 0.0000000000000000000000000;
-					value "state_info.seq" int: 7;
-					value "state_info.flags" int: 1;
+					value "state_info.seq" int: 8;
+					value "state_info.flags" int: 3;
 					value "style" string: "plain";
 					value "orient" int: 0;
 					value "autoscroll" uchar: 0;
@@ -560,15 +583,15 @@ group "E_Config" struct {
 				group "E_Config_Gadcon_Client" struct {
 					value "name" string: "illume-gsm";
 					value "id" string: "illume-gsm";
-					value "geom.pos" int: 700;
-					value "geom.size" int: 42;
-					value "geom.res" int: 138;
+					value "geom.pos" int: 406;
+					value "geom.size" int: 34;
+					value "geom.res" int: 474;
 					value "geom.pos_x" double: 0.0000000000000000000000000;
 					value "geom.pos_y" double: 0.0;
 					value "geom.size_w" double: 0.0000000000000000000000000;
 					value "geom.size_h" double: 0.0000000000000000000000000;
-					value "state_info.seq" int: 6;
-					value "state_info.flags" int: 1;
+					value "state_info.seq" int: 7;
+					value "state_info.flags" int: 3;
 					value "style" string: "plain";
 					value "orient" int: 0;
 					value "autoscroll" uchar: 0;
@@ -577,14 +600,14 @@ group "E_Config" struct {
 				group "E_Config_Gadcon_Client" struct {
 					value "name" string: "clock";
 					value "id" string: "clock";
-					value "geom.pos" int: 322;
-					value "geom.size" int: 64;
+					value "geom.pos" int: 356;
+					value "geom.size" int: 50;
 					value "geom.res" int: 474;
 					value "geom.pos_x" double: 0.0000000000000000000000000;
 					value "geom.pos_y" double: 0.0000000000000000000000000;
 					value "geom.size_w" double: 0.0000000000000000000000000;
 					value "geom.size_h" double: 0.0000000000000000000000000;
-					value "state_info.seq" int: 5;
+					value "state_info.seq" int: 6;
 					value "state_info.flags" int: 3;
 					value "style" string: "plain";
 					value "orient" int: 0;
