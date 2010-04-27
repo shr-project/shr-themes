@@ -19,12 +19,6 @@ group "E_Config" struct {
 			value "priority" int: 90;
 		}
 		group "E_Config_Module" struct {
-			value "name" string: "illume-softkey";
-			value "enabled" uchar: 1;
-			value "delayed" uchar: 0;
-			value "priority" int: 85;
-		}
-		group "E_Config_Module" struct {
 			value "name" string: "illume-keyboard";
 			value "enabled" uchar: 1;
 			value "delayed" uchar: 0;
