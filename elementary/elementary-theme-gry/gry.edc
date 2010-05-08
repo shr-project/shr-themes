@@ -1059,7 +1059,7 @@ collections {
 	 }
 	 program {
 	    name:   "button_unclick3";
-	    signal: "mouse,up,1";
+	    signal: "mouse,clicked,1";
 	    source: "over2";
 	    action: SIGNAL_EMIT "elm,action,click" "";
 	 }
