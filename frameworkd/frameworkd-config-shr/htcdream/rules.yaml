@@ -29,8 +29,8 @@
     actions: MessageTone(play)
 
 -
-    while: CallListContains("incoming")
-    filters: Not(CallListContains("active"))
+    while: CallListContains("INCOMING")
+    filters: Not(CallListContains("ACTIVE"))
     actions:
              - RingTone()
              - Command('xset -display localhost:0 s reset')
@@ -38,7 +38,7 @@
              - OccupyResource(Display)
 -
     while: CallStatus()
-    filters: Or(HasAttr(status, "outgoing"), HasAttr(status, "active"))
+    filters: Or(HasAttr(status, "OUTGOING"), HasAttr(status, "ACTIVE"))
     actions:
             - OccupyResource(CPU)
 -
@@ -51,7 +51,7 @@
 #-
     while: CallStatus()
     filters:
-            - Or(Or(HasAttr(status, "outgoing"), HasAttr(status, "active")), And(HasAttr(status, "incoming"), CallListContains("active")))
+            - Or(Or(HasAttr(status, "OUTGOING"), HasAttr(status, "ACTIVE")), And(HasAttr(status, "INCOMING"), CallListContains("ACTIVE")))
             - BTHeadsetIsConnected()
     actions:
             - SetScenario(gsmbluetooth)
