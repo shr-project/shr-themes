@@ -33,7 +33,7 @@
     filters: Not(CallListContains("ACTIVE"))
     actions:
              - RingTone()
-             - SetLed("gta02_aux_red", "blink")
+             - SetLed("gta02_red_aux", "blink")
              - OccupyResource(Display)
 -
 #    while: CallStatus()
@@ -53,15 +53,15 @@
 -
     while: PowerStatus()
     filters: HasAttr(status, "charging")
-    actions: SetLed("gta02_power_orange", "light")
+    actions: SetLed("gta02_orange_power", "light")
 -
     while: PowerStatus()
     filters: HasAttr(status, "critical")
-    actions: SetLed("gta02_power_orange", "blink")
+    actions: SetLed("gta02_orange_power", "blink")
 -
     while: PowerStatus()
     filters: HasAttr(status, "full")
-    actions: SetLed("gta02_power_blue", "light")
+    actions: SetLed("gta02_blue_power", "light")
 -
     trigger: PowerStatus()
     filters: HasAttr(status, "empty")
