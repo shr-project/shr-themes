@@ -33,8 +33,16 @@
     filters: Not(CallListContains("ACTIVE"))
     actions:
              - RingTone()
-             - SetLed("gta02_red_aux", "blink")
              - OccupyResource(Display)
+
+#-
+#    while: NewMissedCalls()
+#    actions: SetLed("gta02_red_aux", "blink")
+#
+-
+    while: UnreadMessages()
+    actions: SetLed("gta02_red_aux", "blink")
+
 -
 #    while: CallStatus()
 #    filters:
