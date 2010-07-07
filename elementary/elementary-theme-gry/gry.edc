@@ -6019,7 +6019,7 @@ collections {
                   relative: 0.0  1.0;
                   offset:   -1 -5;
                }
-               color: COLOR_WHITE;
+               color: COLOR_BLACK;
                text {
                   font: "Sans";
                   size: 10;
