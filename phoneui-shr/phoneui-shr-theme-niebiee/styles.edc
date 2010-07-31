@@ -3,7 +3,7 @@ styles {
 
   style {
     name: "content_style";
-    base: "font=Edje-Vera font_size=20 align=left valign=bottom color=#000  wrap=word";
+    base: "font=Edje-Vera font_size=20 align=left valign=bottom color=#FFF  wrap=word";
     tag: "br"         "+ \n";
   }
 }
