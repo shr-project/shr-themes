@@ -1,0 +1,192 @@
+group {
+    name: "phoneui/keypad";
+
+	parts {
+		part { name: "background";
+			type: RECT;
+			mouse_events: 0;
+			description {
+				state: "default" 0.0;
+				rel1 {
+					relative: 0.0 0.0;
+				}
+				rel2 {
+					relative: 1.0 1.0;
+				}
+                color: 100 100 100 255;
+			}
+		}
+
+#define BUTTON(__name, __rel1x, __rel1y, __rel2x, __rel2y, __text_name, __text, __desc)\
+part {                                                                          \
+    name: __name;                                                               \
+    type: RECT;                                                                 \
+    mouse_events: 1;                                                            \
+    description {                                                               \
+        state: "default" 0.0;                                                   \
+        rel1 {                                                                  \
+            relative: __rel1x __rel1y;                                          \
+            offset: 0 0;                                                        \
+            }                                                                   \
+        rel2 {                                                                  \
+            relative: __rel2x __rel2y;                                          \
+            offset: 0 0;                                                        \
+            }                                                                   \
+        }                                                                       \
+    description {                                                               \
+        state: "clicked" 0.0;                                                   \
+        color: 200 200 200 255;                                                 \
+        rel1 {                                                                  \
+            relative: __rel1x __rel1y;                                          \
+            offset: 0 0;                                                        \
+            }                                                                   \
+        rel2 {                                                                  \
+            relative: __rel2x __rel2y;                                          \
+            offset: 0 0;                                                        \
+            }                                                                   \
+        }                                                                       \
+    }                                                                           \
+                                                                                \
+part {                                                                          \
+    name: __text_name;                                                          \
+    type: TEXT;                                                                 \
+    mouse_events: 0;                                                            \
+    description {                                                               \
+        state: "default" 0.0;                                                   \
+        color: 1 1 1 255;                                                       \
+        rel1 {                                                                  \
+            relative: 0.0 0.0;                                                  \
+            offset: 0 0;                                                        \
+            to: __name;                                                         \
+            }                                                                   \
+        rel2 {                                                                  \
+            relative: 1.0 0.7;                                                  \
+            offset: 0 0;                                                        \
+            to: __name;                                                         \
+            }                                                                   \
+        text {                                                                  \
+            text: __text;                                                       \
+            font: "redensek:style=bold";                                        \
+            fit: 1 1;                                                           \
+            size: 40;                                                           \
+            align: 0.5 0.5;                                                     \
+            }                                                                   \
+        }                                                                       \
+    }                                                                           \
+                                                                                \
+part {                                                                          \
+    name: __text_name"_desc";                                                   \
+    type: TEXT;                                                                 \
+    mouse_events: 0;                                                            \
+    description {                                                               \
+        state: "default" 0.0;                                                   \
+        color: 60 60 60 255;                                                    \
+        rel1 {                                                                  \
+            relative: 0.0 1.0;                                                  \
+            offset: 0 0;                                                        \
+            to: __text_name;                                                    \
+            }                                                                   \
+        rel2 {                                                                  \
+            relative: 1.0 1.0;                                                  \
+            offset: 0 0;                                                        \
+            to: __name;                                                         \
+            }                                                                   \
+        text {                                                                  \
+            text: __desc;                                                       \
+            font: "redensek";                                                   \
+            fit: 1 1;                                                           \
+            size: 40;                                                           \
+            align: 0.5 0.5;                                                     \
+            }                                                                   \
+        }                                                                       \
+    }
+
+BUTTON("button1",      0.01,  0.01,  0.325, 0.245, "text1",     "1", "");
+BUTTON("button2",      0.335, 0.01,  0.655, 0.245, "text2",     "2", "ABC");
+BUTTON("button3",      0.665, 0.01,  0.99,  0.245, "text3",     "3", "DEF");
+
+BUTTON("button4",      0.01,  0.255, 0.325, 0.495, "text4",     "4", "GHI");
+BUTTON("button5",      0.335, 0.255, 0.655, 0.495, "text5",     "5", "JKL");
+BUTTON("button6",      0.665, 0.255, 0.99,  0.495, "text6",     "6", "MNO");
+
+BUTTON("button7",      0.01,  0.505, 0.325, 0.745, "text7",     "7", "PQRS");
+BUTTON("button8",      0.335, 0.505, 0.655, 0.745, "text8",     "8", "TUV");
+BUTTON("button9",      0.665, 0.505, 0.99,  0.745, "text9",     "9", "WXYZ");
+
+BUTTON("button_star",  0.01,  0.755, 0.325, 0.99,  "text_star",  "*", "");
+BUTTON("button0",      0.335, 0.755, 0.655, 0.99,  "text0",      "0", "+");
+BUTTON("button_rhomb", 0.665, 0.755, 0.99,  0.99,  "text_rhomb", "#", "");
+
+} /* Close Parts */
+
+programs {
+#define PROGRAM(__button, __nr)                                                 \
+program {                                                                       \
+    name: __button"_clicked";                                                   \
+    signal: "mouse,up,1";                                                       \
+    source: __button;                                                           \
+    action: SIGNAL_EMIT __nr "input";                                           \
+    }                                                                           \
+program {                                                                       \
+    name: __button"_click";                                                     \
+    signal: "mouse,down,1";                                                     \
+    source: __button;                                                           \
+    action: STATE_SET "clicked" 0.0;                                            \
+    target: __button;                                                           \
+    }                                                                           \
+program {                                                                       \
+    name: __button"_unclick";                                                   \
+    signal: "mouse,up,1";                                                       \
+    source: __button;                                                           \
+    action: STATE_SET "default" 0.0;                                            \
+    transition: DECELERATE 0.2;                                                 \
+    target: __button;                                                           \
+    }
+
+PROGRAM("button1", "1");
+PROGRAM("button2", "2");
+PROGRAM("button3", "3");
+
+PROGRAM("button4", "4");
+PROGRAM("button5", "5");
+PROGRAM("button6", "6");
+
+PROGRAM("button7", "7");
+PROGRAM("button8", "8");
+PROGRAM("button9", "9");
+
+PROGRAM("button_star", "*");
+PROGRAM("button_rhomb", "#");
+
+               program {
+                       name: "button0_mouse_down";
+                       signal: "mouse,down,1";
+                       source: "button0";
+                       action: SIGNAL_EMIT "0" "mouse_down";
+               }
+               program {
+                       name: "button0_mouse_up";
+                       signal: "mouse,up,1";
+                       source: "button0";
+                       action: SIGNAL_EMIT "0" "mouse_up";
+               }
+
+
+               program {
+                       name: "button0_click";
+                       signal: "mouse,down,1";
+                       source: "button0";
+                       action: STATE_SET "clicked" 0.0;
+                       target: "button0";
+               }
+		program {
+			name: "button0_unclick";
+			signal: "mouse,up,1";
+			source: "button0";
+			action: STATE_SET "default" 0.0;
+			transition: DECELERATE 0.2;
+			target: "button0";
+		}
+
+} /* Close Programs */
+} /* Close Group: phoneui/keypad */
