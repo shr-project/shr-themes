@@ -3470,7 +3470,7 @@ part { name: "shadow";
            }
            program {
                name:   "menu_open";
-               signal: "mouse,in";
+               signal: "mouse,clicked,1";
                source: "over2";
                action: SIGNAL_EMIT "elm,action,open" "";
            }
