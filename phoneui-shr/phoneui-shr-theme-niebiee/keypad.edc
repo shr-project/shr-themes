@@ -1,6 +1,7 @@
 group {
     name: "phoneui/keypad";
-
+      data.item: "stacking" "above"; 
+      data.item: "selectraise" "on"; 
 	parts {
 		part { name: "background";
 			type: RECT;
@@ -13,7 +14,7 @@ group {
 				rel2 {
 					relative: 1.0 1.0;
 				}
-                color: 100 100 100 255;
+                color: 100 100 100 0;
 			}
 		}
 
@@ -24,6 +25,7 @@ part {                                                                          
     mouse_events: 1;                                                            \
     description {                                                               \
         state: "default" 0.0;                                                   \
+        color: 0 105 159 255;                                                   \
         rel1 {                                                                  \
             relative: __rel1x __rel1y;                                          \
             offset: 0 0;                                                        \
@@ -35,14 +37,14 @@ part {                                                                          
         }                                                                       \
     description {                                                               \
         state: "clicked" 0.0;                                                   \
-        color: 200 200 200 255;                                                 \
+        color: 255 255 255 255;                                                 \
         rel1 {                                                                  \
             relative: __rel1x __rel1y;                                          \
-            offset: 0 0;                                                        \
+            offset: 20 -100;                                                     \
             }                                                                   \
         rel2 {                                                                  \
             relative: __rel2x __rel2y;                                          \
-            offset: 0 0;                                                        \
+            offset: -20 0;                                                        \
             }                                                                   \
         }                                                                       \
     }                                                                           \
@@ -53,7 +55,7 @@ part {                                                                          
     mouse_events: 0;                                                            \
     description {                                                               \
         state: "default" 0.0;                                                   \
-        color: 1 1 1 255;                                                       \
+        color: 255 255 255 255;                                                       \
         rel1 {                                                                  \
             relative: 0.0 0.0;                                                  \
             offset: 0 0;                                                        \
@@ -72,6 +74,11 @@ part {                                                                          
             align: 0.5 0.5;                                                     \
             }                                                                   \
         }                                                                       \
+    description {                                                               \
+        state: "clicked" 0.0;                                                   \
+        inherit: "default" 0.0;   \
+        color: 0 0 0 255;                                                    \
+    }            \
     }                                                                           \
                                                                                 \
 part {                                                                          \
@@ -80,7 +87,7 @@ part {                                                                          
     mouse_events: 0;                                                            \
     description {                                                               \
         state: "default" 0.0;                                                   \
-        color: 60 60 60 255;                                                    \
+        color: 200 200 200 255;                                                    \
         rel1 {                                                                  \
             relative: 0.0 1.0;                                                  \
             offset: 0 0;                                                        \
@@ -99,6 +106,11 @@ part {                                                                          
             align: 0.5 0.5;                                                     \
             }                                                                   \
         }                                                                       \
+    description {                                                               \
+        state: "clicked" 0.0;                                                   \
+        inherit: "default" 0.0;   \
+        color: 255 255 255 255;                                                    \
+    }            \
     }
 
 BUTTON("button1",      0.01,  0.01,  0.325, 0.245, "text1",     "1", "");
@@ -120,7 +132,7 @@ BUTTON("button_rhomb", 0.665, 0.755, 0.99,  0.99,  "text_rhomb", "#", "");
 } /* Close Parts */
 
 programs {
-#define PROGRAM(__button, __nr)                                                 \
+#define PROGRAM(__button, __nr, __text)                                                 \
 program {                                                                       \
     name: __button"_clicked";                                                   \
     signal: "mouse,up,1";                                                       \
@@ -133,6 +145,8 @@ program {                                                                       
     source: __button;                                                           \
     action: STATE_SET "clicked" 0.0;                                            \
     target: __button;                                                           \
+    target: "text"__text;                                                       \
+    target: "text"__text"_desc";                                                \
     }                                                                           \
 program {                                                                       \
     name: __button"_unclick";                                                   \
@@ -141,22 +155,24 @@ program {                                                                       
     action: STATE_SET "default" 0.0;                                            \
     transition: DECELERATE 0.2;                                                 \
     target: __button;                                                           \
+    target: "text"__text;                                                       \
+    target: "text"__text"_desc";                                                \
     }
 
-PROGRAM("button1", "1");
-PROGRAM("button2", "2");
-PROGRAM("button3", "3");
+PROGRAM("button1", "1", "1");
+PROGRAM("button2", "2", "2");
+PROGRAM("button3", "3", "3");
 
-PROGRAM("button4", "4");
-PROGRAM("button5", "5");
-PROGRAM("button6", "6");
+PROGRAM("button4", "4", "4");
+PROGRAM("button5", "5", "5");
+PROGRAM("button6", "6", "6");
 
-PROGRAM("button7", "7");
-PROGRAM("button8", "8");
-PROGRAM("button9", "9");
+PROGRAM("button7", "7", "7");
+PROGRAM("button8", "8", "8");
+PROGRAM("button9", "9", "9");
 
-PROGRAM("button_star", "*");
-PROGRAM("button_rhomb", "#");
+PROGRAM("button_star", "*", "_star");
+PROGRAM("button_rhomb", "#", "_rhomb");
 
                program {
                        name: "button0_mouse_down";
@@ -178,6 +194,8 @@ PROGRAM("button_rhomb", "#");
                        source: "button0";
                        action: STATE_SET "clicked" 0.0;
                        target: "button0";
+                       target: "text0";
+                       target: "text0_desc";
                }
 		program {
 			name: "button0_unclick";
@@ -186,6 +204,8 @@ PROGRAM("button_rhomb", "#");
 			action: STATE_SET "default" 0.0;
 			transition: DECELERATE 0.2;
 			target: "button0";
+                        target: "text0";
+                        target: "text0_desc";
 		}
 
 } /* Close Programs */
