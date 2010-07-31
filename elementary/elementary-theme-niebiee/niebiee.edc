@@ -4784,7 +4784,7 @@ part { name: "shadow";
                    rel1.offset: -5 -5;
                    rel2.to: "elm.swallow.slot.bottom";
                    rel2.offset: 4 4;
-		   color: 255 255 255 225;
+		   color: 255 255 255 240;
                    image {
                        normal: "bt_dis_base.png";
                        border: 4 4 4 4;
