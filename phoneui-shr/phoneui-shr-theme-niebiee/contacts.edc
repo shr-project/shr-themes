@@ -444,10 +444,11 @@ group { name: "elm/genlist/item_odd/contact/default";
 
 ///////////////////////////////////////////////////////////////////////////////
 group { name: "elm/list/item/fieldlist";
-	alias: "elm/list/item_odd/fieldlist";
 	alias: "elm/list/item_compress/fieldlist";
-	alias: "elm/list/item_compress_odd/fieldlist";
 	data.item: "stacking" "above";
+      images {
+         image: "bt_base2.png" COMP;
+      }
 	parts {
 		part { name: "event";
 			type: RECT;
@@ -457,13 +458,13 @@ group { name: "elm/list/item/fieldlist";
 				color: 0 0 0 0;
 			}
 		}
-		part { name: "bg";
+		part { name: "back";
 			mouse_events: 0;
 			type: RECT;
 			description {
 				state: "default" 0.0;
 				visible: 1;
-				color: COLOR_LIGHT_GRAY;
+				color: 0 105 159 255;
 				rel1 {
 					relative: 0.0 0.0;
 					offset: 0 0;
@@ -473,14 +474,43 @@ group { name: "elm/list/item/fieldlist";
 					offset: 0 0;
 				}
 			}
-			description {
-				state: "selected" 0.0;
-				inherit: "default" 0.0;
-				visible: 1;
-				color: COLOR_ORANGE_SOLID;
 
-			}
 		}
+         part { name: "bg";
+            mouse_events: 0;
+            description { state: "default" 0.0;
+               visible: 0;
+               image {
+                  normal: "bt_base2.png";
+                  border: 7 7 7 7;
+               }
+               fill.smooth: 0;
+               color: 255 255 255 0;
+               rel1 {
+                  relative: 0.0 0.0;
+                  offset: -2 -2;
+               }
+               rel2 {
+                  relative: 1.0 1.0;
+                  offset: 1 1;
+               }
+               
+            }
+            description { state: "selected" 0.0;
+               inherit: "default" 0.0;
+               visible: 1;
+               color: 255 255 255 255;
+               rel1 {
+                  relative: 0.0 0.0;
+                  offset: -2 -2;
+               }
+               rel2 {
+                  relative: 1.0 1.0;
+                  offset: 1 1;
+               }
+            }
+         }
+
 		part { name: "elm.swallow.icon";
 			type: SWALLOW;
 			description { state: "default" 0.0;
@@ -520,7 +550,7 @@ group { name: "elm/list/item/fieldlist";
 			scale: 1;
 			description {
 				state: "default" 0.0;
-				color: 0 0 0 255;
+				color: 255 255 255 255;
 				color3: 0 0 0 0;
 				rel1 {
 					to_x:     "elm.swallow.icon";
@@ -542,7 +572,7 @@ group { name: "elm/list/item/fieldlist";
 			description {
 				state: "selected" 0.0;
 				inherit: "default" 0.0;
-				color: 224 224 224 255;
+				color: 255 255 255 255;
 				color3: 0 0 0 64;
 			}
 		}
@@ -567,6 +597,164 @@ group { name: "elm/list/item/fieldlist";
 		}
 	}
 }
+
+///////////////////////////////////////////////////////////////////////////////
+group { name: "elm/list/item_odd/fieldlist";
+	alias: "elm/list/item_compress_odd/fieldlist";
+	data.item: "stacking" "above";
+      images {
+         image: "bt_base2.png" COMP;
+      }
+	parts {
+		part { name: "event";
+			type: RECT;
+			repeat_events: 1;
+			description {
+				state: "default" 0.0;
+				color: 0 0 0 0;
+			}
+		}
+		part { name: "back";
+			mouse_events: 0;
+			type: RECT;
+			description {
+				state: "default" 0.0;
+				visible: 1;
+				color: 0 90 159 255;
+				rel1 {
+					relative: 0.0 0.0;
+					offset: 0 0;
+				}
+				rel2 {
+					relative: 1.0 1.0;
+					offset: 0 0;
+				}
+			}
+
+		}
+         part { name: "bg";
+            mouse_events: 0;
+            description { state: "default" 0.0;
+               visible: 0;
+               image {
+                  normal: "bt_base2.png";
+                  border: 7 7 7 7;
+               }
+               fill.smooth: 0;
+               color: 255 255 255 0;
+               rel1 {
+                  relative: 0.0 0.0;
+                  offset: -2 -2;
+               }
+               rel2 {
+                  relative: 1.0 1.0;
+                  offset: 1 1;
+               }
+               
+            }
+            description { state: "selected" 0.0;
+               inherit: "default" 0.0;
+               visible: 1;
+               color: 255 255 255 255;
+               rel1 {
+                  relative: 0.0 0.0;
+                  offset: -2 -2;
+               }
+               rel2 {
+                  relative: 1.0 1.0;
+                  offset: 1 1;
+               }
+            }
+         }
+
+		part { name: "elm.swallow.icon";
+			type: SWALLOW;
+			description { state: "default" 0.0;
+				fixed: 1 0;
+				align: 0.0 0.5;
+				rel1 {
+					relative: 0.0  0.0;
+					offset:   4    4;
+				}
+				rel2 {
+					relative: 0.0  1.0;
+					offset:   4   -5;
+				}
+			}
+		}
+		part { name: "elm.swallow.end";
+			type: SWALLOW;
+			description {
+				state: "default" 0.0;
+				fixed: 1 0;
+				align: 1.0 0.5;
+				aspect: 1.0 1.0;
+				aspect_preference: VERTICAL;
+				rel1 {
+					relative: 1.0  0.0;
+					offset:   -5    4;
+				}
+				rel2 {
+					relative: 1.0  1.0;
+					offset:   -5   -5;
+				}
+			}
+		}
+		part { name: "elm.text";
+			type:           TEXT;
+			mouse_events:   0;
+			scale: 1;
+			description {
+				state: "default" 0.0;
+				color: 255 255 255 255;
+				color3: 0 0 0 0;
+				rel1 {
+					to_x:     "elm.swallow.icon";
+					relative: 1.0  0.0;
+					offset:   0 4;
+				}
+				rel2 {
+					to_x:     "elm.swallow.end";
+					relative: 0.0  1.0;
+					offset:   -1 -5;
+				}
+				text {
+					font: "content";
+					size: 9;
+					min: 1 1;
+					align: 0.0 0.5;
+				}
+			}
+			description {
+				state: "selected" 0.0;
+				inherit: "default" 0.0;
+				color: 255 255 255 255;
+				color3: 0 0 0 64;
+			}
+		}
+	}
+	programs {
+		program {
+			name:    "go_active";
+			signal:  "elm,state,selected";
+			source:  "elm";
+			action:  STATE_SET "selected" 0.0;
+			target:  "bg";
+			target:  "elm.text";
+		}
+		program {
+			name:    "go_passive";
+			signal:  "elm,state,unselected";
+			source:  "elm";
+			action:  STATE_SET "default" 0.0;
+			target:  "bg";
+			target:  "elm.text";
+			transition: LINEAR 0.1;
+		}
+	}
+}
+
+
 ///////////////////////////////////////////////////////////////////////////////
 group { name: "elm/genlist/item/contactfield/default";
 	data.item: "stacking" "above";
