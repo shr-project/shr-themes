@@ -945,6 +945,19 @@ part { name: "shadow";
 	       visible: 1;
 	       text.min: 1 1;
 	    }
+	    description { state: "disabled" 0.0;
+	       inherit: "default" 0.0;
+	       color: 255 255 255 128;
+	       color3: 0 0 0 0;
+	    }
+	    description { state: "disabled_visible" 0.0;
+	       inherit: "default" 0.0;
+	       color: 255 255 255 128;
+	       color3: 0 0 0 0;
+	       visible: 1;
+	       text.min: 1 1;
+	    }
+
 	 }
 	 
 	 part { name: "over2";
@@ -969,6 +982,18 @@ part { name: "shadow";
                color: 0 112 172 128;
             }
          }
+ 	 part { name: "disabler";
+	    type: RECT;
+	    description { state: "default" 0.0;
+	       color: 0 0 0 0;
+	       visible: 0;
+	    }
+	    description { state: "disabled" 0.0;
+	       inherit: "default" 0.0;
+	       visible: 1;
+	    }
+	 }
+
       }
       programs {
 	 program {
@@ -1050,6 +1075,47 @@ part { name: "shadow";
 	    action:  STATE_SET "default" 0.0;
 	    target: "elm.swallow.content";
 	 }
+	 program { name: "disable";
+	    signal: "elm,state,disabled";
+	    source: "elm";
+	    action: STATE_SET "disabled" 0.0;
+	    target: "button_image";
+	    target: "over2";
+	    target: "disabler";
+            after: "disable_text";
+	 }
+         program { name: "disable_text";
+	    script {
+	       new st[31];
+	       new Float:vl;
+	       get_state(PART:"elm.text", st, 30, vl);
+	       if (!strcmp(st, "visible"))
+		 set_state(PART:"elm.text", "disabled_visible", 0.0);
+	       else
+		 set_state(PART:"elm.text", "disabled", 0.0);
+	    }
+         }
+	 program { name: "enable";
+	    signal: "elm,state,enabled";
+	    source: "elm";
+	    action: STATE_SET "default" 0.0;
+	    target: "button_image";
+	    target: "over2";
+	    target: "disabler";
+            after: "enable_text";
+	 }
+         program { name: "enable_text";
+	    script {
+	       new st[31];
+	       new Float:vl;
+	       get_state(PART:"elm.text", st, 30, vl);
+	       if (!strcmp(st, "disabled_visible"))
+		 set_state(PART:"elm.text", "visible", 0.0);
+	       else
+		 set_state(PART:"elm.text", "default", 0.0);
+	    }
+         }
+
       }
    }
 
