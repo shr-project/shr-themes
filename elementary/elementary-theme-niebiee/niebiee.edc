@@ -12239,11 +12239,11 @@ type: RECT;
             description { state: "default" 0.0;
                visible: 1;
                rel1 {
-                  to: "elm.text.content";
+                  to: "elm.text.status";
                   offset: -6 -4;
                }
                rel2 {
-                  to: "elm.text.content";
+                  to: "elm.text.status";
                   offset: 6 4;
                }
                image {
@@ -12257,7 +12257,7 @@ type: RECT;
                visible: 0;
             }
          }
-         part { name: "elm.text.content";
+         part { name: "elm.text.status";
             type: TEXT;
             mouse_events: 0;
             description { state: "default" 0.0;
@@ -12317,14 +12317,14 @@ type: RECT;
             signal: "elm,state,units,visible";
             source: "elm";
             action:  STATE_SET "default" 0.0;
-            target: "elm.text.content";
+            target: "elm.text.status";
             target: "elm.text.box";
          }
          program { name: "units_hide";
             signal: "elm,state,units,hidden";
             source: "elm";
             action:  STATE_SET "hidden" 0.0;
-            target: "elm.text.content";
+            target: "elm.text.status";
             target: "elm.text.box";
          }
          program { name: "slide_to_end";
@@ -12583,11 +12583,11 @@ type: RECT;
             description { state: "default" 0.0;
                visible: 0;
                rel1 {
-                  to: "elm.text.content";
+                  to: "elm.text.status";
                   offset: -2 -2;
                }
                rel2 {
-                  to: "elm.text.content";
+                  to: "elm.text.status";
                   offset: 2 2;
                }
                image {
@@ -12601,7 +12601,7 @@ type: RECT;
                visible: 1;
             }
          }
-         part { name: "elm.text.content";
+         part { name: "elm.text.status";
             type: TEXT;
             mouse_events: 0;
             scale: 1;
@@ -12660,14 +12660,14 @@ type: RECT;
             signal: "elm,state,units,visible";
             source: "elm";
             action:  STATE_SET "visible" 0.0;
-            target: "elm.text.content";
+            target: "elm.text.status";
             target: "elm.text.box";
          }
          program { name: "units_hide";
             signal: "elm,state,units,hidden";
             source: "elm";
             action:  STATE_SET "default" 0.0;
-            target: "elm.text.content";
+            target: "elm.text.status";
             target: "elm.text.box";
          }
          program { name: "slide_to_end";
