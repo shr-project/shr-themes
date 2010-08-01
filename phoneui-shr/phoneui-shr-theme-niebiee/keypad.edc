@@ -14,7 +14,7 @@ group {
 				rel2 {
 					relative: 1.0 1.0;
 				}
-                color: 100 100 100 0;
+                color: 0 90 159 255;
 			}
 		}
 
