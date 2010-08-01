@@ -266,7 +266,7 @@ group { name: "phoneui/messages/new/content";
 			scale: 1;
 			description {
 				state: "default" 0.0;
-				color: 0 0 0 255;
+				color: 255 255 255 255;
                                 rel1.relative: 0.05 0.0;
 				rel2.relative: 0.95 0.09;
 				text {
@@ -283,7 +283,7 @@ group { name: "phoneui/messages/new/content";
 			scale: 1;
 			description {
 				state: "default" 0.0;
-				color: 0 0 0 255;
+				color: 255 255 255 255;
 				rel1.relative: 0.05 0.09;
 				rel2.relative: 0.95 0.12;
 				text {
@@ -334,7 +334,7 @@ group { name: "phoneui/messages/new/recipients";
 			scale: 1;
 			description {
 				state: "default" 0.0;
-				color: 0 0 0 255;
+				color: 255 255 255 255;
                                 rel1.relative: 0.05 0.0;
 				rel2.relative: 0.95 0.09;
 				text {
@@ -407,7 +407,7 @@ group { name: "phoneui/messages/new/contacts";
 			scale: 1;
 			description {
 				state: "default" 0.0;
-				color: 0 0 0 255;
+				color: 255 255 255 255;
                                 rel1.relative: 0.05 0.0;
 				rel2.relative: 0.95 0.09;
 				text {
@@ -493,7 +493,7 @@ group { name: "phoneui/messages/new/number";
 			scale: 1;
 			description {
 				state: "default" 0.0;
-				color: 0 0 0 255;
+				color: 255 255 255 255;
                                 rel1.relative: 0.05 0.0;
 				rel2.relative: 0.95 0.09;
 				text {
@@ -512,7 +512,7 @@ group { name: "phoneui/messages/new/number";
 				state: "default" 0.0;
 				rel1.relative: 0.1 0.1;
 				rel2.relative: 0.8 0.2;
-				color: 0 0 0 255;
+				color: 255 255 255 255;
 				text {
 					text: "";
 					font: "content-bold";
@@ -674,7 +674,7 @@ group { name: "phoneui/messages/show";
 			scale: 1;
 			description {
 				state: "default" 0.0;
-				color: 0 0 0 255;
+				color: 255 255 255 255;
 				rel1.relative: 0.3 0.075;
 				rel1.offset: 0 3;
 				rel2.to_x: "icon_status";
