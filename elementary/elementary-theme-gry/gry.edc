@@ -2482,12 +2482,22 @@ collections {
 	 program { name: "up";
 	    signal: "mouse,down,1";
 	    source: "t";
-	    action: SIGNAL_EMIT "elm,action,up" "";
+	    action: SIGNAL_EMIT "elm,action,up,start" "";
+	 }
+	 program { name: "up,stop";
+	    signal: "mouse,up,1";
+	    source: "t";
+	    action: SIGNAL_EMIT "elm,action,up,stop" "";
 	 }
 	 program { name: "down";
 	    signal: "mouse,down,1";
 	    source: "b";
-	    action: SIGNAL_EMIT "elm,action,down" "";
+	    action: SIGNAL_EMIT "elm,action,down,start" "";
+	 }
+	 program { name: "down,stop";
+	    signal: "mouse,up,1";
+	    source: "b";
+	    action: SIGNAL_EMIT "elm,action,down,stop" "";
 	 }
       }
    }
@@ -2758,12 +2768,22 @@ collections {
 	 program { name: "up";
 	    signal: "mouse,down,1";
 	    source: "t";
-	    action: SIGNAL_EMIT "elm,action,up" "";
+	    action: SIGNAL_EMIT "elm,action,up,start" "";
+	 }
+	 program { name: "up,stop";
+	    signal: "mouse,up,1";
+	    source: "t";
+	    action: SIGNAL_EMIT "elm,action,up,stop" "";
 	 }
 	 program { name: "down";
 	    signal: "mouse,down,1";
 	    source: "b";
-	    action: SIGNAL_EMIT "elm,action,down" "";
+	    action: SIGNAL_EMIT "elm,action,down,start" "";
+	 }
+	 program { name: "down,stop";
+	    signal: "mouse,up,1";
+	    source: "b";
+	    action: SIGNAL_EMIT "elm,action,down,stop" "";
 	 }
       }
    }
