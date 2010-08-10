@@ -3345,43 +3345,49 @@ collections {
    }
    
    group { name: "elm/frame/base/outdent_top";
-      
-      parts {
-         part { name: "base0";
-	    mouse_events:  0;
-		type: RECT;
-	    description { state: "default" 0.0;
-	      color: COLOR_LIGHT_GRAY;
-	    }
-	 }
-	 part { name: "elm.swallow.content";
-	    type: SWALLOW;
-	    description { state: "default" 0.0;
-	       rel1.offset: 2 2;
-	       rel2.offset: -3 -13;
-	    }
-	 }
-      }
+       images {
+           image: "outdent-top.png" COMP;
+       }
+       parts {
+           part { name: "base0";
+               mouse_events:  0;
+               description { state: "default" 0.0;
+                   image.normal: "outdent-top.png";
+                   image.border: 0 0 0 5;
+                   fill.smooth: 0;
+               }
+           }
+           part { name: "elm.swallow.content";
+               type: SWALLOW;
+               description { state: "default" 0.0;
+                   rel1.offset: 2 2;
+                   rel2.offset: -3 -5;
+               }
+           }
+       }
    }
-   
+
    group { name: "elm/frame/base/outdent_bottom";
-     
-      parts {
-         part { name: "base0";
-	    mouse_events:  0;
-		type: RECT;
-	    description { state: "default" 0.0;
-		color: COLOR_LIGHT_GRAY;
-	    }
-	 }
-	 part { name: "elm.swallow.content";
-	    type: SWALLOW;
-	    description { state: "default" 0.0;
-	       rel1.offset: 2 12;
-	       rel2.offset: -3 -3;
-	    }
-	 }
-      }
+       images {
+           image: "outdent-bottom.png" COMP;
+       }
+       parts {
+           part { name: "base0";
+               mouse_events:  0;
+               description { state: "default" 0.0;
+                   image.normal: "outdent-bottom.png";
+                   image.border: 0 0 5 0;
+                   fill.smooth: 0;
+               }
+           }
+           part { name: "elm.swallow.content";
+               type: SWALLOW;
+               description { state: "default" 0.0;
+                   rel1.offset: 2 5;
+                   rel2.offset: -3 -3;
+               }
+           }
+       }
    }
    
 ///////////////////////////////////////////////////////////////////////////////
