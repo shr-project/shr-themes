@@ -1,0 +1,77 @@
+
+# This file is in YAML format (http://www.yaml.org/)
+# We define a list of rules that will be automatically loaded
+# When we start the oevents module of the framework daemon
+#
+# The attributes of a rule are :
+# - trigger     : trigger object
+# - filters     : filters object or list of filters objects
+# - actions     : action object or list of actions objects
+#
+# We define the following functions :
+# - CallStatus()            : create a trigger object activated on a call status event
+# - PowerStatus()           : create a trigger object activated on a power status event
+# - HasAttr(name, value)    : create a filter that accept signal with a given attribute
+# - Not(filter)             : create a neg filter
+# - PlaySound(file)         : Action that starts to play an audio file
+# - StopSound(file)         : Action that stop an audio file
+# - SetScenario(name)       : Action that sets an audio scenario
+# - StartVibration
+# - StopVibration
+# - RingTone(cmd)           : cmd can be 'start' or 'stop'
+# - Time(hour, min)         : create a trigger activated at the given time
+# - Debug(msg)              : Action that prints a debug message (only for debuging)
+-
+    #
+    # Call -> Audio Scenario Handling
+    #
+    trigger: IncomingMessage()
+    actions: MessageTone(play)
+
+-
+    while: CallListContains("INCOMING")
+    filters: Not(CallListContains("ACTIVE"))
+    actions:
+             - RingTone()
+             - OccupyResource(Display)
+
+#-
+#    while: NewMissedCalls()
+#    actions: SetLed("lp5523_b", "blink")
+#
+-
+    while: UnreadMessages()
+    actions: SetLed("lp5523_b", "blink")
+
+-
+#    while: CallStatus()
+#    filters:
+#            - Or(Or(HasAttr(status, "OUTGOING"), HasAttr(status, "ACTIVE")), And(HasAttr(status, "INCOMING"), CallListContains("ACTIVE")))
+#            - Not(BTHeadsetIsConnected())
+#    actions:
+#            - SetScenario(gsmhandset)
+#-
+    while: CallStatus()
+    filters:
+            - Or(Or(HasAttr(status, "OUTGOING"), HasAttr(status, "ACTIVE")), And(HasAttr(status, "INCOMING"), CallListContains("ACTIVE")))
+            - BTHeadsetIsConnected()
+    actions:
+            - SetScenario(gsmbluetooth)
+            - BTHeadsetPlaying()   
+-
+    while: PowerStatus()
+    filters: HasAttr(status, "charging")
+    actions: SetLed("lp5523_r", "light")
+-
+    while: PowerStatus()
+    filters: HasAttr(status, "critical")
+    actions: SetLed("lp5523_r", "blink")
+-
+    while: PowerStatus()
+    filters: HasAttr(status, "full")
+    actions: SetLed("lp5523_g", "light")
+-
+    trigger: PowerStatus()
+    filters: HasAttr(status, "empty")
+    actions: Command('poweroff')
+
