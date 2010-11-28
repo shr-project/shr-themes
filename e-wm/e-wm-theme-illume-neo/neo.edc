@@ -47,7 +47,12 @@ color: 0 0 0 255;
 	 }
       }
    }
-
+/////////////////////////////////////////////////////////////////////////////
+   /*** ILLUME-home ***/
+#include "illume-home/e-module-illume-home.edc"
+/////////////////////////////////////////////////////////////////////////////
+   /*** ILLUME-Indicator ***/
+#include "illume-indicator/e-module-illume-indicator.edc"
 /////////////////////////////////////////////////////////////////////////////
    /*** ILLUME: SLIPSHELF ***/
 
@@ -1100,7 +1105,7 @@ color: 0 0 0 255;
 	       aspect: 1.5 1.5;
 	       align: 1.0 0.5;
 	       aspect_preference: VERTICAL;
-	       color: 0 0 0 0;
+	       color: 0 0 0 255;
 	       rel1 {
 		  relative: 1.0 0.0;
 		  offset: -1 0;
@@ -2173,8 +2178,387 @@ color: 0 0 0 255;
       }
    }
 
+////////////////////////////////////////////////
+   /***FILEMAN***/
+   group { name: "e/fileman/default/list/drop_in";
+      alias: "e/fileman/default/list/drop_between";
+      alias: "e/fileman/desktop/list/drop_in";
+      alias: "e/fileman/desktop/list/drop_between";
+      images.image: "bt_base2.png" COMP;
+      parts {
+         part { name: "clipper";
+            type: RECT;
+            mouse_events: 0;
+            description { state: "default" 0.0;
+               visible: 0;
+               color: 255 255 255 0;
+            }
+            description { state: "visible" 0.0;
+               visible: 1;
+               color: 255 255 255 255;
+            }
+         }
+         part { name: "middle";
+            type: RECT;
+            mouse_events: 0;
+            clip_to: "clipper";
+            description { state: "default" 0.0;
+               visible: 1;
+               color: 255 255 255 20;
+               rel1.offset: 1 1;
+               rel2.offset: -2 -3;
+            }
+         }
+         part { name: "border";
+            type: IMAGE;
+            mouse_events: 0;
+            clip_to: "clipper";
+            description { state: "default" 0.0;
+               visible: 1;
+               image {
+                  normal: "bt_base2.png";
+                  border: 5 5 5 5;
+                  middle: 0;
+               }
+            }
+         }
+      }
+      programs {
+         program { name: "visible";
+            signal: "e,state,selected";
+            source: "e";
+            action: STATE_SET "visible" 0.0;
+            target: "clipper";
+         }
+         program { name: "hidden";
+            signal: "e,state,unselected";
+            source: "e";
+            action: STATE_SET "default" 0.0;
+            target: "clipper";
+         }
+      }
+   }
    
+   /* e/fileman/default/list/* is used in file selectors eg; Wallpaper dialog */
+   group { name: "e/fileman/default/list/variable";
+      alias: "e/fileman/default/list_odd/variable";
+      alias: "e/fileman/default/list/fixed";
+      alias: "e/fileman/desktop/list/fixed";
+      alias: "e/fileman/default/list_odd/fixed";
+      alias: "e/fileman/desktop/list_odd/fixed";
+      data.item: "stacking" "above";
+      data.item: "selectraise" "on";
+      images {
+         image: "icon_efm_dnd_copy.png" COMP;
+         image: "icon_efm_dnd_ask.png" COMP;
+         image: "icon_efm_dnd_move.png" COMP;
+      }
+      parts {
+         part { name: "bg";
+            mouse_events: 0;
+            description { state: "default" 0.0;
+               visible: 0;
+               color: 255 255 255 0;
+               image {
+                  normal: "bt_base2.png";
+                  border: 5 5 5 5;
+               }
+               fill.smooth: 1;
+            }
+            description { state: "selected" 0.0;
+               inherit: "default" 0.0;
+               visible: 1;
+               color: 255 255 255 255;
+            }
+         }
+         part { name: "e.swallow.icon";
+            type: SWALLOW;
+            description { state: "default" 0.0;
+               align: 0.0 0.5;
+               aspect: 1.0 1.0;
+               aspect_preference: BOTH;
+               rel1 {
+                  relative: 0.0  0.0;
+                  offset: 10    10;
+               }
+               rel2 {
+                  relative: 1.0  1.0;
+                  offset: -10   -11;
+               }
+            }
+         }
+         part { name: "e.text.label";
+            type: TEXT;
+            mouse_events: 0;
+            scale: 1;
+            description { state: "default" 0.0;
+               min: 16 16;
+               rel1 {
+                  to_x: "e.swallow.icon";
+                  relative: 1.0  0.0;
+                  offset: 10 10;
+               }
+               rel2 {
+                  relative: 1.0  1.0;
+                  offset: -11 -11;
+               }
+               color_class: "ilist_item";
+               text {
+                  font: "DejaVu Sans,Sans";
+                  size: 10;
+                  min: 1 1;
+                  align: 0.0 0.5;
+                  text_class: "ilist_item";
+               }
+            }
+            description { state: "selected" 0.0;
+               inherit: "default" 0.0;
+               color_class: "ilist_item_selected";
+            }
+         }
+         part {
+            name: "event";
+            type: RECT;
+            description {
+               state: "default" 0.0;
+               color: 0 0 0 0;
+            }
+         }
+         part {
+            name: "e.swallow.entry";
+            type: SWALLOW;
+            description {
+               state: "default" 0.0;
+               rel1.to: "e.text.label";
+               rel2.to: "e.text.label";
+            }
+         }
+      }
+      programs {
+         program {
+            name: "go_active";
+            signal: "e,state,selected";
+            source: "e";
+            action: STATE_SET "selected" 0.0;
+            target: "bg";
+            target: "e.text.label";
+         }
+         program {
+            name: "go_passive";
+            signal: "e,state,unselected";
+            source: "e";
+            action: STATE_SET "default" 0.0;
+            target: "bg";
+            target: "e.text.label";
+            transition: LINEAR 0.1;
+         }
 
+      }
+   }
+////////////////////////////////////////////////
+  /***used for ILLUME-HOME***/
+   group { name: "e/fileman/default/icon/variable";
+      alias: "e/fileman/default/icon/fixed";
+      alias: "e/fileman/desktop/icon/variable";
+      alias: "e/fileman/desktop/icon/fixed";
+      styles {
+         style {
+            name: "fileman_icon_name";
+            base: "font=Sans font_size=10 text_class=tb_plain align=center color=#fff wrap=char";
+         }
+      }
+      images {
+         image: "bt_base2.png" COMP;
+      }
+      parts {
+         part { name: "bg";
+            type: RECT;
+            mouse_events: 0;
+            description { state: "default" 0.0;
+               color: 255 0 0 0;
+               aspect: 1.0 1.0;
+               aspect_preference: VERTICAL;
+               //min: 50 50;
+               rel1 {
+                  relative: 0.0 0.0;
+                  offset: 1 1;
+               }
+               rel2 {
+                  relative: 1.0 1.0;
+                  offset: -1 -1;
+               }
+            }
+         }
+         part { name: "bg_selected";
+            mouse_events: 1;
+            clip_to: "selected";
+            description { state: "default" 0.0;
+               image.normal: "bt_base2.png";
+               image.border: 5 5 5 5;
+               rel1.to: "selected";
+               rel2.to: "selected";
+            }
+         }
+         part { name: "icon_base";
+            type: RECT;
+            description { state: "default" 0.0;
+               align: 0.5 0.0;
+               aspect: 1.0 1.0;
+               aspect_preference: BOTH;
+               rel1 {
+                  to: "bg";
+                  relative: 0.0 0.0;
+                  offset: 20 5;
+               }
+               rel2 {
+                  to: "bg";
+                  relative: 1.0 1.0;
+                  offset: -21 -5;
+               }
+               color: 0 0 0 0;
+            }
+         }
+         part { name: "e.swallow.icon";
+            type: SWALLOW;
+            description { state: "default" 0.0;
+               aspect: 1.0 1.0;
+               aspect_preference: BOTH;
+               align: 0.5 0.5;
+                      //fixed: 1 1;
+               rel1.to: "icon_base";
+               rel2.to: "icon_base";
+            }
+         }
+         part { name: "e.text.label";
+            type: TEXT;
+            mouse_events: 0;
+            scale: 1;
+            description { state: "default" 0.0;
+               align: 0.5 1.0;
+               rel1 {
+                  to_x: "bg";
+                  to_y: "icon_base";
+                  relative: 0.0 1.0;
+                  offset: 10 10;
+               }
+               rel2 {
+                  to: "bg";
+                  relative: 1.0 1.0;
+                  offset: -11 -11;
+               }
+               color_class: "fileman_icon_label";
+               text {
+                  min: 0 1;
+                  text_class: "fileman_icon";
+                  font: "DejaVu Sans, Sans";
+                  size: 10;
+                  align: 0.5 0.5;
+               }
+            }
+//             description { state: "selected" 0.0;
+//                //inherit: "default" 0.0;
+//                //color: 0 0 0 0;
+//             }
+         }
+//          part { name: "label_full";
+//             type: TEXTBLOCK;
+//             mouse_events: 0;
+//             scale: 1;
+//             description { state: "default" 0.0;
+//                align: 0.5 0.0;
+//                fixed: 0 1;
+//                rel1 {
+//                   to_x: "bg";
+//                   to_y: "e.text.label";
+//                   relative: 0.0 0.0;
+//                   offset: 5 0;
+//                }
+//                rel2 {
+//                   to: "bg";
+//                   relative: 1.0 1.0;
+//                   offset: -6 -6;
+//                }
+//                color_class: "fileman_icon_label_selected";
+//                text {
+//                   style: "fileman_icon_name";
+//                   min: 0 1;
+//                   text_class: "fileman_icon";
+//                   text_source: "e.text.label";
+//                }
+//                visible: 0;
+//             }
+//             description { state: "selected" 0.0;
+//                inherit: "default" 0.0;
+//                visible: 0;
+//             }
+//          }
+         part { name: "event";
+            type: RECT;
+            mouse_events: 1;
+            description { state: "default" 0.0;
+               color: 0 0 0 0;
+            }
+         }
+         part {
+            name: "e.swallow.entry";
+            type: SWALLOW;
+            description {
+               state: "default" 0.0;
+               rel1.to: "e.text.label";
+               rel2.to: "e.text.label";
+            }
+         }
+         part { name: "selected";
+            type: RECT;
+            mouse_events: 0;
+            description { state: "default" 0.0;
+               color: 0 0 0 0;
+               visible: 0;
+               rel1.to: "bg";
+               rel2.to: "bg";
+               //rel2.to_y: "label_full";
+               rel2.offset: 0 0;
+            }
+            description { state: "selected" 0.0;
+               inherit: "default" 0.0;
+               color: 255 255 255 255;
+               visible: 1;
+            }
+         }
+      }
+      programs {
+//          program { name: "go_active";
+//             signal: "e,state,selected";
+//             source: "e";
+//             action: STATE_SET "selected" 0.0;
+//             target: "e.text.label";
+//             after: "go_active2";
+//          }
+         program { name: "go_active";
+            signal: "e,state,selected";
+            source: "e";
+            action: STATE_SET "selected" 0.0;
+            target: "selected";
+            transition: LINEAR 0.2;
+         }
+//          program { name: "go_passive";
+//             signal: "e,state,unselected";
+//             source: "e";
+//             action: STATE_SET "default" 0.0;
+//             target: "e.text.label";
+//             after: "go_passive2";
+//          }
+         program { name: "go_passive";
+            signal: "e,state,unselected";
+            source: "e";
+            action: STATE_SET "default" 0.0;
+            target: "selected";
+            transition: LINEAR 0.1;
+         }
+         
+      }
+   }
+   
 /////////////////////////////////////////////////////////////////////////////
    /*** MOD: ILLUME SCROLLFRAME ***/
    group { name: "e/modules/illume/launcher/scrollview";
@@ -2379,13 +2763,262 @@ color: 0 0 0 255;
       }
    }
 
+/////////////////////////////////////////////////////////////////////////////
+/*** MOD: ILLUME-KBD-TOGGLE ***/
+
+group { name: "e/modules/illume_kbd_toggle/main";
+   images.image: "illume_kbd.png" COMP;
+   images.image: "illume_kbd_on.png" COMP;
+   min: 16 16;
+   max: 128 128;
+   parts {
+      part {
+         name: "icon";
+         mouse_events: 0;
+         description {
+            state: "default" 0.0;
+            aspect: 1.0 1.0;
+            aspect_preference: BOTH;
+            image.normal: "illume_kbd.png";
+          //  max: 48 48;
+         }
+         description { state: "on" 0.0;
+            inherit: "default" 0.0;
+            image.normal: "illume_kbd_on.png";
+         }
+         program { name: "state_on";
+            signal: "e,state,vkbd,on";
+            source: "e";
+            action: STATE_SET "on" 0.0;
+            target: "icon";
+            target: "on";
+         }
+         program { name: "state_off";
+            signal: "e,state,vkbd,off";
+            source: "e";
+            action: STATE_SET "default" 0.0;
+            target: "icon";
+            target: "on";
+         }
+      }
+      part { name: "event";
+         type: RECT;
+         mouse_events: 1;
+         description { state: "default" 0.0;
+            visible: 1;
+            color: 0 0 0 0;
+         }
+         program { name: "enable";
+            signal: "mouse,clicked,1";
+            source: "event";
+            action: SIGNAL_EMIT "e,action,vkbd,enable" "";
+         }
+      }
+      part { name: "on";
+         type: RECT;
+         mouse_events: 1;
+         description { state: "default" 0.0;
+            visible: 0;
+            color: 0 0 0 0;
+         }
+         description { state: "on" 0.0;
+            inherit: "default" 0.0;
+            visible: 1;
+         }
+         program { name: "disable";
+            signal: "mouse,clicked,1";
+            source: "on";
+            action: SIGNAL_EMIT "e,action,vkbd,disable" "";
+         }
+      }
+   }
+}
 
 /////////////////////////////////////////////////////////////////////////////
+/*** MOD: ILLUME-MODE-TOGGLE ***/
+
+group {
+   name: "e/modules/illume_mode_toggle/main";
+   images.image: "illume-mode-single.png" COMP;
+   images.image: "illume-mode-dual-left.png" COMP;
+   images.image: "illume-mode-dual-top.png" COMP;
+   min: 16 16;
+   max: 128 128;
+   parts {
+      part {
+         name: "icon";
+         mouse_events: 0;
+         description {
+            state: "default" 0.0;
+            aspect: 1.0 1.0;
+            aspect_preference: BOTH;
+            image.normal: "illume-mode-single.png";
+            //max: 15 15;
+         }
+         description { state: "dual_left" 0.0;
+            inherit: "default" 0.0;
+            image.normal: "illume-mode-dual-left.png";
+         }
+         description { state: "dual_top" 0.0;
+            inherit: "default" 0.0;
+            image.normal: "illume-mode-dual-top.png";
+         }
+         program { name: "state_single";
+            signal: "e,mode,single";
+            source: "e";
+            action: STATE_SET "default" 0.0;
+            target: "icon";
+            target: "dual_left";
+            target: "dual_top";
+         }
+         program { name: "state_dual_left";
+            signal: "e,mode,dual,left";
+            source: "e";
+            action: STATE_SET "dual_left" 0.0;
+            target: "icon";
+            target: "dual_left";
+            target: "dual_top";
+         }
+         program { name: "state_dual_top";
+            signal: "e,mode,dual,top";
+            source: "e";
+            action: STATE_SET "dual_top" 0.0;
+            target: "icon";
+            target: "dual_left";
+            target: "dual_top";
+         }
+      }
+      part { name: "single";
+         type: RECT;
+         mouse_events: 1;
+         description { state: "default" 0.0;
+            visible: 1;
+            color: 0 0 0 0;
+         }
+         program { name: "single";
+            signal: "mouse,clicked,1";
+            source: "single";
+            action: SIGNAL_EMIT "e,action,mode,dual,top" "";
+         }
+      }
+      part { name: "dual_top";
+         type: RECT;
+         mouse_events: 1;
+         description { state: "default" 0.0;
+            visible: 0;
+            color: 0 0 0 0;
+         }
+         description { state: "dual_top" 0.0;
+            inherit: "default" 0.0;
+            visible: 1;
+         }
+         description { state: "dual_left" 0.0;
+            inherit: "default" 0.0;
+            visible: 0;
+         }
+         program { name: "dual_top";
+            signal: "mouse,clicked,1";
+            source: "dual_top";
+            action: SIGNAL_EMIT "e,action,mode,dual,left" "";
+         }
+      }
+      part { name: "dual_left";
+         type: RECT;
+         mouse_events: 1;
+         description { state: "default" 0.0;
+            visible: 0;
+            color: 0 0 0 0;
+         }
+         description { state: "dual_top" 0.0;
+            inherit: "default" 0.0;
+            visible: 0;
+         }
+         description { state: "dual_left" 0.0;
+            inherit: "default" 0.0;
+            visible: 1;
+         }
+         program { name: "dual_left";
+            signal: "mouse,clicked,1";
+            source: "dual_left";
+            action: SIGNAL_EMIT "e,action,mode,single" "";
+         }
+      }
+   }
+}
+
+/////////////////////////////////////////////////////////////////////////////
+/*** MOD: ILLUME-HOME-TOGGLE ***/
+
+group { name: "e/modules/illume_home_toggle/main";
+   images.image: "illume-home.png" COMP;
+   min: 16 16;
+   max: 128 128;
+   parts {
+      part { name: "icon";
+         mouse_events: 0;
+         description { state: "default" 0.0;
+            //max: 50 50;
+            aspect: 1.0 1.0;
+            aspect_preference: BOTH;
+            image.normal: "illume-home.png";
+         }
+      }
+      part { name: "event";
+         type: RECT;
+         mouse_events: 1;
+         description { state: "default" 0.0;
+            visible: 1;
+            color: 0 0 0 0;
+         }
+         program { name: "button_click";
+            signal: "mouse,clicked,1";
+            source: "event";
+            action: SIGNAL_EMIT "e,action,home" "";
+         }
+      }
+   }
+}
+
+
+   /////////////////////////////////////////////////////////////////////////////
+   /*** MOD: CONF ***/
+
+   group { name: "e/modules/conf/main";
+      images.image: "cfg.png" COMP;
+      min: 16 16;
+      max: 128 128;
+      parts {
+         part { name: "icon";
+            mouse_events: 0;
+            description { state: "default" 0.0;
+               //max: 50 50;
+               aspect: 1.0 1.0;
+               aspect_preference: BOTH;
+               image.normal: "cfg.png";
+            }
+         }
+         part { name: "event";
+            type: RECT;
+            mouse_events: 1;
+            description { state: "default" 0.0;
+               visible: 1;
+               color: 0 0 0 0;
+            }
+            program { name: "button_click";
+               signal: "mouse,clicked,1";
+               source: "event";
+               action: SIGNAL_EMIT "e,action,conf" "";
+            }
+         }
+      }
+   }
+   
+
+   
+/////////////////////////////////////////
 
 #include "clock.edc"
 #include "battery.edc"
 #include "bases.edc"
 #include "bootsplash.edc"
 }
-
-
