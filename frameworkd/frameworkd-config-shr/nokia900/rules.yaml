@@ -74,4 +74,15 @@
     trigger: PowerStatus()
     filters: HasAttr(status, "empty")
     actions: Command('poweroff')
-
+-
+    while: InputEvent()
+    filters:
+             - HasAttr(switch, "SLIDE") 
+             - HasAttr(event, "pressed")
+    actions:
+             - SetLed("lp5523_kb1", "light")
+             - SetLed("lp5523_kb2", "light")
+             - SetLed("lp5523_kb3", "light")
+             - SetLed("lp5523_kb4", "light")
+             - SetLed("lp5523_kb5", "light")
+             - SetLed("lp5523_kb6", "light")
