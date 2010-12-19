@@ -77,7 +77,7 @@
 -
     while: InputEvent()
     filters:
-             - HasAttr(switch, "SLIDE") 
+             - HasAttr(switch, "SLIDER")
              - HasAttr(event, "pressed")
     actions:
              - SetLed("lp5523_kb1", "light")
