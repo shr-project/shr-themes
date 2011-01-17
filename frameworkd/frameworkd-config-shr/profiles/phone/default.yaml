@@ -1,8 +1,0 @@
-message-loop: false
-message-tone: notify_message.wav
-message-volume: 10
-message-vibration: true
-ring-loop: true
-ring-tone: ringtone_ringnroll.wav
-ring-volume: 10
-ring-vibration: true
