@@ -13,7 +13,6 @@ EXTRA_DIST = \
 	module.illume2.src \
 	module.illume-home.src \
 	module.illume-softkey.src \
-	module.illume-indicator.src \
 	module.illume-keyboard.src
 
 filesdir = $(datadir)/enlightenment/data/config/illume2-shr
@@ -28,8 +27,15 @@ files_DATA = \
 	module.illume2.cfg \
 	module.illume-home.cfg \
 	module.illume-softkey.cfg \
-	module.illume-indicator.cfg \
 	module.illume-keyboard.cfg
+
+if WANT_MACHINE_PALMPRE
+EXTRA_DIST += palm_pre/module.illume-indicator.src
+files_DATA += palm_pre/module.illume-indicator.cfg
+else
+EXTRA_DIST += module.illume-indicator.src
+files_DATA += module.illume-indicator.cfg
+endif
 
 %.cfg: %.src
 	$(EET_EET) -e \

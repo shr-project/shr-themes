@@ -39,6 +39,14 @@ AC_ARG_WITH(eet-eet,
 ])
 AC_SUBST(eet_eet)
 
+##############################################################################
+# check for PalmPre
+AC_ARG_ENABLE(machine-palmpre,
+  [  --enable-machine-palmpre            Use palmpre theme (default=disabled)],
+  [palmpre=$enableval],
+  [palmpre="no"])
+AM_CONDITIONAL( [WANT_MACHINE_PALMPRE], [test x"$palmpre" = x"yes"])
+##############################################################################
 
 AC_OUTPUT([
 Makefile
