@@ -11,7 +11,6 @@ EXTRA_DIST = \
 	module.mixer.src \
 	module.pager.src \
 	module.illume2.src \
-	module.illume-home.src \
 	module.illume-softkey.src \
 	module.illume-keyboard.src
 
@@ -25,16 +24,23 @@ files_DATA = \
 	module.mixer.cfg \
 	module.pager.cfg \
 	module.illume2.cfg \
-	module.illume-home.cfg \
 	module.illume-softkey.cfg \
 	module.illume-keyboard.cfg
 
 if WANT_MACHINE_PALMPRE
-EXTRA_DIST += palm_pre/module.illume-indicator.src
-files_DATA += palm_pre/module.illume-indicator.cfg
+EXTRA_DIST += \
+	palm_pre/module.illume-indicator.src \
+	palm_pre/module.illume-home.src
+files_DATA += \
+	palm_pre/module.illume-indicator.cfg \
+	palm_pre/module.illume-home.cfg
 else
-EXTRA_DIST += module.illume-indicator.src
-files_DATA += module.illume-indicator.cfg
+EXTRA_DIST += \
+	module.illume-indicator.src \
+	module.illume-home.src
+files_DATA += \
+	module.illume-indicator.cfg \
+	module.illume-home.cfg
 endif
 
 %.cfg: %.src
