@@ -50,4 +50,5 @@ endif
 
 clean-local:
 	rm -rf *.cfg *~
+	rm -rf palm_pre/*.cfg palm_pre/*~
 	
