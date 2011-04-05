@@ -176,7 +176,7 @@
 	       text {
 		  font: "Sans:style=Bold";
 		  size: 8;
-		  text: "time";
+		  text: "";
 		  min: 1 1;
 		  align: 0.5 1.0;
 		  text_class: "module_small";
