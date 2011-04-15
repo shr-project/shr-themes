@@ -27,12 +27,10 @@ if WANT_MACHINE_PALMPRE
 EXTRA_DIST += \
 	palm_pre/e.src \
 	palm_pre/module.illume-indicator.src \
-	palm_pre/module.battery.src \
 	palm_pre/module.illume-home.src
 files_DATA += \
 	palm_pre/e.cfg \
 	palm_pre/module.illume-indicator.cfg \
-	palm_pre/module.battery.cfg \
 	palm_pre/module.illume-home.cfg
 else
 EXTRA_DIST += \
