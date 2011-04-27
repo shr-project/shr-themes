@@ -36,12 +36,10 @@ else
 EXTRA_DIST += \
 	e.src \
 	module.illume-indicator.src \
-	module.battery.src \
 	module.illume-home.src
 files_DATA += \
 	e.cfg \
 	module.illume-indicator.cfg \
-	module.battery.cfg \
 	module.illume-home.cfg
 endif
 
