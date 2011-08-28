@@ -1,0 +1,18 @@
+#include "colors.edc"
+#include "styles.edc"
+
+collections {
+
+#include "icons.edc"
+
+#include "dialer.edc"
+#include "call-management.edc"
+#include "notification.edc"
+#include "messages.edc"
+#include "contacts.edc"
+#include "phonelog.edc"
+#include "keypad.edc"
+#include "quick-settings.edc"
+#include "sim-manager.edc"
+
+}
