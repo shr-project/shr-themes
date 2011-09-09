@@ -1383,7 +1383,7 @@ collections {
 	    description { state: "default" 0.0;
 	       rel1.to: "e.swallow.content";
 	       rel2.to: "e.swallow.content";
-	       color: COLOR_WHITE;
+	       color: COLOR_BLACK;
 	       text {
                   font: "Sans"; 
 		  size: 10;
@@ -1527,7 +1527,7 @@ collections {
 	    description { state: "default" 0.0;
 	       rel1.to: "e.swallow.content";
 	       rel2.to: "e.swallow.content";
-	       color: COLOR_WHITE;
+	       color: COLOR_BLACK;
 	       text {
                   font: "Sans"; 
 		  size: 40;
