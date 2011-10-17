@@ -734,7 +734,6 @@ collections {
 	    source: "elm";
 	    action: STATE_SET "disabled" 0.0;
 	    target: "button_image";
-	    target: "button_image";
 	    target: "disabler";
             after: "disable_text";
 	 }
