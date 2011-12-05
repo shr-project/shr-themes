@@ -843,7 +843,7 @@ group "E_Config" struct {
 	value "ping_clients_interval" int: 128;
 	value "cache_flush_poll_interval" int: 512;
 	value "thumbscroll_enable" int: 1;
-	value "thumbscroll_threshhold" int: 8;
+	value "thumbscroll_threshhold" int: 16;
 	value "thumbscroll_momentum_threshhold" double: 100.0000000000000000000000000;
 	value "thumbscroll_friction" double: 1.0000000000000000000000000;
 	value "hal_desktop" int: 1;
