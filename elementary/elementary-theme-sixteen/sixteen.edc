@@ -7217,7 +7217,7 @@ collections {
       data.item: "stacking" "above";
       data.item: "selectraise" "on";
       data.item: "texts" "elm.text";
-      data.item: "icons" "elm.swallow.icon elm.swallow.end";
+      data.item: "contents" "elm.swallow.icon elm.swallow.end";
       data.item: "treesize" "20";
 //      data.item: "states" "";
       images {
@@ -7491,7 +7491,7 @@ collections {
       data.item: "stacking" "below";
       data.item: "selectraise" "on";
       data.item: "texts" "elm.text";
-      data.item: "icons" "elm.swallow.icon elm.swallow.end";
+      data.item: "contents" "elm.swallow.icon elm.swallow.end";
       data.item: "treesize" "20";
 //      data.item: "states" "";
       images {
@@ -7740,7 +7740,7 @@ collections {
       data.item: "stacking" "above";
       data.item: "selectraise" "on";
       data.item: "texts" "elm.text";
-      data.item: "icons" "elm.swallow.icon elm.swallow.end";
+      data.item: "contents" "elm.swallow.icon elm.swallow.end";
       data.item: "treesize" "20";
 //      data.item: "states" "";
       images {
@@ -8060,7 +8060,7 @@ collections {
       data.item: "stacking" "below";
       data.item: "selectraise" "on";
       data.item: "texts" "elm.text";
-      data.item: "icons" "elm.swallow.icon elm.swallow.end";
+      data.item: "contents" "elm.swallow.icon elm.swallow.end";
       data.item: "treesize" "20";
 //      data.item: "states" "";
       images {
@@ -8356,7 +8356,7 @@ collections {
       data.item: "stacking" "above";
       data.item: "selectraise" "on";
       data.item: "texts" "elm.text elm.text.sub";
-      data.item: "icons" "elm.swallow.icon elm.swallow.end";
+      data.item: "contents" "elm.swallow.icon elm.swallow.end";
       data.item: "treesize" "20";
 //      data.item: "states" "";
       images {
@@ -8666,7 +8666,7 @@ collections {
       data.item: "stacking" "below";
       data.item: "selectraise" "on";
       data.item: "texts" "elm.text elm.text.sub";
-      data.item: "icons" "elm.swallow.icon elm.swallow.end";
+      data.item: "contents" "elm.swallow.icon elm.swallow.end";
       data.item: "treesize" "20";
 //      data.item: "states" "";
       images {
@@ -8951,7 +8951,7 @@ collections {
       data.item: "stacking" "above";
       data.item: "selectraise" "on";
       data.item: "texts" "elm.text elm.text.sub";
-      data.item: "icons" "elm.swallow.icon elm.swallow.end";
+      data.item: "contents" "elm.swallow.icon elm.swallow.end";
       data.item: "treesize" "20";
 //      data.item: "states" "";
       images {
@@ -9307,7 +9307,7 @@ collections {
       data.item: "stacking" "below";
       data.item: "selectraise" "on";
       data.item: "texts" "elm.text elm.text.sub";
-      data.item: "icons" "elm.swallow.icon elm.swallow.end";
+      data.item: "contents" "elm.swallow.icon elm.swallow.end";
       data.item: "treesize" "20";
 //      data.item: "states" "";
       images {
