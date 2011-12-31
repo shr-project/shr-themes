@@ -1038,6 +1038,7 @@ collections {
 	    mouse_events: 0;
 	    scale: 1;
 	    description { state: "default" 0.0;
+	       fixed: 1 1;
 	       visible: 0;
 	       rel1.to_x: "tl_tab";
 	       rel1.relative: 1.0 0.0;
