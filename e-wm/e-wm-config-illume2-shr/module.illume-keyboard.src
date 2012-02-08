@@ -2,4 +2,5 @@ group "Illume_Kbd_Cfg" struct {
     value "version" int: 0;
     value "use_internal" int: 1;
     value "dict" string: "English_(US).dic";
+    value "scale_height" double: 1.6000000000000000000000000;
 }
