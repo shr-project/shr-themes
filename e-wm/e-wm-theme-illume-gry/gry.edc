@@ -982,7 +982,7 @@ collections {
 /////////////////////////////////////////////////////////////////////////////
    /*** ILLUME: KBD ***/
 
-   group { name: "e/modules/kbd/base/default";
+/*   group { name: "e/modules/kbd/base/default";
       images {
 	   
 	 image: "frame_2.png" COMP;
@@ -1200,7 +1200,7 @@ collections {
             action: SIGNAL_EMIT "e,action,do,layouts" "";
 	 }
       }
-   }
+   } */
 
    group { name: "e/modules/kbd/match/word";
       
