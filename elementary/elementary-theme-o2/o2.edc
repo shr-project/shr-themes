@@ -7396,6 +7396,7 @@ collections {
             }
          }
          part { name: "image_1_whole";
+	    type: RECT;
             description {
                state: "default" 0.0;
                color: 255 255 255 255;
