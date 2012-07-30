@@ -5,22 +5,26 @@ EET_EET = @eet_eet@
 EXTRA_DIST = \
 	profile.desktop \
 	icon.png \
-	module.dropshadow.src \
-	module.mixer.src \
-	module.pager.src \
+	module.conf.src \
+	module.clock.src \
+	module.comp.src \
 	module.illume2.src \
-	module.illume-softkey.src \
+	module.elfe.src \
+	module.gadman.src \
+	e_remember_restart.src \
 	module.illume-keyboard.src
 
 filesdir = $(datadir)/enlightenment/data/config/illume2-shr
 files_DATA = \
 	profile.desktop \
 	icon.png \
-	module.dropshadow.cfg \
-	module.mixer.cfg \
-	module.pager.cfg \
+	module.conf.cfg \
+	module.clock.cfg \
+	module.comp.cfg \
 	module.illume2.cfg \
-	module.illume-softkey.cfg \
+	module.elfe.cfg \
+	module.gadman.cfg \
+	e_remember_restart.cfg \
 	module.illume-keyboard.cfg
 
 if WANT_MACHINE_PALMPRE

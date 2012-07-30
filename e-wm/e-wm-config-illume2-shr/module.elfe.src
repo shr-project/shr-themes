@@ -1,0 +1,17 @@
+group "Elfe_Cfg" struct {
+    group "desktops" list {
+        group "Elfe_Desktop_Cfg" struct {
+        }
+        group "Elfe_Desktop_Cfg" struct {
+        }
+        group "Elfe_Desktop_Cfg" struct {
+        }
+        group "Elfe_Desktop_Cfg" struct {
+        }
+        group "Elfe_Desktop_Cfg" struct {
+        }
+    }
+    value "cols" int: 4;
+    value "rows" int: 4;
+    value "icon_size" int: 72;
+}
