@@ -26,17 +26,17 @@ files_DATA = \
 if WANT_MACHINE_PALMPRE
 EXTRA_DIST += \
 	palm_pre/e.src \
-	palm_pre/module.illume-indicator.src \
+	palm_pre/module.illume-indicator.src
 files_DATA += \
 	palm_pre/e.cfg \
-	palm_pre/module.illume-indicator.cfg \
+	palm_pre/module.illume-indicator.cfg
 else
 EXTRA_DIST += \
 	e.src \
-	module.illume-indicator.src \
+	module.illume-indicator.src
 files_DATA += \
 	e.cfg \
-	module.illume-indicator.cfg \
+	module.illume-indicator.cfg
 endif
 
 %.cfg: %.src
