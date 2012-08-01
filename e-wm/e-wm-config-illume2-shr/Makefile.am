@@ -7,11 +7,9 @@ EXTRA_DIST = \
 	icon.png \
 	module.conf.src \
 	module.clock.src \
-	module.comp.src \
 	module.illume2.src \
 	module.elfe.src \
 	module.gadman.src \
-	e_remember_restart.src \
 	module.illume-keyboard.src
 
 filesdir = $(datadir)/enlightenment/data/config/illume2-shr
@@ -20,31 +18,25 @@ files_DATA = \
 	icon.png \
 	module.conf.cfg \
 	module.clock.cfg \
-	module.comp.cfg \
 	module.illume2.cfg \
 	module.elfe.cfg \
 	module.gadman.cfg \
-	e_remember_restart.cfg \
 	module.illume-keyboard.cfg
 
 if WANT_MACHINE_PALMPRE
 EXTRA_DIST += \
 	palm_pre/e.src \
 	palm_pre/module.illume-indicator.src \
-	palm_pre/module.illume-home.src
 files_DATA += \
 	palm_pre/e.cfg \
 	palm_pre/module.illume-indicator.cfg \
-	palm_pre/module.illume-home.cfg
 else
 EXTRA_DIST += \
 	e.src \
 	module.illume-indicator.src \
-	module.illume-home.src
 files_DATA += \
 	e.cfg \
 	module.illume-indicator.cfg \
-	module.illume-home.cfg
 endif
 
 %.cfg: %.src

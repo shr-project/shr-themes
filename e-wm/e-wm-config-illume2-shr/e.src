@@ -222,17 +222,17 @@ group "E_Config" struct {
             }
             value "name" string: "illume-indicator";
             value "id" int: 0;
-            value "zone" uint: 0;
+            value "zone" int: 0;
         }
         group "E_Config_Gadcon" struct {
             value "name" string: "gadman";
             value "id" int: 114;
-            value "zone" uint: 0;
+            value "zone" int: 0;
         }
         group "E_Config_Gadcon" struct {
             value "name" string: "gadman_top";
             value "id" int: 115;
-            value "zone" uint: 0;
+            value "zone" int: 0;
         }
     }
     group "acpi_bindings" list {
@@ -548,13 +548,25 @@ group "E_Config" struct {
     }
     group "modules" list {
         group "E_Config_Module" struct {
-            value "name" string: "shr-e-gadgets";
+            value "name" string: "elfe";
             value "enabled" uchar: 1;
             value "delayed" uchar: 0;
             value "priority" int: 100;
         }
         group "E_Config_Module" struct {
+            value "name" string: "gadman";
+            value "enabled" uchar: 1;
+            value "delayed" uchar: 1;
+            value "priority" int: 100;
+        }
+        group "E_Config_Module" struct {
             value "name" string: "illume2";
+            value "enabled" uchar: 1;
+            value "delayed" uchar: 0;
+            value "priority" int: 100;
+        }
+        group "E_Config_Module" struct {
+            value "name" string: "shr-e-gadgets";
             value "enabled" uchar: 1;
             value "delayed" uchar: 0;
             value "priority" int: 100;
@@ -566,115 +578,7 @@ group "E_Config" struct {
             value "priority" int: 90;
         }
         group "E_Config_Module" struct {
-            value "name" string: "clock";
-            value "enabled" uchar: 1;
-            value "delayed" uchar: 1;
-            value "priority" int: 0;
-        }
-        group "E_Config_Module" struct {
-            value "name" string: "mixer";
-            value "enabled" uchar: 1;
-            value "delayed" uchar: 1;
-            value "priority" int: 0;
-        }
-        group "E_Config_Module" struct {
-            value "name" string: "battery";
-            value "enabled" uchar: 0;
-            value "delayed" uchar: 1;
-            value "priority" int: 0;
-        }
-        group "E_Config_Module" struct {
-            value "name" string: "battery-fso";
-            value "enabled" uchar: 1;
-            value "delayed" uchar: 1;
-            value "priority" int: 0;
-        }
-        group "E_Config_Module" struct {
-            value "name" string: "start";
-            value "enabled" uchar: 1;
-            value "delayed" uchar: 0;
-            value "priority" int: 0;
-        }
-        group "E_Config_Module" struct {
-            value "name" string: "conf_interaction";
-            value "enabled" uchar: 1;
-            value "delayed" uchar: 1;
-            value "priority" int: 0;
-        }
-        group "E_Config_Module" struct {
-            value "name" string: "conf_theme";
-            value "enabled" uchar: 1;
-            value "delayed" uchar: 1;
-            value "priority" int: 0;
-        }
-        group "E_Config_Module" struct {
-            value "name" string: "conf_performance";
-            value "enabled" uchar: 1;
-            value "delayed" uchar: 1;
-            value "priority" int: 0;
-        }
-        group "E_Config_Module" struct {
-            value "name" string: "conf_display";
-            value "enabled" uchar: 1;
-            value "delayed" uchar: 1;
-            value "priority" int: 0;
-        }
-        group "E_Config_Module" struct {
-            value "name" string: "conf_intl";
-            value "enabled" uchar: 1;
-            value "delayed" uchar: 1;
-            value "priority" int: 0;
-        }
-        group "E_Config_Module" struct {
-            value "name" string: "conf_keybindings";
-            value "enabled" uchar: 1;
-            value "delayed" uchar: 1;
-            value "priority" int: 0;
-        }
-        group "E_Config_Module" struct {
-            value "name" string: "conf_dialogs";
-            value "enabled" uchar: 1;
-            value "delayed" uchar: 1;
-            value "priority" int: 0;
-        }
-        group "E_Config_Module" struct {
-            value "name" string: "illume-rightclick-toggle";
-            value "enabled" uchar: 1;
-            value "delayed" uchar: 0;
-            value "priority" int: 0;
-        }
-        group "E_Config_Module" struct {
-            value "name" string: "illume-mode-toggle";
-            value "enabled" uchar: 1;
-            value "delayed" uchar: 0;
-            value "priority" int: 0;
-        }
-        group "E_Config_Module" struct {
-            value "name" string: "illume-kbd-toggle";
-            value "enabled" uchar: 1;
-            value "delayed" uchar: 0;
-            value "priority" int: 0;
-        }
-        group "E_Config_Module" struct {
-            value "name" string: "illume-home-toggle";
-            value "enabled" uchar: 1;
-            value "delayed" uchar: 0;
-            value "priority" int: 0;
-        }
-        group "E_Config_Module" struct {
-            value "name" string: "fileman";
-            value "enabled" uchar: 0;
-            value "delayed" uchar: 1;
-            value "priority" int: 0;
-        }
-        group "E_Config_Module" struct {
-            value "name" string: "illume-home";
-            value "enabled" uchar: 0;
-            value "delayed" uchar: 0;
-            value "priority" int: 0;
-        }
-        group "E_Config_Module" struct {
-            value "name" string: "conf";
+            value "name" string: "illume-keyboard";
             value "enabled" uchar: 1;
             value "delayed" uchar: 1;
             value "priority" int: 0;
@@ -686,22 +590,118 @@ group "E_Config" struct {
             value "priority" int: 0;
         }
         group "E_Config_Module" struct {
-            value "name" string: "illume-keyboard";
+            value "name" string: "conf";
             value "enabled" uchar: 1;
             value "delayed" uchar: 1;
             value "priority" int: 0;
         }
         group "E_Config_Module" struct {
-            value "name" string: "gadman";
-            value "enabled" uchar: 1;
-            value "delayed" uchar: 1;
-            value "priority" int: 100;
+            value "name" string: "illume-home";
+            value "enabled" uchar: 0;
+            value "delayed" uchar: 0;
+            value "priority" int: 0;
         }
         group "E_Config_Module" struct {
-            value "name" string: "elfe";
+            value "name" string: "fileman";
+            value "enabled" uchar: 0;
+            value "delayed" uchar: 1;
+            value "priority" int: 0;
+        }
+        group "E_Config_Module" struct {
+            value "name" string: "illume-home-toggle";
             value "enabled" uchar: 1;
             value "delayed" uchar: 0;
-            value "priority" int: 100;
+            value "priority" int: 0;
+        }
+        group "E_Config_Module" struct {
+            value "name" string: "illume-kbd-toggle";
+            value "enabled" uchar: 1;
+            value "delayed" uchar: 0;
+            value "priority" int: 0;
+        }
+        group "E_Config_Module" struct {
+            value "name" string: "illume-mode-toggle";
+            value "enabled" uchar: 1;
+            value "delayed" uchar: 0;
+            value "priority" int: 0;
+        }
+        group "E_Config_Module" struct {
+            value "name" string: "illume-rightclick-toggle";
+            value "enabled" uchar: 1;
+            value "delayed" uchar: 0;
+            value "priority" int: 0;
+        }
+        group "E_Config_Module" struct {
+            value "name" string: "conf_dialogs";
+            value "enabled" uchar: 1;
+            value "delayed" uchar: 1;
+            value "priority" int: 0;
+        }
+        group "E_Config_Module" struct {
+            value "name" string: "conf_keybindings";
+            value "enabled" uchar: 1;
+            value "delayed" uchar: 1;
+            value "priority" int: 0;
+        }
+        group "E_Config_Module" struct {
+            value "name" string: "conf_intl";
+            value "enabled" uchar: 1;
+            value "delayed" uchar: 1;
+            value "priority" int: 0;
+        }
+        group "E_Config_Module" struct {
+            value "name" string: "conf_display";
+            value "enabled" uchar: 1;
+            value "delayed" uchar: 1;
+            value "priority" int: 0;
+        }
+        group "E_Config_Module" struct {
+            value "name" string: "conf_performance";
+            value "enabled" uchar: 1;
+            value "delayed" uchar: 1;
+            value "priority" int: 0;
+        }
+        group "E_Config_Module" struct {
+            value "name" string: "conf_theme";
+            value "enabled" uchar: 1;
+            value "delayed" uchar: 1;
+            value "priority" int: 0;
+        }
+        group "E_Config_Module" struct {
+            value "name" string: "conf_interaction";
+            value "enabled" uchar: 1;
+            value "delayed" uchar: 1;
+            value "priority" int: 0;
+        }
+        group "E_Config_Module" struct {
+            value "name" string: "start";
+            value "enabled" uchar: 1;
+            value "delayed" uchar: 0;
+            value "priority" int: 0;
+        }
+        group "E_Config_Module" struct {
+            value "name" string: "battery-fso";
+            value "enabled" uchar: 1;
+            value "delayed" uchar: 1;
+            value "priority" int: 0;
+        }
+        group "E_Config_Module" struct {
+            value "name" string: "battery";
+            value "enabled" uchar: 0;
+            value "delayed" uchar: 1;
+            value "priority" int: 0;
+        }
+        group "E_Config_Module" struct {
+            value "name" string: "mixer";
+            value "enabled" uchar: 1;
+            value "delayed" uchar: 1;
+            value "priority" int: 0;
+        }
+        group "E_Config_Module" struct {
+            value "name" string: "clock";
+            value "enabled" uchar: 1;
+            value "delayed" uchar: 1;
+            value "priority" int: 0;
         }
     }
     value "config_version" int: 65875;
@@ -727,7 +727,6 @@ group "E_Config" struct {
     value "use_composite" int: 1;
     value "language" string: "en_US.UTF-8";
     value "window_placement_policy" int: 0;
-    value "window_grouping" int: 0;
     value "focus_policy" int: 0;
     value "focus_setting" int: 1;
     value "pass_click_on" int: 1;
@@ -848,7 +847,6 @@ group "E_Config" struct {
     value "border_raise_on_focus" int: 1;
     value "desk_flip_wrap" int: 0;
     value "fullscreen_flip" int: 1;
-    value "multiscreen_flip" int: 0;
     value "icon_theme" string: "gnome";
     value "icon_theme_overrides" uchar: 0;
     value "desk_flip_animate_mode" int: 1;
@@ -868,7 +866,6 @@ group "E_Config" struct {
     value "thumbscroll_threshhold" int: 16;
     value "thumbscroll_momentum_threshhold" double: 100.0000000000000000000000000;
     value "thumbscroll_friction" double: 1.0000000000000000000000000;
-    value "filemanager_single_click" uchar: 0;
     value "device_desktop" int: 0;
     value "device_auto_mount" int: 0;
     value "device_auto_open" int: 0;
@@ -907,13 +904,6 @@ group "E_Config" struct {
     value "deskenv.load_xmodmap" uchar: 0;
     value "deskenv.load_gnome" uchar: 0;
     value "deskenv.load_kde" uchar: 0;
-    value "powersave.none" double: 0.0100000000000000002081668;
-    value "powersave.low" double: 0.0100000000000000002081668;
-    value "powersave.medium" double: 0.0100000000000000002081668;
-    value "powersave.high" double: 0.0100000000000000002081668;
-    value "powersave.extreme" double: 0.0100000000000000002081668;
-    value "powersave.min" int: 0;
-    value "powersave.max" int: 0;
     value "xsettings.enabled" uchar: 0;
     value "xsettings.match_e17_theme" uchar: 0;
     value "xsettings.match_e17_icon_theme" uchar: 0;
@@ -921,5 +911,4 @@ group "E_Config" struct {
     value "xsettings.xft_hinting" int: 0;
     value "update.check" uchar: 1;
     value "update.later" uchar: 0;
-    value "xkb.only_label" int: 0;
 }
