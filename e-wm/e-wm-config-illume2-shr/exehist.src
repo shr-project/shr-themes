@@ -1,0 +1,9 @@
+group "E_Exehist" struct {
+    group "history" list {
+        group "E_Exehist_Item" struct {
+            value "exe" string: "shr_elm_softkey";
+            value "normalized_exe" string: "shr_elm_softkey";
+            value "exetime" double: 946686066.8940919637680053710937500;
+        }
+    }
+}

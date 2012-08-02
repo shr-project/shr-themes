@@ -1,7 +1,7 @@
 group "Illume_Kbd_Cfg" struct {
     value "version" int: 65539;
     value "use_internal" int: 1;
-    value "dict" string: "English_US.dic";
+    value "dict" string: "English_(US).dic";
     value "zoom_level" int: 4;
     value "hold_timer" double: 0.2500000000000000000000000;
     value "slide_dim" int: 4;

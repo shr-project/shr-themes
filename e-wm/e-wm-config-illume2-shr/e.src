@@ -222,17 +222,17 @@ group "E_Config" struct {
             }
             value "name" string: "illume-indicator";
             value "id" int: 0;
-            value "zone" uint: 0;
+            value "zone" int: 0;
         }
         group "E_Config_Gadcon" struct {
             value "name" string: "gadman";
             value "id" int: 114;
-            value "zone" uint: 0;
+            value "zone" int: 0;
         }
         group "E_Config_Gadcon" struct {
             value "name" string: "gadman_top";
             value "id" int: 115;
-            value "zone" uint: 0;
+            value "zone" int: 0;
         }
     }
     group "acpi_bindings" list {
@@ -704,7 +704,7 @@ group "E_Config" struct {
             value "priority" int: 100;
         }
     }
-    value "config_version" int: 65844;
+    value "config_version" int: 65864;
     value "show_splash" int: 0;
     value "init_default_theme" string: "default.edj";
     value "desktop_default_name" string: "Desktop %i, %i";
@@ -725,9 +725,7 @@ group "E_Config" struct {
     value "show_desktop_icons" int: 1;
     value "edge_flip_dragging" int: 1;
     value "use_composite" int: 1;
-    value "language" string: "en_US.UTF-8";
     value "window_placement_policy" int: 0;
-    value "window_grouping" int: 0;
     value "focus_policy" int: 0;
     value "focus_setting" int: 1;
     value "pass_click_on" int: 1;
@@ -848,8 +846,7 @@ group "E_Config" struct {
     value "border_raise_on_focus" int: 1;
     value "desk_flip_wrap" int: 0;
     value "fullscreen_flip" int: 1;
-    value "multiscreen_flip" int: 0;
-    value "icon_theme" string: "gnome";
+    value "icon_theme" string: "shr";
     value "icon_theme_overrides" uchar: 0;
     value "desk_flip_animate_mode" int: 1;
     value "desk_flip_animate_interpolation" int: 0;
@@ -868,7 +865,6 @@ group "E_Config" struct {
     value "thumbscroll_threshhold" int: 16;
     value "thumbscroll_momentum_threshhold" double: 100.0000000000000000000000000;
     value "thumbscroll_friction" double: 1.0000000000000000000000000;
-    value "filemanager_single_click" uchar: 0;
     value "device_desktop" int: 0;
     value "device_auto_mount" int: 0;
     value "device_auto_open" int: 0;
@@ -907,19 +903,11 @@ group "E_Config" struct {
     value "deskenv.load_xmodmap" uchar: 0;
     value "deskenv.load_gnome" uchar: 0;
     value "deskenv.load_kde" uchar: 0;
-    value "powersave.none" double: 0.0100000000000000002081668;
-    value "powersave.low" double: 0.0100000000000000002081668;
-    value "powersave.medium" double: 0.0100000000000000002081668;
-    value "powersave.high" double: 0.0100000000000000002081668;
-    value "powersave.extreme" double: 0.0100000000000000002081668;
-    value "powersave.min" int: 0;
-    value "powersave.max" int: 0;
     value "xsettings.enabled" uchar: 0;
     value "xsettings.match_e17_theme" uchar: 0;
     value "xsettings.match_e17_icon_theme" uchar: 0;
     value "xsettings.xft_antialias" int: 0;
     value "xsettings.xft_hinting" int: 0;
-    value "update.check" uchar: 1;
+    value "update.check" uchar: 0;
     value "update.later" uchar: 0;
-    value "xkb.only_label" int: 0;
 }

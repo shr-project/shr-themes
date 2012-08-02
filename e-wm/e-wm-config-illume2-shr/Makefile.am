@@ -12,6 +12,7 @@ EXTRA_DIST = \
 	module.elfe.src \
 	module.gadman.src \
 	e_remember_restart.src \
+	exehist.src \
 	module.illume-keyboard.src
 
 filesdir = $(datadir)/enlightenment/data/config/illume2-shr
@@ -25,6 +26,7 @@ files_DATA = \
 	module.elfe.cfg \
 	module.gadman.cfg \
 	e_remember_restart.cfg \
+	exehist.src \
 	module.illume-keyboard.cfg
 
 if WANT_MACHINE_PALMPRE

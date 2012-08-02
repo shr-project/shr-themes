@@ -121,13 +121,13 @@ group "E_Remember_List" struct {
             value "apply" int: 73183;
             value "max_score" int: 0;
             value "prop.pos_x" int: 0;
-            value "prop.pos_y" int: 0;
+            value "prop.pos_y" int: 56;
             value "prop.res_x" int: 480;
             value "prop.res_y" int: 640;
             value "prop.pos_w" int: 480;
-            value "prop.pos_h" int: 640;
+            value "prop.pos_h" int: 584;
             value "prop.w" int: 480;
-            value "prop.h" int: 640;
+            value "prop.h" int: 584;
             value "prop.layer" int: 90;
             value "prop.lock_user_location" uchar: 1;
             value "prop.lock_client_location" uchar: 1;
