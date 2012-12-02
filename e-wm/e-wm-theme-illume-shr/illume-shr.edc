@@ -1639,6 +1639,7 @@ collections {
 	    }
 	 }
 	 part { name: "content_clip";
+	    type: RECT;
 	    description { state: "default" 0.0;
 	       color: 0 0 0 255;
 	       rel1.to: "button_image";
@@ -1791,6 +1792,7 @@ collections {
 	    }
 	 }
 	 part { name: "content_clip";
+	    type: RECT;
 	    description { state: "default" 0.0;
 	       color: 0 0 0 255;
 	       rel1.to: "button_image";
