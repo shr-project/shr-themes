@@ -7385,6 +7385,7 @@ collections {
       }
       parts {
          part { name: "whole";
+	    type: RECT;
             description {
                state: "default" 0.0;
                visible: 1;
@@ -7392,6 +7393,7 @@ collections {
             }
          }
          part { name: "image_1_whole";
+	    type: RECT;
             description {
                state: "default" 0.0;
                color: 255 255 255 255;
@@ -7453,6 +7455,7 @@ collections {
             }
          }
          part { name: "image_2_whole";
+	    type: RECT;
             description {
                state: "default" 0.0;
                visible: 1;
@@ -13777,6 +13780,7 @@ collections {
       }
       parts {
          part { name: "elm.background.progressbar";
+	    type: RECT;
             mouse_events: 0;
             description {
                state: "default" 0.0;
@@ -14021,6 +14025,7 @@ collections {
            }
          }
          part { name: "progress-rect";
+	    type: RECT;
             mouse_events: 0;
             description {
                state: "default" 0.0;
@@ -16839,6 +16844,7 @@ collections {
        }
         parts {
             part { name: "whole";
+	        type: RECT;
                 description { state: "default" 0.0;
                 }
             }
@@ -16946,6 +16952,7 @@ collections {
         }
         parts {
             part { name: "whole";
+	        type: RECT;
                 description { state: "default" 0.0;
                 }
             }
@@ -17005,6 +17012,7 @@ collections {
         }
     parts {
     part { name: "clipper";
+        type: RECT;
         mouse_events:  1;
         description { state: "default" 0.0;
           color: 255 255 255 0;
