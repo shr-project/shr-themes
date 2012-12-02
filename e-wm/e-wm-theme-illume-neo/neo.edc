@@ -1313,6 +1313,7 @@ color: 0 0 0 255;
 	    }
 	 }
 	 part { name: "content_clip";
+	    type: RECT;
 	    description { state: "default" 0.0;
 	       color: 255 255 255 255;
 	       rel1.to: "button_image";
@@ -1436,6 +1437,7 @@ color: 0 0 0 255;
 	    }
 	 }
 	 part { name: "content_clip";
+	    type: RECT;
 	    description { state: "default" 0.0;
 	       color: 255 255 255 255;
 	       rel1.to: "button_image";
