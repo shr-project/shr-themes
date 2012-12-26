@@ -701,7 +701,7 @@ group "E_Config" struct {
 			value "is_main" int: 0;
 		}
 	}
-	value "config_version" int: 65844;
+	value "config_version" int: 1000000;
 	value "show_splash" int: 0;
 	value "init_default_theme" string: "default.edj";
 	value "desktop_default_name" string: "Desktop %i, %i";
