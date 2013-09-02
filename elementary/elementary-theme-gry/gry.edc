@@ -868,7 +868,7 @@ collections {
       styles
 	{
 	   style { name: "textblock_style";
-	      base: "font=Sans font_size=10 align=left color=#000 style=outline outline_color=#fff wrap=word";
+	      base: "font=Sans font_size=10 align=left color=#000 wrap=word";
 	      
 	      tag:  "br" "\n";
 	      tag:  "hilight" "+ font=Sans:style=Bold";
