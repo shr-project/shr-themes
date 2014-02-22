@@ -1,7 +1,7 @@
    group 
      {
         images.image: "illume-home/illume-home.png" COMP;
-        name: "icon";
+        name: "illume-home-icon";
         max: 128 128;
         parts 
           {
