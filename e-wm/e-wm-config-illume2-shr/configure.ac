@@ -3,7 +3,7 @@ rm -f config.cache
 
 AC_PREREQ(2.53)
 AC_INIT(enlightenment, 0.16.999.050, enlightenment-devel@lists.sourceforge.net)
-AM_INIT_AUTOMAKE()
+AM_INIT_AUTOMAKE([foreign])
 AC_CONFIG_SRCDIR(configure.ac)
 
 AC_CHECK_FUNCS(setenv)
